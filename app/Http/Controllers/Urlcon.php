@@ -6,7 +6,6 @@ use App\Models\Urltrans;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\DomCrawler\Crawler;
 
 class Urlcon extends Controller
 {
