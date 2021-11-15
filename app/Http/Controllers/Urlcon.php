@@ -67,7 +67,9 @@ class Urlcon extends Controller
             $doc = new \DOMDocument();
             //dd($doc);
 
-            $doc -> loadHTMLFile($pre_url);
+            $right_chr = html_entity_decode($pre_url,ENT_QUOTES|ENT_HTML5,'UTF-8');
+
+            $doc -> loadHTMLFile($right_chr);
 
             $xpath = new \DOMXpath($doc);
             //dd($xpath);
