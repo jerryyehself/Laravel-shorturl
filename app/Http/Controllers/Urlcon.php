@@ -72,7 +72,7 @@ class Urlcon extends Controller
             $doc -> loadHTML($pre_url);
 
             $xpath = new \DOMXpath($doc);
-            $entries = $xpath -> $xpath->query('//title');
+            $entries = $xpath -> query('//title');
             
             return $entries;
         }
