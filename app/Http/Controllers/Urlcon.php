@@ -69,7 +69,7 @@ class Urlcon extends Controller
 
             $xpath = new \DOMXpath($doc);
             //dd($xpath);
-            $entries = $xpath -> query('//title') -> first();
+            $entries = $xpath -> query('//title') -> nodeValue;
             
             return $entries;
         }
