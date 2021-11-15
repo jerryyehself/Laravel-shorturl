@@ -61,7 +61,6 @@ class Urlcon extends Controller
             $item -> number_of_inseret_times = $new_insert_number++;
 
             
-
             $item -> increment('number_of_inseret_times');
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
