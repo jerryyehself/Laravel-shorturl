@@ -65,13 +65,15 @@ class Urlcon extends Controller
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
             $doc = new \DOMDocument();
-            $doc -> loadHTMLFile(htmlspecialchars_decode($pre_url));
+            dd($doc);
+
+            $doc -> loadHTMLFile($pre_url);
 
             $xpath = new \DOMXpath($doc);
             //dd($xpath);
             $entries = $xpath -> query('//title') -> item(0);
 
-            dd($entries);
+            
             
             return $entries;
         }
