@@ -52,10 +52,10 @@ class Urlcon extends Controller
         }
         else
         {
-            $item = new Urltrans;
+            /*$item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
-            /*$item -> url_title = $sql -> url_title;
+            $item -> url_title = $sql -> url_title;
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
 
             $new_insert_number = $item -> number_of_inseret_times;
@@ -67,7 +67,13 @@ class Urlcon extends Controller
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
 
-            $entries = $item -> pre_id -> filterXPath('//title') -> result();
+            $doc = new DOMDocument();
+
+            $doc -> loadHTMLFile($pre_id);
+
+            $xpath = new DOMXpath($doc);
+
+            $entries = $xpath -> $xpath->query('//title');
             
             return $entries;
         }
