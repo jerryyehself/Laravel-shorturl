@@ -64,7 +64,7 @@ class Urlcon extends Controller
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
 
-            $xml = file_get_html("https://www.wibibi.com/info.php?tid=109");
+            $doc = new DOMDocument;
             $entries = $xml->find('title');;
             
             return $entries;
