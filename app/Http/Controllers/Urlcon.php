@@ -67,7 +67,7 @@ class Urlcon extends Controller
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
 
-            $entries = $item -> pre_id -> filterXPath('//title');
+            $entries = $item -> pre_id -> filterXPath('//title') -> result();
             
             return $entries;
         }
