@@ -66,9 +66,8 @@ class Urlcon extends Controller
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
             $doc = new \DOMDocument();
             //dd($doc);
-            libxml_use_internal_errors(true);
             $doc -> loadHTMLFile($pre_url);
-            libxml_clear_errors();
+            
             
 
             $xpath = new \DOMXpath($doc);
