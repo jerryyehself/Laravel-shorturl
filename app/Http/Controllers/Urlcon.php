@@ -33,7 +33,9 @@ class Urlcon extends Controller
 
             $url_random = rand(10 ,100);
 
-            $fp = file_get_contents($pre_url); 
+            $contents = file_get_contents($pre_url);
+            
+            dd($contents);
 
             preg_match("/<title>(.*)<\/title>/s", $fp, $match);
 
