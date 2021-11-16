@@ -35,21 +35,33 @@ class Urlcon extends Controller
 
             $contents = file_get_contents($pre_url);
             
-            dd($contents);
+            //dd($contents);
 
-            preg_match("/<title>(.*)<\/title>/s", $fp, $match);
+            $doc = new \DOMDocument();
 
-            $url_title = strval($match[0]);
+            libxml_use_internal_errors(true);
+            $doc -> loadHTML($contents);
+            libxml_use_internal_errors(false);
+            
+            $xpath = new \DOMXpath($doc);
+            //dd(var_dump($xpath));
+            $entries = $xpath -> query('//title') -> item(0) -> textContent;
+
+
+
+            //preg_match("/<title>(.*)<\/title>/s", $fp, $match);
+
+            //$url_title = strval($match[0]);
                                     
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
             $item -> ins_time = now();
-            $item -> url_title = $url_title; 
+            $item -> url_title = $entries; 
             $item -> number_of_inseret_times = 1;
             $item -> save();
 
-            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=>$item -> new_id , 'url_title'=> $url_title]);               
+            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=>$item -> new_id , 'url_title'=> $entries]);               
         }
         else
         {
