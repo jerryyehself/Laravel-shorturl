@@ -49,7 +49,7 @@ class Urlcon extends Controller
 
 
 
-            preg_match("/<title>(.*)<\/title>/s", $contents, $match);
+            dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
             $url_title = strval($match[0]);
             dd($url_title);                        
