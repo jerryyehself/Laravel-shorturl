@@ -42,7 +42,7 @@ class Urlcon extends Controller
 
             
             //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            dd($contents -> addHtmlContent());
+            dd(get($contents)->getBody()->getContents());
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
             
