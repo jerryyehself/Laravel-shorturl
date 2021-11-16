@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4509b97597d61a6d87816cf13523355",
+    "content-hash": "8f4d322089849426c9e15f6d93512392",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,44 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "cucxabeng/simple-html-dom",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cucxabeng/simple-html-dom.git",
+                "reference": "273be838092d34d6e8477d4bf89fcb2a811eb14b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cucxabeng/simple-html-dom/zipball/273be838092d34d6e8477d4bf89fcb2a811eb14b",
+                "reference": "273be838092d34d6e8477d4bf89fcb2a811eb14b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "cucxabeng\\HtmlDom": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "HaiDang",
+                    "email": "cucxabeng@gmail.com"
+                }
+            ],
+            "description": "SimpleHtmlDom for Laravel 5",
+            "support": {
+                "issues": "https://github.com/cucxabeng/simple-html-dom/issues",
+                "source": "https://github.com/cucxabeng/simple-html-dom/tree/master"
+            },
+            "time": "2019-08-08T16:48:28+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -8024,7 +8062,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "cucxabeng/simple-html-dom": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
