@@ -48,8 +48,8 @@ class Urlcon extends Controller
             //$entries = $xpath -> query('//title') -> item(0) -> textContent;
 
 
-
-            dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
+            dd($contents);
+            //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
             $url_title = strval($match[0]);
             dd($url_title);                        
