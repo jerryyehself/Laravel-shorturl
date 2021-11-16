@@ -36,7 +36,7 @@ class Urlcon extends Controller
 
             $crawler = new Crawler();
 
-            $pre_url = file_get_html($pre_url);
+            $pre_url = file_get_contents($pre_url);
 
             $crawler -> addHtmlContent($pre_url);
 
@@ -46,7 +46,7 @@ class Urlcon extends Controller
 
             
             //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            dd($crawler);
+            dd($pre_url);
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
             
