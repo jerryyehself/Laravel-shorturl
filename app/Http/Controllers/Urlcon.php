@@ -38,6 +38,8 @@ class Urlcon extends Controller
             //$doc = new \DOMDocument();
             
             //libxml_use_internal_errors(true);
+
+            dd($contents);
             $contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
 
             //$doc -> loadHTML($contents);
@@ -48,7 +50,7 @@ class Urlcon extends Controller
             //$entries = $xpath -> query('//title') -> item(0) -> textContent;
 
 
-            dd($contents);
+            
             //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
             $url_title = strval($match[0]);
