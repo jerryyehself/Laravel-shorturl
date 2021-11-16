@@ -36,7 +36,7 @@ class Urlcon extends Controller
 
             $crawler = new Crawler();
 
-            $pre_url = file_get_contents($pre_url);
+            $pre_url = file_get_html($pre_url);
 
             $crawler -> addHtmlContent($pre_url);
 
