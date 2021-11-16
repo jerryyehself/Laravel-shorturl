@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Urltrans;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Urlcon extends Controller
@@ -74,6 +74,7 @@ class Urlcon extends Controller
             $xpath = new \DOMXpath($doc);
             //dd($xpath);
             $entries = $xpath -> query('//title') -> item(0);
+            dd(var_dump($entries));
 
             
             
