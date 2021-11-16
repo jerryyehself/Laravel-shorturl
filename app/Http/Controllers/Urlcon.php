@@ -74,7 +74,7 @@ class Urlcon extends Controller
             $xpath = new \DOMXpath($doc);
             dd(var_dump($xpath));
             $entries = $xpath -> query('//title');
-            dd(var_dump($entries));
+            //dd(var_dump($entries));
 
             
             
