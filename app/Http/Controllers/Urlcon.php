@@ -40,6 +40,8 @@ class Urlcon extends Controller
             $doc = new \DOMDocument();
 
             libxml_use_internal_errors(true);
+            $doc = mb_convert_encoding($doc, 'HTML-ENTITIES', "UTF-8");
+
             $doc -> loadHTML($contents);
             libxml_use_internal_errors(false);
             
