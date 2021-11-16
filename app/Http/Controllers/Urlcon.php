@@ -34,27 +34,25 @@ class Urlcon extends Controller
             $url_random = rand(10 ,100);
 
             $contents = file_get_contents($pre_url);
+
+            //$doc = new \DOMDocument();
             
-            //dd($contents);
+            //libxml_use_internal_errors(true);
+            //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
 
-            $doc = new \DOMDocument();
+            //$doc -> loadHTML($contents);
+            //libxml_use_internal_errors(false);
             
-            libxml_use_internal_errors(true);
-            $contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-
-            $doc -> loadHTML($contents);
-            libxml_use_internal_errors(false);
-            
-            $xpath = new \DOMXpath($doc);
-            dd($xpath);
-            $entries = $xpath -> query('//title') -> item(0) -> textContent;
+            //$xpath = new \DOMXpath($doc);
+            //dd($xpath);
+            //$entries = $xpath -> query('//title') -> item(0) -> textContent;
 
 
 
-            //preg_match("/<title>(.*)<\/title>/s", $fp, $match);
+            preg_match("/<title>(.*)<\/title>/s", $contents, $match);
 
-            //$url_title = strval($match[0]);
-                                    
+            $url_title = strval($match[0]);
+            dd($url_title);                        
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
