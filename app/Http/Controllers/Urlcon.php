@@ -59,7 +59,7 @@ class Urlcon extends Controller
             //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
             $url_title = $crawler -> filterXpath("//title") -> text();
-            dd($url_title);
+            
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
