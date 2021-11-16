@@ -36,9 +36,9 @@ class Urlcon extends Controller
 
             $crawler = new Crawler();
 
-            $pre_url = file_get_contents($pre_url);
+            $html_content = file_get_contents($pre_url);
 
-            $crawler -> addHtmlContent($pre_url);
+            $crawler -> addHtmlContent($html_content);
 
             //$doc = new \DOMDocument();
             
@@ -59,7 +59,7 @@ class Urlcon extends Controller
             //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
             $url_title = $crawler -> filterXpath("//title") -> text();
-            
+
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
