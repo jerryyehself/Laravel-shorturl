@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Urltrans;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 
 class Urlcon extends Controller
