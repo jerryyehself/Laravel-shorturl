@@ -46,7 +46,7 @@ class Urlcon extends Controller
 
             
             //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            dd($crawler -> filterXpath("//title") -> text());
+            
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
             
@@ -58,21 +58,21 @@ class Urlcon extends Controller
             
             //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
 
-            $url_title = strval($match[0]);
-            dd($url_title);                        
+            $url_title = $crawler -> filterXpath("//title") -> text();
+
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
             $item -> ins_time = now();
-            $item -> url_title = $entries; 
+            $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> save();
 
-            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=>$item -> new_id , 'url_title'=> $entries]);               
+            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=>$item -> new_id , 'url_title'=> $url_title]);               
         }
         else
         {
-            /*$item = new Urltrans;
+            $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
@@ -81,26 +81,10 @@ class Urlcon extends Controller
             $new_insert_number = $item -> number_of_inseret_times;
             $item -> number_of_inseret_times = $new_insert_number++;
 
-            
-            $item -> increment('number_of_inseret_times');
+            //$item -> increment('number_of_inseret_times');
 
-            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
-            $contents = file_get_contents($pre_url);
-            
-            $doc = new \DOMDocument();
-            //dd($doc);
-            libxml_use_internal_errors(true);
-            $doc -> loadHTML($contents);
-            libxml_use_internal_errors(false);
-            
-            $xpath = new \DOMXpath($doc);
-            //dd(var_dump($xpath));
-            $entries = $xpath -> query('//title') -> item(0) -> textContent;
-            //dd(var_dump($entries));
+            return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);
 
-            
-            
-            return $entries;
         }
 
     }
