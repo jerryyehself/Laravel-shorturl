@@ -64,15 +64,16 @@ class Urlcon extends Controller
             $item -> increment('number_of_inseret_times');
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);*/
+            $contents = file_get_contents($pre_url);
+            
             $doc = new \DOMDocument();
             //dd($doc);
-            $doc -> loadHTMLFile($pre_url);
             
+            $doc -> loadHTML($contents);
             
-
             $xpath = new \DOMXpath($doc);
-            dd(var_dump($xpath));
-            $entries = $xpath -> query('//title');
+            //dd(var_dump($xpath));
+            $entries = $xpath -> query('//title') -> item(0) -> textContent;
             //dd(var_dump($entries));
 
             
