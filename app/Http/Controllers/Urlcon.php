@@ -34,7 +34,9 @@ class Urlcon extends Controller
 
             $url_random = rand(10 ,100);
 
-            $contents = new Crawler($pre_url);
+            $crawler = new Crawler();
+
+            $crawler -> addHtmlContent($pre_url);
 
             //$doc = new \DOMDocument();
             
@@ -42,7 +44,7 @@ class Urlcon extends Controller
 
             
             //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            dd($contents);
+            dd($crawler);
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
             

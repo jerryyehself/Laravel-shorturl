@@ -12,6 +12,7 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "symfony/css-selector": "^5.3",
         "symfony/dom-crawler": "^5.3"
     },
     "require-dev": {
