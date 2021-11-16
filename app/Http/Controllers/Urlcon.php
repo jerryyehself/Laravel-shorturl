@@ -46,7 +46,7 @@ class Urlcon extends Controller
 
             
             //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            dd($crawler->filterXPath("//html")->text());
+            dd($crawler);
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
             
