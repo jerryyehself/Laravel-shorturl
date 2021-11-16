@@ -33,14 +33,14 @@ class Urlcon extends Controller
 
             $url_random = rand(10 ,100);
 
-            $contents = file_get_contents($pre_url);
+            $contents = file_get_html($pre_url);
 
             //$doc = new \DOMDocument();
             
             //libxml_use_internal_errors(true);
 
             
-            $contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
+            //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
             dd($contents);
             //$doc -> loadHTML($contents);
             //libxml_use_internal_errors(false);
