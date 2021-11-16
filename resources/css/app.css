@@ -222,7 +222,8 @@ input{
     background-color: #eae4e9;
 }
 
-.url_title{
-    margin: 5px 0 0 0;
-    
+.url_title, .url-string{
+    margin: 5px 0 0 5px;
+    text-align: left;
 }
+

@@ -25,7 +25,8 @@
         @if(@isset($pre_url))
             <p>轉換結果</p>
                 <span class="url_title" name="url_title" id="url_title"> 
-                    網頁名稱: {{ $url_title }}
+                    網頁名稱:<br/>
+                    {{ $url_title }}
                 </span>
                 <br>    
                 <span class="url-string">
