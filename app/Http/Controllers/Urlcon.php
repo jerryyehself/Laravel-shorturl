@@ -68,8 +68,9 @@ class Urlcon extends Controller
             
             $doc = new \DOMDocument();
             //dd($doc);
-            
+            libxml_use_internal_errors(true);
             $doc -> loadHTML($contents);
+            libxml_use_internal_errors(false);
             
             $xpath = new \DOMXpath($doc);
             //dd(var_dump($xpath));
