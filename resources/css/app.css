@@ -75,7 +75,7 @@ a{
     grid-column-end: 3;
     font-size: 2em;
     font-weight:900;
-    align-items: start;
+    align-items: flex-start;
     display: inline-flex;
 }
 
