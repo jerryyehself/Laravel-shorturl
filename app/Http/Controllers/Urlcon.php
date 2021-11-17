@@ -81,7 +81,7 @@ class Urlcon extends Controller
             $item -> url_title = $sql -> url_title;
 
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
-            $new_insert_number = increment($item -> number_of_inseret_times);
+            $new_insert_number = $item -> number_of_inseret_times++;
             $item -> $sql-> update('number_of_inseret_times', $new_insert_number);
             //$item -> number_of_inseret_times = $sql -> number_of_inseret_times
             //$new_insert_number = $item -> number_of_inseret_times;
