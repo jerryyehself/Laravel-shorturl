@@ -31,38 +31,18 @@ class Urlcon extends Controller
 
             $url_random = rand(10 ,100);
 
-            $crawler = new Crawler();
-
             $html_content = file_get_contents($pre_url);
 
-            $crawler -> addHtmlContent($html_content);
+            $crawler = new Crawler();
 
-            //$doc = new \DOMDocument();
-            
-            //libxml_use_internal_errors(true);
-
-            
-            //$contents = mb_convert_encoding($contents, 'HTML-ENTITIES', "UTF-8");
-            
-            //$doc -> loadHTML($contents);
-            //libxml_use_internal_errors(false);
-            
-            //$xpath = new \DOMXpath($doc);
-            //dd($xpath);
-            //$entries = $xpath -> query('//title') -> item(0) -> textContent;
-
-
-            
-            //dd(preg_match("/<title>(.*)<\/title>/s", $contents, $match));
-
-            $url_title = $crawler -> filterXpath("//title") -> text();
+            $url_title = $crawler -> addHtmlContent($html_content) -> filterXpath("//title") -> text();
 
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
             $item -> ins_time = now();
             $item -> url_title = $url_title; 
-            $item -> number_of_inseret_times = 1;
+            $item -> number_of_inseret_times = increment('number_of_inseret_times');
             $item -> save();
 
             return view('/welcome', ['pre_url'=> $pre_url,
