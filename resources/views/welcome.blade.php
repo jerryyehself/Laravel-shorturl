@@ -24,13 +24,17 @@
     <div class="function-output">
         @if(@isset($pre_url))
             <p>轉換結果</p>
-                <span class="url_title" name="url_title" id="url_title"> 
-                    網頁名稱:<br/>
+                <span class="sub-title" name="sub-title" id="sub-title"> 
+                    來源網頁名稱:<br/>
+                </span>
+                <span class="url_title" name="url_title" id="url_title">
                     {{ $url_title }}
                 </span>
                 <br>    
-                <span class="url-string">
-                    短網址:        
+                <span class="sub-title" name="sub-title" id="sub-title">
+                    短網址:
+                </span>
+                <span class="url-string">        
                     <a class="ot" id="urlt" href="{{ $pre_url }}" name = "new_url">
                         https://dbtes.herokuapp.com/{{ $new_id }}
                     </a>
@@ -41,6 +45,6 @@
     </div>
 </div>
 <footer class="footer">
-        測試用
+        copyright 2021
 </footer>  
 @endsection

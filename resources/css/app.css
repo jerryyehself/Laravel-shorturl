@@ -227,3 +227,12 @@ input{
     text-align: left;
 }
 
+.sub-title{
+    margin: 5px 0 0 5px;
+    text-align: left;
+    text-shadow: #555;
+}
+
+.ot{
+    width: fit-content;
+}

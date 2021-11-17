@@ -77,11 +77,11 @@ class Urlcon extends Controller
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
+            $item -> increment('number_of_inseret_times')
+            //$new_insert_number = $item -> number_of_inseret_times;
+            //$item -> number_of_inseret_times = $new_insert_number++;
 
-            $new_insert_number = $item -> number_of_inseret_times;
-            $item -> number_of_inseret_times = $new_insert_number++;
-
-            //$item -> increment('number_of_inseret_times');
+            ;
 
             return view('/welcome', ['pre_url'=> $pre_url, 'new_id'=> $item -> new_id, 'url_title'=> $item -> url_title ]);
 
