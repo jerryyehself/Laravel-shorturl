@@ -61,6 +61,8 @@ class Urlcon extends Controller
             
             
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
+
+            dd(var_dump($new_insert_number));
             
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
             //$new_insert_number = $item -> number_of_inseret_times;
