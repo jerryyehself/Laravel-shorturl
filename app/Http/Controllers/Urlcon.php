@@ -24,8 +24,6 @@ class Urlcon extends Controller
         //isset($pre_url));
         $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
 
-        $insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
-
         //dd(($sql));
 
         if($sql == null)
@@ -46,11 +44,11 @@ class Urlcon extends Controller
             $item -> new_id = $url_random;
             $item -> ins_time = now();
             $item -> url_title = $url_title; 
-            $item -> $insert_number+1;
+            $item -> number_of_inseret_times = 1;
             $item -> save();
 
             return view('/welcome', ['pre_url'=> $pre_url,
-                                     'new_id' => $item -> new_id,
+                                     'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);               
         }
@@ -60,6 +58,10 @@ class Urlcon extends Controller
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
+            
+            
+            $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
+            
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
             //$new_insert_number = $item -> number_of_inseret_times;
             //$item -> number_of_inseret_times = $new_insert_number++;
