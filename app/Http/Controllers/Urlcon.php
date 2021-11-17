@@ -92,7 +92,7 @@ class Urlcon extends Controller
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $item -> new_id,
                                      'url_title'=> $item -> url_title,
-                                     'number_of_inseret_times'=> $new_insert_number ]);
+                                     'number_of_inseret_times'=> $item -> number_of_inseret_times ]);
 
         }
 
