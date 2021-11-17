@@ -28,9 +28,6 @@ class Urlcon extends Controller
 
         if($sql == null)
         {
-            
-                
-            $sql = $sql;
 
             $url_random = rand(10 ,100);
 
@@ -79,11 +76,11 @@ class Urlcon extends Controller
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
+            
+            
+            $sql -> increment('number_of_inseret_times');
 
-            $update_inseret_times = $sql -> number_of_inseret_times++;
-
-            $item -> number_of_inseret_times = $update_inseret_times;
-            $item -> save();
+            $item -> number_of_inseret_times = $sql -> number_of_inseret_times;
             //$item -> number_of_inseret_times = $sql -> number_of_inseret_times
             //$new_insert_number = $item -> number_of_inseret_times;
             //$item -> number_of_inseret_times = $new_insert_number++;
