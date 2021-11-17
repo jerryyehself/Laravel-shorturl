@@ -35,7 +35,9 @@ class Urlcon extends Controller
 
             $crawler = new Crawler();
 
-            $url_title = $crawler -> addHtmlContent($html_content) -> filterXpath("//title") -> text();
+            $crawler -> addHtmlContent($html_content);
+
+            $url_title = $crawler -> filterXpath("//title") -> text();
 
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
