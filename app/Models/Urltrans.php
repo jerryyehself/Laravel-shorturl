@@ -20,5 +20,6 @@ class Urltrans extends Model
     protected $pre_id;
     protected $new_id;
     protected $url_title;
+    protected $number_of_inseret_times;
     
 }
