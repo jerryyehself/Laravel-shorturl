@@ -13,18 +13,15 @@ class Urlcon extends Controller
     
 
     public function turn_in(Request $request){
-
-        //@$_GET['pre_url'];
         
         $pre_url =  $request->input('pre_url');
+
         if(!isset($pre_url))
         {
             return view('/welcome',['pre_url'=>'', 'new_id' => '', 'url_title'=> '']);
         } 
-        //isset($pre_url));
+        
         $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
-
-        //dd(($sql));
 
         if($sql == null)
         {
@@ -58,17 +55,10 @@ class Urlcon extends Controller
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
-            
+            $item -> number_of_inseret_times = $sql -> number_of_inseret_times+1;
             
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
-
-            //dd(var_dump($new_insert_number));
             
-            $item -> number_of_inseret_times = $sql -> number_of_inseret_times+1;
-            //$new_insert_number = $item -> number_of_inseret_times;
-            //$item -> number_of_inseret_times = $new_insert_number++;
-            
-
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $item -> new_id,
                                      'url_title'=> $item -> url_title,
@@ -84,11 +74,6 @@ class Urlcon extends Controller
 
             $item = new Urltrans;
             $item -> pre_id = $sql -> pre_id;
-            
-            $fp = file_get_contents($pre_url); 
-            preg_match("/<title>(.*)<\/title>/s", $fp, $match);
-
-            $url_title = string($match[1]);
             
             return '<script>document.location.href="'.$item -> pre_id.'";</script>';
         }
