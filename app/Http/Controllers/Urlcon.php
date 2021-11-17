@@ -44,7 +44,7 @@ class Urlcon extends Controller
             $item -> new_id = $url_random;
             $item -> ins_time = now();
             $item -> url_title = $url_title; 
-            $item -> number_of_inseret_times = increment('number_of_inseret_times');
+            $item -> number_of_inseret_times = 1;
             $item -> save();
 
             return view('/welcome', ['pre_url'=> $pre_url,
