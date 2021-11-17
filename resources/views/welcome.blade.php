@@ -42,14 +42,14 @@
                 </span>              
         
     </div>
-    <div class="right-show">
-        <span class="sub-title" name="sub-title" id="sub-title">
-            來源網址被轉換次數
-        </span>
-        <span>
-            {{ $number_of_inseret_times }}
+        <div class="right-show">
+            <span class="sub-title" name="sub-title" id="sub-title">
+                來源網址被轉換次數
+            </span>
+            <span>
+                {{ $number_of_inseret_times }}
+        </div>
     </div>
-</div>
 @endif
 <footer class="footer">
 © 2021
