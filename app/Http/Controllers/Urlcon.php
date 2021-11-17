@@ -46,11 +46,11 @@ class Urlcon extends Controller
             $item -> new_id = $url_random;
             $item -> ins_time = now();
             $item -> url_title = $url_title; 
-            $item -> $insert_number;
+            $item -> $insert_number+1;
             $item -> save();
 
             return view('/welcome', ['pre_url'=> $pre_url,
-                                     'new_id'=>$item -> new_id,
+                                     'new_id' => $item -> new_id,
                                      'url_title'=> $url_title,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);               
         }
