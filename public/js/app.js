@@ -38,6 +38,10 @@ if (document.getElementById("url-string").getAttribute("href") != "") {
     arr[1] = temp;
     $('.url-tran').html(arr);
   });
+  $(".submit").css("display", "none");
+  $(".url").focus(function () {
+    $(".submit").css("display", "inline-block");
+  });
 }
 
 /***/ }),

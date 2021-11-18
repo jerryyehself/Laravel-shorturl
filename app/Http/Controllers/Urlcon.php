@@ -42,11 +42,19 @@ class Urlcon extends Controller
             $item -> ins_time = now();
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
+
+            $r = new HTTP_Request($pre_url);
+            $r->sendRequest();
+            $response_headers = $r->getResponseHeader();
+            $item -> url_update_time = $response_headers["last-modified"];
+
             $item -> save();
 
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
+                                     'ins_time'=>$item -> ins_time,
+                                     'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);               
         }
         else
@@ -56,12 +64,20 @@ class Urlcon extends Controller
             $item -> new_id = $sql -> new_id;
             $item -> url_title = $sql -> url_title;
             $item -> number_of_inseret_times = $sql -> number_of_inseret_times+1;
-            
+            $item -> ins_time =  $sql -> ins_time;
+            $item -> url_update_time =  $sql -> url_update_time;
+
+
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
+
+
+
             
             return view('/welcome', ['pre_url'=> $pre_url,
-                                     'new_id'=> $item -> new_id,
-                                     'url_title'=> $item -> url_title,
+                                     'new_id'=>$item -> new_id,
+                                     'url_title'=> $url_title,
+                                     'ins_time'=>$item -> ins_time,
+                                     'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);
 
         }

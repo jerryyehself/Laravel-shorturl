@@ -51,12 +51,19 @@
         <p class="sub-title" name="sub-title" id="sub-title">
             本站首次轉換短網址時間
         </p>
+        <span class="url_title" name="url_title" id="url_title">
+            {{ $ins_time }}
+        </span>
         <p class="sub-title" name="sub-title" id="sub-title">
             所屬網域
         </p>
+        
         <p class="sub-title" name="sub-title" id="sub-title">
             頁面最後更新時間
         </p>
+        <span class="url_title" name="url_title" id="url_title">
+            {{ $url_update_time }}
+        </span>
     </div>
 </div>
 @endif

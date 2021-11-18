@@ -172,7 +172,6 @@ input.active:focus {
     margin-left: 5px;
     margin-bottom: 10px;
     font-weight:bold;
-    text-shadow: 3px 3px 1px#555;  
 }
 
 form{
@@ -233,6 +232,7 @@ input{
     margin: 5px 0 0 5px;
     text-align: left;
     font-weight: bolder;
+    text-decoration: underline;
 }
 
 .ot{
