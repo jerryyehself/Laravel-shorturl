@@ -11,6 +11,9 @@ body {
 a{
     display: block;
     text-decoration:none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 .title-font , a:visited{
@@ -172,6 +175,7 @@ input.active:focus {
     font-size: 1.5em;
     margin-top: 5px;
     margin-left: 5px;
+    margin-bottom: 10px;
     font-weight:bold;  
 }
 
@@ -226,7 +230,6 @@ input{
 }
 
 .url_title, .url-string{
-    margin: 5px;
     text-align: left;
     font-weight: normal;
 }
