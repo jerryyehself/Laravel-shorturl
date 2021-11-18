@@ -43,7 +43,8 @@ class Urlcon extends Controller
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
 
-            $r = new HTTP_Request($pre_url);
+            $r = new Request($pre_url);
+            dd($r);
             $r->sendRequest();
             $response_headers = $r->getResponseHeader();
             $item -> url_update_time = $response_headers["last-modified"];
