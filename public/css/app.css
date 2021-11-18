@@ -168,7 +168,7 @@ input.active:focus {
     display: inline;
 }
 
-p{
+.trans-result{
     font-size: 1.5em;
     margin-top: 5px;
     margin-left: 5px;
@@ -227,7 +227,7 @@ input{
 }
 
 .url_title, .url-string{
-    margin: 5px 0 0 5px;
+    margin: 5px;
     text-align: left;
 }
 

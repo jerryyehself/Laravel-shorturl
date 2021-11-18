@@ -24,20 +24,18 @@
     </div>
     <div class="function-output">
         
-        <p>轉換結果</p>
-            <span class="sub-title" name="sub-title" id="sub-title"> 
-                來源網頁名稱<br/>
-            </span>
+        <p class="trans-result">轉換結果</p>
+        <p class="sub-title" name="sub-title" id="sub-title">
+            來源網頁名稱<br/>
             <span class="url_title" name="url_title" id="url_title">
                 {{ $url_title }}
-            </span>
-            <br>    
-            <span class="sub-title" name="sub-title" id="sub-title">
-                短網址
-            </span>
+            </span><br/>    
+        <p class="sub-title" name="sub-title" id="sub-title">
+            短網址
             <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
                 https://dbtes.herokuapp.com/{{ $new_id }}
-            </a>    
+            </a>
+        </p>    
     </div>
         <div class="right-show">
             <span class="sub-title" name="sub-title" id="sub-title">
