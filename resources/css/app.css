@@ -230,8 +230,7 @@ input{
 .sub-title{
     margin: 5px 0 0 5px;
     text-align: left;
-    text-size-adjust: 2em;
-    
+    font-weight: bolder;
 }
 
 .ot{

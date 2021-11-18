@@ -234,10 +234,7 @@ input{
 .sub-title{
     margin: 5px 0 0 5px;
     text-align: left;
-    -webkit-text-size-adjust: 2em;
-       -moz-text-size-adjust: 2em;
-            text-size-adjust: 2em;
-    
+    font-weight: bolder;
 }
 
 .ot{
