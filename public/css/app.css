@@ -172,8 +172,7 @@ input.active:focus {
     font-size: 1.5em;
     margin-top: 5px;
     margin-left: 5px;
-    font-weight:bold;
-    
+    font-weight:bold;  
 }
 
 form{
@@ -229,6 +228,7 @@ input{
 .url_title, .url-string{
     margin: 5px;
     text-align: left;
+    font-weight: normal;
 }
 
 .sub-title{
@@ -241,5 +241,9 @@ input{
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+}
+
+span{
+    font-weight: normal;
 }
 
