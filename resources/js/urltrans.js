@@ -1,4 +1,4 @@
-if (document.getElementById("urlt").getAttribute("href") != ""){
+if (document.getElementById("url-string").getAttribute("href") != ""){
     $(".head-bar").toggleClass("active");
     $(".title-zh").toggleClass("active");
     $(".title-eng").toggleClass("active");
