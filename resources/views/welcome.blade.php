@@ -26,17 +26,19 @@
         
         <p class="trans-result">轉換結果</p>
         <p class="sub-title" name="sub-title" id="sub-title">
-            來源網頁名稱<br/>
-            <span class="url_title" name="url_title" id="url_title">
-                {{ $url_title }}
-            </span>
+            來源網頁名稱
+        </p>
+        <span class="url_title" name="url_title" id="url_title">
+            {{ $url_title }}
+        </span>
         </p>    
         <p class="sub-title" name="sub-title" id="sub-title">
             短網址
-            <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
-                https://dbtes.herokuapp.com/{{ $new_id }}
-            </a>
         </p>
+        <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
+                https://dbtes.herokuapp.com/{{ $new_id }}
+        </a>
+    
 
     </div>
     <div class="right-show">
