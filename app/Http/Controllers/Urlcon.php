@@ -38,8 +38,6 @@ class Urlcon extends Controller
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
 
-            dd($url_host);
-
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
