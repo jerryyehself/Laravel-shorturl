@@ -83,7 +83,7 @@ class Urlcon extends Controller
                                      'url_title'=> $item -> url_title,
                                      'ins_time'=>$item -> ins_time,
                                      //'url_update_time'=>$item -> url_update_time,
-                                     'url_host' =>$item ->  $url_host,
+                                     'url_host' => $item -> url_host,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);
 
         }
@@ -101,5 +101,5 @@ class Urlcon extends Controller
             //
             
             return '<script>document.location.href="'.$item -> pre_id.'";</script>';
-        }
+    }
 }
