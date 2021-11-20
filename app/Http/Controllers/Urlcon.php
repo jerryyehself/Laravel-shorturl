@@ -54,10 +54,10 @@ class Urlcon extends Controller
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
 
-            /*$r->sendRequest();
-            $response_headers = $r->getResponseHeader();
+            $pre_url->sendRequest();
+            $response_headers = $pre_url->getResponseHeader();
             $item -> url_update_time = $response_headers["last-modified"];
-            */
+            
             $item -> usage_number = 0;
             
 
