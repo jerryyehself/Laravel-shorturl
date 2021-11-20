@@ -55,9 +55,9 @@ class Urlcon extends Controller
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
 
-            $pre_url->sendRequest();
+            /*$pre_url->sendRequest();
             $response_headers = $pre_url->getResponseHeader();
-            $item -> url_update_time = $response_headers["last-modified"];
+            $item -> url_update_time = $response_headers["last-modified"];*/
             
             $item -> usage_number = 0;
             
@@ -68,7 +68,7 @@ class Urlcon extends Controller
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
                                      'ins_time'=>$item -> ins_time,
-                                     'url_update_time'=>$item -> url_update_time,
+                                     //'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times,
                                      'url_host' => $url_host,
                                      'usage_number' => $item -> usage_number]);               
@@ -97,7 +97,7 @@ class Urlcon extends Controller
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
                                      'ins_time'=> $sql -> ins_time,
-                                     'url_update_time'=>$item -> url_update_time,
+                                     'url_update_time'=> $sql -> url_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
                                      'usage_number' => $sql -> uasge_number]);
