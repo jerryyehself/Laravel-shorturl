@@ -16,6 +16,8 @@ class Urlcon extends Controller
         
         $pre_url =  $request->input('pre_url');
 
+        date_default_timezone_set("Asia/Taipei");
+
         if(!isset($pre_url))
         {
             return view('/welcome',['pre_url'=>'', 'new_id' => '', 'url_title'=> '']);
@@ -41,7 +43,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
-            $item -> ins_time = date_create('now')->format('Y-m-d H:i:s');
+            $item -> ins_time = date('Y-m-d H:i:s');
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
