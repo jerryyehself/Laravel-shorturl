@@ -20,10 +20,10 @@ class Urlcon extends Controller
 
         if(!isset($pre_url))
         {
-        return view('/welcome'/*,['pre_url'=>'', 'new_id' => '', 'url_title'=> '']*/);
+        return view('/welcome',['pre_url'=>'', 'new_id' => '', 'url_title'=> '']);
         } 
         
-        $sql = DB::table('urltrans')->where('pre_id', $pre_url);
+        $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
 
         if($sql == null)
         {
