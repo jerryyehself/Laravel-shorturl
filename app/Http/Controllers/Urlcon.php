@@ -90,14 +90,17 @@ class Urlcon extends Controller
             
             //dd($item -> uasge_number);*/
             $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
+            
+            $new_update_time = get_headers($pre_url,1)["Last-Modified"];
 
+            $save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
             //dd($sql);
 
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
                                      'ins_time'=> $sql -> ins_time,
-                                     'url_update_time'=> $sql -> url_update_time,
+                                     'url_update_time'=> $new_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
                                      'usage_number' => $sql -> usage_number]);

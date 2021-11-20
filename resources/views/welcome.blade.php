@@ -42,7 +42,7 @@
             短網址使用次數
         </p>
         <span class="url_title" name="url_title" id="url_title">
-            {{ $usage_number }}
+            {{ $usage_number }}次
         </span>
     
 
