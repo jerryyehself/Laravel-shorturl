@@ -80,8 +80,10 @@ class Urlcon extends Controller
             $item -> uasge_number = $sql -> usage_number;
             
             
-            dd($item -> uasge_number);
+            //dd($item -> uasge_number);
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
+
+            dd($item -> uasge_number);
 
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=>$item -> new_id,
@@ -90,7 +92,7 @@ class Urlcon extends Controller
                                      //'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times,
                                      'url_host' => $item -> url_host,
-                                     'usage_number' => $item -> usage_number]);
+                                     'usage_number' => $item -> uasge_number]);
         }
     }
     
