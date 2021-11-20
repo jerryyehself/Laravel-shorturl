@@ -24,7 +24,8 @@ class Urlcon extends Controller
                                 'usage_number'=> '',
                                 'number_of_inseret_times' => '',
                                 'ins_time' => '',
-                                'url_host' => '']);
+                                'url_host' => '',
+                                'url_update_time'=> '']);
         } 
 
         date_default_timezone_set("Asia/Taipei");
