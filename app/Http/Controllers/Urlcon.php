@@ -100,7 +100,7 @@ class Urlcon extends Controller
                                      'url_update_time'=> $sql -> url_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
-                                     'usage_number' => $sql -> uasge_number]);
+                                     'usage_number' => $sql -> usage_number]);
         }
     }
     
