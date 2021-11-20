@@ -58,9 +58,10 @@
         </span>
         <p class="sub-title" name="sub-title" id="sub-title">
             所屬網域
-            {{ $url_host }}
         </p>
-        
+        <span class="url_title" name="url_title" id="url_title">
+            {{ $url_host }}
+        </span>
         <p class="sub-title" name="sub-title" id="sub-title">
             頁面最後更新時間
         </p>
