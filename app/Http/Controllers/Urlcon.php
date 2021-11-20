@@ -97,7 +97,7 @@ class Urlcon extends Controller
             $item -> pre_id = $sql -> pre_id;
 
             $new_insert_number = DB::table('urltrans')-> increment('usage_number', 1, ['pre_id' => $item -> pre_id]);
-
+            dd( $new_insert_number);
             //
             
             return '<script>document.location.href="'.$item -> pre_id.'";</script>';
