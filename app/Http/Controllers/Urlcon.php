@@ -97,7 +97,7 @@ class Urlcon extends Controller
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $item -> new_id,
                                      'url_title'=> $item -> url_title,
-                                     'ins_time'=> format($item -> ins_time, 'Y-m-d H:i:s'),
+                                     'ins_time'=> $item -> ins_time,
                                      //'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times,
                                      'url_host' => $item -> url_host,
