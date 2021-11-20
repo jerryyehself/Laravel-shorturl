@@ -20,7 +20,13 @@ class Urlcon extends Controller
 
         if(!isset($pre_url))
         {
-        return view('/welcome',['pre_url'=>'', 'new_id' => '', 'url_title'=> '']);
+        return view('/welcome',['pre_url'=>'',
+                                'new_id' => '',
+                                'url_title'=> '',
+                                'usage_number'=> '',
+                                'number_of_inseret_times' => '',
+                                'ins_time' => '',
+                                'url_host' => '']);
         } 
         
         $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
