@@ -38,6 +38,8 @@ class Urlcon extends Controller
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
 
+            dd($url_host);
+
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
@@ -75,8 +77,6 @@ class Urlcon extends Controller
             //$item -> url_update_time =  $sql -> url_update_time;
             $item -> url_host = $sql -> url_host;
             $item -> uasge_number = $sql -> usage_number;
-
-
 
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
 
