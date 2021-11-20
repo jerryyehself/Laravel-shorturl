@@ -20,7 +20,7 @@ class Urlcon extends Controller
 
         if(!isset($pre_url))
         {
-            return view('/welcome',['pre_url'=>'', 'new_id' => '', 'url_title'=> '']);
+        return view('/welcome'/*,['pre_url'=>'', 'new_id' => '', 'url_title'=> '']*/);
         } 
         
         $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
@@ -77,7 +77,7 @@ class Urlcon extends Controller
             //$item -> url_update_time =  $sql -> url_update_time;
             $item -> url_host = $sql -> url_host;
             $item -> uasge_number = $sql -> usage_number;
-            dd($item -> uasge_number);
+
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
 
             return view('/welcome', ['pre_url'=> $pre_url,
