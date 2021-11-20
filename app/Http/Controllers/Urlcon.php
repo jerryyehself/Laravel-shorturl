@@ -60,6 +60,7 @@ class Urlcon extends Controller
             
             $item -> usage_number = 0;
             
+            dd($item -> url_update_time);
 
             $item -> save();
             //dd($sql == null);
