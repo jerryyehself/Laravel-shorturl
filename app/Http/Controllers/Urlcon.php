@@ -55,9 +55,8 @@ class Urlcon extends Controller
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
 
-            /*$pre_url->sendRequest();
-            $response_headers = $pre_url->getResponseHeader();
-            $item -> url_update_time = $response_headers["last-modified"];*/
+            
+            $item -> url_update_time = get_headers($pre_url,"Last-Modified");
             
             $item -> usage_number = 0;
             
@@ -68,7 +67,7 @@ class Urlcon extends Controller
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
                                      'ins_time'=>$item -> ins_time,
-                                     //'url_update_time'=>$item -> url_update_time,
+                                     'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times,
                                      'url_host' => $url_host,
                                      'usage_number' => $item -> usage_number]);               
@@ -89,7 +88,7 @@ class Urlcon extends Controller
             
             
             //dd($item -> uasge_number);*/
-        $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times'/*, 1, ['pre_id' => $pre_url]*/);
+            $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
 
             //dd($sql);
 
@@ -111,7 +110,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $sql -> pre_id;
 
-            $new_insert_number = DB::table('urltrans')-> increment('usage_number', 1, ['pre_id' => $item -> pre_id]);
+            $new_insert_number = DB::table('urltrans') ->where('new_id', $codee) -> increment('usage_number');
             //dd( $new_insert_number);
             //
             
