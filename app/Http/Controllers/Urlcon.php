@@ -63,7 +63,7 @@ class Urlcon extends Controller
             
 
             $item -> save();
-            dd($sql == null);
+            //dd($sql == null);
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
