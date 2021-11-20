@@ -49,9 +49,9 @@ class Urlcon extends Controller
             /*$r->sendRequest();
             $response_headers = $r->getResponseHeader();
             $item -> url_update_time = $response_headers["last-modified"];
-            
-            $item -> usage_number = 0;
             */
+            $item -> usage_number = 0;
+            
 
             $item -> save();
 
