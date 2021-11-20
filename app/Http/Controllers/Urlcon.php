@@ -16,7 +16,7 @@ class Urlcon extends Controller
         
         $pre_url =  $request->input('pre_url');
 
-        date_default_timezone_set("Asia/Taipei");
+        
 
         if(!isset($pre_url))
         {
@@ -28,6 +28,8 @@ class Urlcon extends Controller
                                 'ins_time' => '',
                                 'url_host' => '']);
         } 
+
+        date_default_timezone_set("Asia/Taipei");
         
         $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
 
