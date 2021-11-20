@@ -88,6 +88,7 @@ class Urlcon extends Controller
                                      'url_title'=> $item -> url_title,
                                      'ins_time'=>$item -> ins_time,
                                      //'url_update_time'=>$item -> url_update_time,
+                                     'url_host' => $url_host,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);
 
         }
