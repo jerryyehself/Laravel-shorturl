@@ -42,6 +42,9 @@ if (document.getElementById("url-string").getAttribute("href") != "") {
   $(".url").focus(function () {
     $(".submit").css("display", "inline-block");
   });
+  $(".url").blur(function () {
+    $(".submit").css("display", "none");
+  });
 }
 
 /***/ }),

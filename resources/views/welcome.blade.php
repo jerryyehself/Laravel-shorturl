@@ -58,6 +58,7 @@
         </span>
         <p class="sub-title" name="sub-title" id="sub-title">
             所屬網域
+            {{ $url_host }}
         </p>
         
         <p class="sub-title" name="sub-title" id="sub-title">

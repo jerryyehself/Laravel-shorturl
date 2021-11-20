@@ -18,7 +18,13 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
             arr[1] = temp;
          
             $('.url-tran').html(arr);
-        })
+        });
+    $(".url").focus(function(){
+        $(".submit").css("display", "inline-block");
+    });
+    $(".url").blur(function(){
+        $(".submit").css("display", "none");
+    });
 }
 
 
