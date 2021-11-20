@@ -78,9 +78,6 @@ class Urlcon extends Controller
 
             $new_insert_number = DB::table('urltrans')-> increment('number_of_inseret_times', 1, ['pre_id' => $pre_url]);
 
-
-
-            
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $item -> url_title,
@@ -90,7 +87,6 @@ class Urlcon extends Controller
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times]);
 
         }
-
     }
     
     public function turn_t($codee){
