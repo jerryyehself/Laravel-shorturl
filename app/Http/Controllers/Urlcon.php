@@ -41,7 +41,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
-            $item -> ins_time = now();
+            $item -> ins_time = date_create('now')->format('Y-m-d H:i:s');
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
@@ -96,7 +96,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $sql -> pre_id;
 
-            $new_insert_number = DB::table('urltrans')-> increment('usage_number', 1, ['pre_id' => $pre_url]);
+            $new_insert_number = DB::table('urltrans')-> increment('usage_number', 1, ['pre_id' => $item -> pre_id]);
 
             //
             
