@@ -23,7 +23,7 @@ class Urlcon extends Controller
         return view('/welcome'/*,['pre_url'=>'', 'new_id' => '', 'url_title'=> '']*/);
         } 
         
-        $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
+        $sql = DB::table('urltrans')->where('pre_id', $pre_url);
 
         if($sql == null)
         {
