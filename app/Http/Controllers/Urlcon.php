@@ -56,11 +56,11 @@ class Urlcon extends Controller
             $item -> url_host = $url_host;
 
             
-            $item -> url_update_time = get_headers($pre_url);
+            $item -> url_update_time = get_headers($pre_url)["Last-Modified"];
             
             $item -> usage_number = 0;
             
-            dd($item -> url_update_time["Last-Modified"]);
+            dd($item -> url_update_time);
 
             $item -> save();
             //dd($sql == null);
