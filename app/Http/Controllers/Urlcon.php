@@ -76,6 +76,8 @@ class Urlcon extends Controller
         }
         else
         {
+            date_default_timezone_set("Asia/Taipei");
+            
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $sql -> new_id;
