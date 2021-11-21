@@ -46,7 +46,7 @@ class Urlcon extends Controller
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
-            dd(get_headers($pre_url,1));
+            dd(get_headers($pre_url,1)["Last-Modified"] == null);
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
