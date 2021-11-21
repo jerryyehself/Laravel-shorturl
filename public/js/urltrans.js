@@ -19,10 +19,10 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
          
             $('.url-tran').html(arr);
         });
-    $(".url").focus(function(){
+    $(".url.active").focus(function(){
         $(".submit").css("display", "inline-block");
     });
-    $(".url").blur(function(){
+    $(".url.active").blur(function(){
         $(".submit").css("display", "none");
     });
 }

@@ -46,7 +46,7 @@ class Urlcon extends Controller
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
-
+            dd(get_headers($pre_url,1)["Last-Modified"]);
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
@@ -54,16 +54,11 @@ class Urlcon extends Controller
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
-
-            
             $item -> url_update_time = get_headers($pre_url,1)["Last-Modified"];
-            
             $item -> usage_number = 0;
-            
-            //dd($item -> url_update_time);
 
             $item -> save();
-            //dd($sql == null);
+
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
@@ -76,19 +71,6 @@ class Urlcon extends Controller
         else
         {
             
-            /*$item = new Urltrans;
-            $item -> pre_id = $pre_url;
-            $item -> new_id = $sql -> new_id;
-            $item -> url_title = $sql -> url_title;
-            $item -> number_of_inseret_times = $sql -> number_of_inseret_times+1;
-            $item -> ins_time =  $sql -> ins_time;
-            //$item -> url_update_time =  $sql -> url_update_time;
-
-            $item -> url_host = $sql -> url_host;
-            $item -> uasge_number = $sql -> usage_number;
-            
-            
-            //dd($item -> uasge_number);*/
             $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
             
             $new_update_time = get_headers($pre_url,1)["Last-Modified"];
@@ -115,9 +97,7 @@ class Urlcon extends Controller
             $item -> pre_id = $sql -> pre_id;
 
             $new_insert_number = DB::table('urltrans') ->where('new_id', $codee) -> increment('usage_number');
-            //dd( $new_insert_number);
-            //
-            
+
             return '<script>document.location.href="'.$item -> pre_id.'";</script>';
     }
 }
