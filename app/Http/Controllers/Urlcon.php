@@ -71,6 +71,8 @@ class Urlcon extends Controller
         else
         {
             
+            
+            date_default_timezone_set("Asia/Taipei");
             $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
             //$ins_time = to_char($sql -> ins_time, "")
             //$new_update_time = get_headers($pre_url,1)["Last-Modified"];
