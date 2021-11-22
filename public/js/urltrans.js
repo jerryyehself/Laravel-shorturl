@@ -19,13 +19,14 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
          
             $('.url-tran').html(arr);
         });
-    $(".url.active").focus(function(){
-        $(".submit").css("display", "inline-block");
-    });
-    $(".url.active").blur(function(){
-        $(".submit").css("display", "none");
-    });
 }
+
+$(".url.active").focus(function(){
+    $(".submit").css("display", "inline-block");
+});
+$(".url.active").blur(function(){
+    $(".submit").css("display", "none");
+});
 
 
 
