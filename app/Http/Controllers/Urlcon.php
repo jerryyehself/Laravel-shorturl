@@ -46,7 +46,7 @@ class Urlcon extends Controller
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
-            dd(get_headers($pre_url,1)["Last-Modified"] == null);
+            //dd(match(get_headers($pre_url,1)["Last-Modified"] == null);
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
@@ -54,7 +54,7 @@ class Urlcon extends Controller
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
-            $item -> url_update_time = get_headers($pre_url,1)["Last-Modified"];
+            //$item -> url_update_time = get_headers($pre_url,1)["Last-Modified"];
             $item -> usage_number = 0;
 
             $item -> save();
@@ -63,7 +63,7 @@ class Urlcon extends Controller
                                      'new_id'=>$item -> new_id,
                                      'url_title'=> $url_title,
                                      'ins_time'=>$item -> ins_time,
-                                     'url_update_time'=>$item -> url_update_time,
+                                     //'url_update_time'=>$item -> url_update_time,
                                      'number_of_inseret_times'=> $item -> number_of_inseret_times,
                                      'url_host' => $url_host,
                                      'usage_number' => $item -> usage_number]);               
@@ -73,16 +73,16 @@ class Urlcon extends Controller
             
             $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
             
-            $new_update_time = get_headers($pre_url,1)["Last-Modified"];
+            //$new_update_time = get_headers($pre_url,1)["Last-Modified"];
 
-            $save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
+            //$save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
             //dd($sql);
 
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
                                      'ins_time'=> $sql -> ins_time,
-                                     'url_update_time'=> $new_update_time,
+                                     //'url_update_time'=> $new_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
                                      'usage_number' => $sql -> usage_number]);

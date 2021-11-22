@@ -72,7 +72,7 @@
             頁面最後更新時間
         </p>
         <span class="url_title" name="url_title" id="url_title">
-            {{ $url_update_time }}
+            <!-- {{ $url_update_time }} -->
         </span>
 
     </div>
