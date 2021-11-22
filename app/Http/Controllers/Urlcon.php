@@ -72,7 +72,7 @@ class Urlcon extends Controller
         {
             
             $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
-            
+            //$ins_time = to_char($sql -> ins_time, "")
             //$new_update_time = get_headers($pre_url,1)["Last-Modified"];
 
             //$save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
@@ -81,7 +81,7 @@ class Urlcon extends Controller
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
-                                     'ins_time'=> $sql -> ins_time,
+                                     'ins_time'=> $sql -> ins_time ->format('Y-m-d H:i:s'),
                                      //'url_update_time'=> $new_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
