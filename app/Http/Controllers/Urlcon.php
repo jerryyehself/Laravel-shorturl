@@ -51,7 +51,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
-            $item -> ins_time = Carbon::now();
+            $item -> ins_time = Carbon::now("Asia/Taipei");
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
