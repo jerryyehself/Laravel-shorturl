@@ -25,4 +25,6 @@ class Urltrans extends Model
     protected $ins_time;
     protected $usage_number;
     protected $url_update_time;
+
+    protected $dateFormat = 'U';
 }
