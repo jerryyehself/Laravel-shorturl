@@ -50,7 +50,7 @@ class Urlcon extends Controller
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
-            $item -> ins_time = date('Y-m-d H:i:s');
+            $item -> ins_time = Carbon::now();
             $item -> url_title = $url_title; 
             $item -> number_of_inseret_times = 1;
             $item -> url_host = $url_host;
@@ -83,7 +83,7 @@ class Urlcon extends Controller
             return view('/welcome', ['pre_url'=> $pre_url,
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
-                                     'ins_time'=> $sql -> ins_time,
+                                     'ins_time'=> $sql -> ins_time -> format('d-m-Y h:i:s'),
                                      //'url_update_time'=> $new_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
