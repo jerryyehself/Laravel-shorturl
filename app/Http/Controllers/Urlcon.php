@@ -31,7 +31,9 @@ class Urlcon extends Controller
 
         //date_default_timezone_set("Asia/Taipei");
         
-        $sql = DB::table('urltrans')->where('pre_id', $pre_url)->first();
+        $sql = DB::table('urltrans')
+                ->where('pre_id', $pre_url)
+                ->first();
         
         if($sql == null)
         {
@@ -47,7 +49,7 @@ class Urlcon extends Controller
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
-            //dd(match(get_headers($pre_url,1)["Last-Modified"] == null);
+            
             $item = new Urltrans;
             $item -> pre_id = $pre_url;
             $item -> new_id = $url_random;
@@ -74,8 +76,11 @@ class Urlcon extends Controller
             
             
             date_default_timezone_set("Asia/Taipei");
-            $new_insert_number = DB::table('urltrans')-> where('pre_id', $pre_url)  -> increment('number_of_inseret_times');
-            //$ins_time = to_char($sql -> ins_time, "")
+
+            $new_insert_number = DB::table('urltrans')
+                                    -> where('pre_id', $pre_url)
+                                    -> increment('number_of_inseret_times');
+
             //$new_update_time = get_headers($pre_url,1)["Last-Modified"];
 
             //$save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
@@ -96,11 +101,10 @@ class Urlcon extends Controller
 
             $sql = DB::table('urltrans')->where('new_id', $codee)->first();
 
-            $item = new Urltrans;
-            $item -> pre_id = $sql -> pre_id;
+            $new_insert_number = DB::table('urltrans')
+                                    ->where('new_id', $codee)
+                                    ->increment('usage_number');
 
-            $new_insert_number = DB::table('urltrans') ->where('new_id', $codee) -> increment('usage_number');
-
-            return '<script>document.location.href="'.$item -> pre_id.'";</script>';
+            return '<script>document.location.href="'.$sql -> pre_id.'";</script>';
     }
 }

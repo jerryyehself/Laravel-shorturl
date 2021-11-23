@@ -23,10 +23,10 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     
 }
 
-$(".url.active").focus(function(){
+$(".url.active").on('focus', function(){
     $(".submit").css("display", "inline-block");
 });
-$(".url.active").blur(function(){
+$(".url.active").on('blur', function(){
     $(".submit").css("display", "none");
 });
 
