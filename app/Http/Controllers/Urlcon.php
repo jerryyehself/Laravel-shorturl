@@ -99,7 +99,9 @@ class Urlcon extends Controller
     
     public function turn_t($codee){
 
-            $sql = DB::table('urltrans')->where('new_id', $codee)->first();
+            $sql = DB::table('urltrans')
+                    ->where('new_id', $codee)
+                    ->first();
 
             $new_insert_number = DB::table('urltrans')
                                     ->where('new_id', $codee)
