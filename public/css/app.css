@@ -235,7 +235,7 @@ input{
 }
 
 .sub-title{
-    margin: 5px 0 0 5px;
+    margin: 10px 0 0 5px;
     text-align: left;
     font-weight: bolder;
     text-decoration: underline;
@@ -249,6 +249,6 @@ input{
 
 span{
     margin: 5px;
-    text-align: left;
+    display: inline-block;
 }
 
