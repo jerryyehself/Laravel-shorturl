@@ -240,6 +240,6 @@ input{
 }
 
 span{
-    font-weight: normal;
     margin: 5px;
+    text-align: left;
 }
