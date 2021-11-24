@@ -19,18 +19,16 @@ class Urlcon extends Controller
 
         if(!isset($pre_url))
         {
-        return view('/welcome',['pre_url'=>'',
-                                'new_id' => '',
-                                'url_title'=> '',
-                                'usage_number'=> '',
-                                'number_of_inseret_times' => '',
-                                'ins_time' => '',
-                                'url_host' => '',
-                                'url_update_time'=> '']);
+            return view('/welcome',['pre_url'=>'',
+                                    'new_id' => '',
+                                    'url_title'=> '',
+                                    'usage_number'=> '',
+                                    'number_of_inseret_times' => '',
+                                    'ins_time' => '',
+                                    'url_host' => '',
+                                    'url_update_time'=> '']);
         } 
 
-        //date_default_timezone_set("Asia/Taipei");
-        
         $sql = DB::table('urltrans')
                 ->where('pre_id', $pre_url)
                 ->first();

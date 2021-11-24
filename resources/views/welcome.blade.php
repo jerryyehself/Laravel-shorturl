@@ -25,53 +25,50 @@
     <div class="function-output">
         
         <p class="trans-result">轉換結果</p>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            來源網頁名稱
-        </p>
+        
+        <p class="sub-title" name="sub-title" id="sub-title">來源網頁名稱</p>
+
         <span class="url_title" name="url_title" id="url_title">
             {{ $url_title }}
         </span>
-        </p>    
-        <p class="sub-title" name="sub-title" id="sub-title">
-            短網址
-        
+
+        <p class="sub-title" name="sub-title" id="sub-title">短網址</p>
+
         <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
                 https://dbtes.herokuapp.com/{{ $new_id }}
         </a>
-        </p>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            短網址使用次數
         
+        <p class="sub-title" name="sub-title" id="sub-title">短網址使用次數</p>
+
         <span class="url_title" name="url_title" id="url_title">
             {{ $usage_number }}次
         </span>
-        </p>
+    
 
     </div>
     <div class="right-show">
 
         <p class="trans-result">來源網站相關資料</p>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            網址被轉換次數
-        </p>
+
+        <p class="sub-title" name="sub-title" id="sub-title">網址被轉換次數</p>
+
         <span class="url_title" name="url_title" id="url_title">
             {{ $number_of_inseret_times }}次
         </span>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            本站首次轉換短網址時間
-        </p>
+        
+        <p class="sub-title" name="sub-title" id="sub-title">本站首次轉換短網址時間</p>
+
         <span class="url_title" name="url_title" id="url_title">
             {{ $ins_time }}
         </span>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            所屬網域
-        </p>
+        <p class="sub-title" name="sub-title" id="sub-title">所屬網域</p>
+
         <span class="url_title" name="url_title" id="url_title">
             {{ $url_host }}
         </span>
-        <p class="sub-title" name="sub-title" id="sub-title">
-            頁面最後更新時間
-        </p>
+        
+        <p class="sub-title" name="sub-title" id="sub-title">頁面最後更新時間</p>
+        
         <span class="url_title" name="url_title" id="url_title">
             <!--  $url_update_time -->
         </span>
