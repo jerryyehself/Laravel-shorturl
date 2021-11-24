@@ -240,6 +240,6 @@ input{
 }
 
 span{
-    margin: 5px;
+    margin-left: 5px;
     display: inline-block;
 }

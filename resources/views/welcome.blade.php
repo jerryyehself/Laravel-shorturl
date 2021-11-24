@@ -34,9 +34,11 @@
 
         <p class="sub-title" name="sub-title" id="sub-title">短網址</p>
 
-        <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
+        <span class="url_title" name="url_title" id="url_title">
+            <a class="url-string" id="url-string" href="{{ $pre_url }}" name = "new_url">
                 https://dbtes.herokuapp.com/{{ $new_id }}
-        </a>
+            </a>
+        </span>
         
         <p class="sub-title" name="sub-title" id="sub-title">短網址使用次數</p>
 
@@ -68,7 +70,7 @@
         </span>
         
         <p class="sub-title" name="sub-title" id="sub-title">頁面最後更新時間</p>
-        
+
         <span class="url_title" name="url_title" id="url_title">
             <!--  $url_update_time -->
         </span>
