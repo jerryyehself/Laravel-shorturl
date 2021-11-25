@@ -23,14 +23,12 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     
 };
 
-$(".url.active").on('focus', function(){
+$(".url.active").on('focus', function(event){
     $(".submit").css("display", "inline-block");
-    alert('bb');
 });    
 
-$(".url.active").on('blur', function(){
+$(".url.active").on('blur', function(event){
     $(".submit").css("display", "none");
-    alert('aa');
 });
 
 
