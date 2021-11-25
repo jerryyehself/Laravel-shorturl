@@ -39,7 +39,7 @@ class Urlcon extends Controller
             $url_random = rand(10 ,100);
 
             $html_content = file_get_contents($pre_url);
-
+            dd($html_content);
             if(!$html_content){
                 echo 'in error';
             }
