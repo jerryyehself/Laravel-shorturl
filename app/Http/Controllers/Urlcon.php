@@ -49,13 +49,11 @@ class Urlcon extends Controller
             $url_content = $crawler -> addHtmlContent($html_content);
 
             if($url_content == null){
-                return '<script>document.alert("無法取得網頁內容");</script>';
+                $url_title = "無法取的網頁內容";
+            }else{
+                $url_title = $crawler -> filterXpath("//title") -> text();
             }
             
-            $url_title = $crawler -> filterXpath("//title") -> text();
-
-
-
             $url_host = parse_url($pre_url, PHP_URL_HOST);
             
             $item = new Urltrans;
