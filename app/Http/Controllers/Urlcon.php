@@ -48,7 +48,7 @@ class Urlcon extends Controller
 
             $crawler -> addHtmlContent($html_content);
 
-            dd($crawler -> document);
+            dd($crawler -> addHtmlContent($html_content));
             
             $url_title = $crawler -> filterXpath("//title") -> text();
 
