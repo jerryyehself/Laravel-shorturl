@@ -46,9 +46,11 @@ class Urlcon extends Controller
 
             $crawler = new Crawler();
 
-            $crawler -> addHtmlContent($html_content);
+            $url_content = $crawler -> addHtmlContent($html_content);
 
-            dd($crawler -> addHtmlContent($html_content));
+            if($url_content == null){
+                echo 'can not get content';
+            }
             
             $url_title = $crawler -> filterXpath("//title") -> text();
 
