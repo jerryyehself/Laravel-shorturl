@@ -48,7 +48,7 @@ class Urlcon extends Controller
 
             $crawler -> addHtmlContent($html_content);
 
-            dd($crawler -> filterXpath("//title"));
+            dd($crawler);
             
             $url_title = $crawler -> filterXpath("//title") -> text();
 
@@ -79,12 +79,12 @@ class Urlcon extends Controller
         }
         else
         {
-            $html_content = file_get_contents($pre_url);
+            /*$html_content = file_get_contents($pre_url);
             $crawler = new Crawler();
 
             $crawler -> addHtmlContent($html_content);
 
-            dd($crawler -> filterXpath("//title"));
+            dd($crawler -> filterXpath("//title"));*/
             
             date_default_timezone_set("Asia/Taipei");
 
