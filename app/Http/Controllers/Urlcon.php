@@ -79,7 +79,7 @@ class Urlcon extends Controller
         }
         else
         {
-            
+            $html_content = file_get_contents($pre_url);
             $crawler = new Crawler();
 
             $crawler -> addHtmlContent($html_content);
