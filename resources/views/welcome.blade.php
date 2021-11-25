@@ -69,11 +69,11 @@
             {{ $url_host }}
         </span>
         
-        <p class="sub-title" name="sub-title" id="sub-title">頁面最後更新時間</p>
+        <!--<p class="sub-title" name="sub-title" id="sub-title">頁面最後更新時間</p>
 
         <span class="url_title" name="url_title" id="url_title">
-            <!--  $url_update_time -->
-        </span>
+              $url_update_time
+        </span> -->
 
     </div>
 </div>
