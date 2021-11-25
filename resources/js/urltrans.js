@@ -23,13 +23,17 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     
 };
 
-$.$(".url.active").on('focus', function(event){
-    $(".submit").css("display", "inline-block");
-    console.log('33');
-});    
 
-$.$(".url.active").on('blur', function(event){
-    $(".submit").css("display", "none");
+$(document).ready(function(){
+    $(".url.active").on('focus', function(event){
+        $(".submit").css("display", "inline-block");
+        console.log('33');
+    });    
+    
+    $(".url.active").on('blur', function(event){
+        $(".submit").css("display", "none");
+    });
+    
 });
 
 
