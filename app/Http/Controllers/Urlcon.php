@@ -39,7 +39,7 @@ class Urlcon extends Controller
             $url_random = rand(10 ,100);
 
             $html_content = file_get_contents($pre_url);
-            dd($html_content);
+            //dd($html_content);
             if(!$html_content){
                 echo 'in error';
             }
@@ -47,7 +47,7 @@ class Urlcon extends Controller
             $crawler = new Crawler();
 
             $crawler -> addHtmlContent($html_content);
-
+            dd($crawler);
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
