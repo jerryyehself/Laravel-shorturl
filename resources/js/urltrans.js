@@ -25,7 +25,7 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     $(".url.active").on('blur', function(){
         $(".submit").css("display", "none");
     });
-    $(".submit").css("display", "none");
+    //$(".submit").css("display", "none");
     
 };
 
