@@ -129,7 +129,7 @@ form{
 .submit:hover{
     color: white;
     background-color: black;
-    transition: 1s; 
+    transition: 0.5s; 
 }
 
 input[type=url] {
