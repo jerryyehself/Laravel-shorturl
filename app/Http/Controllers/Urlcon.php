@@ -33,7 +33,7 @@ class Urlcon extends Controller
                 ->where('pre_id', $pre_url)
                 ->first();
         
-        if($sql == null)
+        if($sql != null)
         {
 
             $url_random = rand(10 ,100);
