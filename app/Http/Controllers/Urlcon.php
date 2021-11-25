@@ -49,7 +49,7 @@ class Urlcon extends Controller
             $url_content = $crawler -> addHtmlContent($html_content);
 
             if($url_content == null){
-                return 'can not get content';
+                return '<script>document.alert("無法取得網頁內容");</script>';
             }
             
             $url_title = $crawler -> filterXpath("//title") -> text();
