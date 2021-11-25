@@ -38,15 +38,16 @@ if (document.getElementById("url-string").getAttribute("href") != "") {
     arr[1] = temp;
     $('.url-tran').html(arr);
   });
-  $(".url.active").on('focus', function () {
-    $(".submit").css("display", "inline-block");
-  });
-  $(".url.active").on('blur', function () {
-    $(".submit").css("display", "none");
-  }); //$(".submit").css("display", "none");
+  $(".submit").css("display", "none");
 }
 
 ;
+$(".url.active").on('focus', function () {
+  $(".submit").css("display", "inline-block");
+});
+$(".url.active").on('blur', function () {
+  $(".submit").css("display", "none");
+});
 
 /***/ }),
 
