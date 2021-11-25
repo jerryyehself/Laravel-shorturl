@@ -22,7 +22,7 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     $(".submit").css("display", "none");
     
 };
-
+document.querySelector(".url.active").addEventListener("focus", function(){console.log("11")});
 $(".url.active").on('focus', function(event){
     $(".submit").css("display", "inline-block");
     console.log('33');

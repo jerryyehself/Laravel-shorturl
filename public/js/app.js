@@ -42,6 +42,9 @@ if (document.getElementById("url-string").getAttribute("href") != "") {
 }
 
 ;
+document.querySelector(".url.active").addEventListener("focus", function () {
+  console.log("11");
+});
 $(".url.active").on('focus', function (event) {
   $(".submit").css("display", "inline-block");
   console.log('33');
