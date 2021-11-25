@@ -126,6 +126,12 @@ form{
     border-radius: 5px;
 }
 
+.submit:hover{
+    color: white;
+    background-color: black;
+    transition: 1s; 
+}
+
 input[type=url] {
     width: 130px;
     padding: 12px;
