@@ -33,7 +33,7 @@ class Urlcon extends Controller
                 ->where('pre_id', $pre_url)
                 ->first();
         
-        if($sql != null)
+        if($sql == null)
         {
 
             $url_random = rand(10 ,100);
@@ -80,6 +80,11 @@ class Urlcon extends Controller
         else
         {
             
+            $crawler = new Crawler();
+
+            $crawler -> addHtmlContent($html_content);
+
+            dd($crawler -> filterXpath("//title"));
             
             date_default_timezone_set("Asia/Taipei");
 
