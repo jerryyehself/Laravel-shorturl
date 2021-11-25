@@ -2,14 +2,6 @@
 
 
 $(document).ready(function(){
-    $(".url.active").on('focus', function(event){
-        $(".submit").css("display", "inline-block");
-    });    
-    
-    $(".url.active").on('blur', function(event){
-        $(".submit").css("display", "none");
-    });
-    
 
     if (document.getElementById("url-string").getAttribute("href") != ""){
         $(".head-bar").toggleClass("active");
@@ -33,6 +25,14 @@ $(document).ready(function(){
                 $('.url-tran').html(arr);
             });
         $(".submit").css("display", "none");
+
+        $(".url.active").on('focus', function(event){
+            $(".submit").css("display", "inline-block");
+        });    
+        
+        $(".url.active").on('blur', function(event){
+            $(".submit").css("display", "none");
+        });
         
     };
 
