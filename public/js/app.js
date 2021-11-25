@@ -47,6 +47,7 @@ $(".url.active").on('focus', function () {
 });
 $(".url.active").on('blur', function () {
   $(".submit").css("display", "none");
+  alert('aa');
 });
 
 /***/ }),
