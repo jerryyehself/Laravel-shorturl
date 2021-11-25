@@ -47,7 +47,7 @@ class Urlcon extends Controller
             $crawler = new Crawler();
 
             $crawler -> addHtmlContent($html_content);
-            dd($crawler);
+            dd(!$crawler);
             $url_title = $crawler -> filterXpath("//title") -> text();
 
             $url_host = parse_url($pre_url, PHP_URL_HOST);
