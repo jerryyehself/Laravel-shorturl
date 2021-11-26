@@ -87,7 +87,7 @@ class Urlcon extends Controller
                                     -> where('pre_id', $pre_url)
                                     -> increment('number_of_inseret_times');
 
-            $new_update_time = get_headers($pre_url,1);
+            $new_update_time = get_headers($pre_url);
             dd($new_update_time);
             //$save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
             //dd($sql);
