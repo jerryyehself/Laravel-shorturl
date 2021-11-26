@@ -49,9 +49,13 @@ class Urlcon extends Controller
             $url_content = $crawler -> addHtmlContent($html_content);
 
             if($url_content == null){
-                $url_title = "無法取的網頁內容";
+
+                $url_title = "無法取得網頁內容";
+            
             }else{
+
                 $url_title = $crawler -> filterXpath("//title") -> text();
+            
             }
             
             $url_host = parse_url($pre_url, PHP_URL_HOST);
@@ -83,8 +87,8 @@ class Urlcon extends Controller
                                     -> where('pre_id', $pre_url)
                                     -> increment('number_of_inseret_times');
 
-            //$new_update_time = get_headers($pre_url,1)["Last-Modified"];
-
+            $new_update_time = get_headers($pre_url,1)["Last-Modified"];
+            dd($new_update_time);
             //$save_update_time = DB::table('urltrans')-> where('pre_id', $pre_url)  -> update(['url_update_time'=>$new_update_time]);
             //dd($sql);
 
@@ -92,7 +96,7 @@ class Urlcon extends Controller
                                      'new_id'=> $sql -> new_id,
                                      'url_title'=> $sql -> url_title,
                                      'ins_time'=> $sql -> ins_time,
-                                     //'url_update_time'=> $new_update_time,
+                                     'url_update_time'=> $new_update_time,
                                      'number_of_inseret_times'=> $sql -> number_of_inseret_times,
                                      'url_host' => $sql -> url_host,
                                      'usage_number' => $sql -> usage_number]);
