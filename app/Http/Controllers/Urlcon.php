@@ -79,15 +79,6 @@ class Urlcon extends Controller
         }
         else
         {
-            /*$html_content = file_get_contents($pre_url);
-            $crawler = new Crawler();
-
-            $crawler -> addHtmlContent($html_content);
-
-            dd($crawler -> filterXpath("//title"));*/
-            
-            date_default_timezone_set("Asia/Taipei");
-
             $new_insert_number = DB::table('urltrans')
                                     -> where('pre_id', $pre_url)
                                     -> increment('number_of_inseret_times');

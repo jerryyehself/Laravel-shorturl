@@ -19,7 +19,7 @@
 </div>
 @if(@isset($pre_url))
 <div class="main-content">
-    <div class=left-show>
+    <div class="chart-output">
         
     </div>
     <div class="function-output">
@@ -48,7 +48,7 @@
     
 
     </div>
-    <div class="right-show">
+    <div class="origin-url">
 
         <p class="trans-result">來源網站相關資料</p>
 
