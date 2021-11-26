@@ -200,10 +200,12 @@ input{
 
 .main-content.active{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
     height: 79%;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
     transition: 1s;
     width: 100%;
     padding: 1em 0.5em;
