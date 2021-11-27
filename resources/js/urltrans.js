@@ -70,5 +70,5 @@ d3.select(".chart-output").selectAll("div")
     .attr("class", "bar").style("height", function(d) {
         var barHeight = d * 5;  //Scale up by factor of 5
         return barHeight + "px";
-    })
-    .attr({"margin-right": "2px"});
+        "margin-right", "2px";
+    });
