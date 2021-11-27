@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     var w = 2000;
     var h = 2000;
-    var barPadding = 1;
+    var barPadding = 10;
 
     var svg = d3.select(".chart-output")
                 .append("svg")
