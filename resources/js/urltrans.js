@@ -49,16 +49,10 @@ $(document).ready(function(){
             .data(dataset)
             .enter()
             .append("rect")
-            .attr("height", function(d) {
-                return d * 4;
-            })
-            .attr("x", function(d, i) {
-                    return i * (w / dataset.length);
-            })
-            .attr("y", function(d) {
-                    return h - (d * 4);
-            })
-            .attr("width", w / dataset.length - barPadding)
+            .attr('height', (d, i) => 100 - yScale(d))
+            .attr("x", (d, i) => xScale(i) + 50)
+            .attr("y", (d, i) => yScale(d) + 100)
+            .attr("width",15)
 
 });
 
