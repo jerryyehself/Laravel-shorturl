@@ -50,17 +50,25 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
 });
-var vote = ['30', '50', '100', '20'];
+var vote = [{
+  "name": "Grete",
+  "num": 80
+}, {
+  "name": "Steffi",
+  "num": 100
+}, {
+  "name": "Lala",
+  "num": 200
+}];
 d3.select('.chart-output').append('svg').attr({
   "width": "100%",
   "height": "100%"
 });
-d3.select('.list').selectAll('li') // 預先選取等一下會創建的與資料數相同的 li
-.data(vote) // 導入資料
-.enter() // 自動生成與資料對應數量的元素
-.append('li') // 插入元素
-.text(function (d) {
-  return d; // d 指的是資料陣列中的每個元素(如果陣列內是物件，帶進來的就是物件)
+d3.select('.chart').selectAll('div').data(vote).enter().append('div').html(function (d) {
+  // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
+  return d.name + '<br>' + d.num;
+}).style("height", function (d) {
+  return d.num + 'px'; // 調整每個長條的高度
 });
 
 /***/ }),
