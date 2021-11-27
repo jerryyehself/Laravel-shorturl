@@ -54,12 +54,12 @@ var vote =[
     },
 ];
 
-d3.select('.chart-output')
+/*d3.select('.chart-output')
 .append('svg')
 .attr({
     "width": "100%",
     "height": "100%",
-});
+});*/
 
 var dataset = [ 5, 10, 15, 20, 25 ];
 

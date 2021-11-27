@@ -64,10 +64,13 @@ var vote = [{
   "name": "Lala",
   "num": 200
 }];
-d3__WEBPACK_IMPORTED_MODULE_0__.select('.chart-output').append('svg').attr({
-  "width": "100%",
-  "height": "100%"
-});
+/*d3.select('.chart-output')
+.append('svg')
+.attr({
+    "width": "100%",
+    "height": "100%",
+});*/
+
 var dataset = [5, 10, 15, 20, 25];
 d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").selectAll("div").data(dataset).enter().append("div").attr("class", "bar");
 
