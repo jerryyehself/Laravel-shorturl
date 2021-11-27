@@ -61,15 +61,10 @@ d3.select('.chart-output')
     "height": "100%",
 });
 
-d3.select('.chart')
-  .selectAll('div')
-  .data(vote)
-  .enter()
-  .append('div')
-  .html(function(d){
-    // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
-    return d.name + '<br>' + d.num
-  })
-  .style("height", function(d){
-    return d.num + 'px'  // 調整每個長條的高度
-  });
+var dataset = [ 5, 10, 15, 20, 25 ];
+
+d3.select(".chart-output").selectAll("div")
+    .data(dataset)
+    .enter()
+    .append("div")
+    .attr("class", "bar");

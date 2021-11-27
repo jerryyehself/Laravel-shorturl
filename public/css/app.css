@@ -280,3 +280,10 @@ span{
     grid-column-start: 1;
     grid-column-end: 2;
 }
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+}
