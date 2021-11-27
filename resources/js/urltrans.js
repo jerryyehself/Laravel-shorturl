@@ -48,7 +48,7 @@ $(document).ready(function(){
             .domain([0, dataset.length])
             .range([0, 200])
         let yScale = d3.scaleLinear()
-            .domain([0, 10000])
+            .domain([0, 100])
             .range([100, 0])
 
         svg.selectAll("rect")

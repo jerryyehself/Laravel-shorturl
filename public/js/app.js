@@ -59,7 +59,7 @@ $(document).ready(function () {
   var barPadding = 1;
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg");
   var xScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, dataset.length]).range([0, 200]);
-  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, 10000]).range([100, 0]);
+  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, 100]).range([100, 0]);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return xScale(i) + 50;
   }).attr("y", function (d, i) {
