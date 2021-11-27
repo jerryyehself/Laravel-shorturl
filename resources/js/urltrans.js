@@ -43,8 +43,6 @@ $(document).ready(function(){
 
     var svg = d3.select(".chart-output")
                 .append("svg")
-                .attr("width", w)
-                .attr("height", h)
                 
 
         svg.selectAll("rect")
