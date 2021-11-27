@@ -58,7 +58,7 @@ $(document).ready(function () {
   var h = "100%";
   var barPadding = 1;
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg").attr("width", w).attr("height", h);
-  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("height", h).attr("width", 20);
+  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("height", h).attr("width", w / dataset.length - barPadding);
 });
 
 /***/ }),
