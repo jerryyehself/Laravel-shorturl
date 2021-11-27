@@ -54,21 +54,22 @@ var vote =[
     },
 ];
 
-/*d3.select('.chart-output')
-.append('svg')
-.attr({
-    "width": "100%",
-    "height": "100%",
-});*/
+var svg = d3.select('.chart-output')
+            .append('svg')
+            .attr({
+                "width": "100%",
+                "height": "100%",
+            }); 
 
 var dataset = [ 5, 10, 15, 20, 25 ];
 
-d3.select(".chart-output").selectAll("div")
+
+
+svg.selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
     .attr("class", "bar").style("height", function(d) {
         var barHeight = d * 5;  //Scale up by factor of 5
         return barHeight + "px";
-        "margin-right", "2px";
     });
