@@ -20,6 +20,7 @@
 @if(@isset($pre_url))
 <div class="main-content">
     <div class="chart-output">
+        <ul class="list"></ul>
         
     </div>
     <div class="function-output">
