@@ -76,8 +76,9 @@ d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").selectAll("div").data(da
   var barHeight = d * 5; //Scale up by factor of 5
 
   return barHeight + "px";
+}).attr({
+  "margin-right": "2px"
 });
-;
 
 /***/ }),
 
