@@ -78,7 +78,7 @@ svg.selectAll("rect")
    .data(dataset)
    .enter()
    .append("rect")
-   .attr("x", 0)
-   .attr("y", 0)
-   .attr("width", 20)
-   .attr("height", 100);
+   .attr({"x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 100});
