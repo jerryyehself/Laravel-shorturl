@@ -59,27 +59,17 @@ d3.select('.chart-output')
 .attr({
     "width": "100%",
     "height": "100%",
-}).selectAll('div')
-.data(vote)
-.enter()
-.append('div')
-.html(function(d){
-    // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
-    return d.name + '<br>' + d.num
-})
-.style("height", function(d){
-    return d.num + 'px'  // 調整每個長條的高度
 });
 
-/*d3.select('.chart')
-.selectAll('div')
-.data(vote)
-.enter()
-.append('div')
-.html(function(d){
+d3.select('.chart')
+  .selectAll('div')
+  .data(vote)
+  .enter()
+  .append('div')
+  .html(function(d){
     // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
     return d.name + '<br>' + d.num
-})
-.style("height", function(d){
+  })
+  .style("height", function(d){
     return d.num + 'px'  // 調整每個長條的高度
-});*/
+  });
