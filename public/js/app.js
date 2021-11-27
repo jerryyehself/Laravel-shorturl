@@ -56,9 +56,12 @@ $(document).ready(function () {
   var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
   var w = "100%";
   var h = "100%";
+  var barPadding = 1;
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg").attr("width", w).attr("height", h);
-  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("width", "10%").attr("height", "100%").attr("x", function (d, i) {
-    return i * (w / dataset.length);
+  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("width", "5%").attr("height", "100%").attr("width", w / dataset.length - barPadding).attr("y", function (d) {
+    return h - d; //Height minus data value
+  }).attr("height", function (d) {
+    return d; //Just the data value
   });
 });
 
