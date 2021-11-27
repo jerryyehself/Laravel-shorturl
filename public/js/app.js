@@ -15,9 +15,65 @@ __webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js");
 /*!**********************************!*\
   !*** ./resources/js/urltrans.js ***!
   \**********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/jerryself/dbtest/dbtest/resources/js/urltrans.js: 'import' and 'export' may only appear at the top level. (36:4)\n\n\u001b[0m \u001b[90m 34 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     \u001b[36mimport\u001b[39m \u001b[33m*\u001b[39m \u001b[36mas\u001b[39m d3 \u001b[36mfrom\u001b[39m \u001b[32m\"d3\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mvar\u001b[39m vote \u001b[33m=\u001b[39m[\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m         {\u001b[0m\n    at Parser._raise (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:541:17)\n    at Parser.raiseWithData (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:534:17)\n    at Parser.raise (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:495:17)\n    at Parser.parseStatementContent (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:13407:18)\n    at Parser.parseStatement (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:13312:17)\n    at Parser.parseBlockOrModuleBlockBody (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:13901:25)\n    at Parser.parseBlockBody (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:13892:10)\n    at Parser.parseBlock (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:13876:10)\n    at Parser.parseFunctionBody (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:12750:24)\n    at Parser.parseFunctionBodyAndFinish (/home/jerryself/dbtest/dbtest/node_modules/@babel/parser/lib/index.js:12734:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+if (document.getElementById("url-string").getAttribute("href") != "") {
+  $(".head-bar").toggleClass("active");
+  $(".title-zh").toggleClass("active");
+  $(".title-eng").toggleClass("active");
+  $(".input-mag").toggleClass("active");
+  $(".function-input").toggleClass("active");
+  $(".url").toggleClass("active");
+  $(".main-content").toggleClass("active");
+  $(".footer").toggleClass("active");
+  $(".title-font").toggleClass("active");
+  $(".input-msg").remove();
+  $(function () {
+    var arr = $('.url-tran').find('input').toArray(); // 把三個div放進數組裡面
+
+    var temp; // 1 3對調
+
+    temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+    $('.url-tran').html(arr);
+  });
+  $(".submit").css("display", "none");
+}
+
+;
+
+$(document).ready(function () {
+  $(".url.active").on('focus', function (event) {
+    $(".submit").css("display", "inline-block");
+  });
+  $(".url.active").on('blur', function (event) {
+    $(".submit").css("display", "none");
+  });
+  var vote = [{
+    "name": "Grete",
+    "num": 80
+  }, {
+    "name": "Steffi",
+    "num": 100
+  }, {
+    "name": "Lala",
+    "num": 200
+  }];
+  Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.chart-output').append('svg').attr({
+    "width": "100%",
+    "height": "100%"
+  });
+  Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.chart').selectAll('div').data(vote).enter().append('div').html(function (d) {
+    // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
+    return d.name + '<br>' + d.num;
+  }).style("height", function (d) {
+    return d.num + 'px'; // 調整每個長條的高度
+  });
+});
 
 /***/ }),
 

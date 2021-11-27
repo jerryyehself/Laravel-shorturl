@@ -22,7 +22,7 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     $(".submit").css("display", "none");
 };
 
-
+import * as d3 from "d3";
 $(document).ready(function(){
     
     $(".url.active").on('focus', function(event){
@@ -33,7 +33,7 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    import * as d3 from "d3";
+    
 
     var vote =[
         {
