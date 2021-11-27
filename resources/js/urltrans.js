@@ -62,7 +62,7 @@ d3.select('.chart-output')
 });
 
 d3.select('.chart')
-.selectAll('div')
+//.selectAll('div')
 .data(vote)
 .enter()
 .append('div')
