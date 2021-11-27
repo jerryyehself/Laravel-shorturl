@@ -33,7 +33,13 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    var svg = d3.select('.chart-output')
+    
+
+    
+
+});
+
+var svg = d3.select('.chart-output')
                 .append('svg')
                 .attr({
                     "width": "100%",
@@ -61,8 +67,3 @@ $(document).ready(function(){
               "y": 0,
               "width": 20,
               "height": 100});*/
-
-    
-
-});
-
