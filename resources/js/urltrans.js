@@ -44,6 +44,12 @@ $(document).ready(function(){
     var svg = d3.select(".chart-output")
                 .append("svg")
                 
+        let xScale = d3.scaleLinear()
+            .domain([0, data.length])
+            .range([0, 200])
+        let yScale = d3.scaleLinear()
+            .domain([0, 10000])
+            .range([100, 0])
 
         svg.selectAll("rect")
             .data(dataset)
