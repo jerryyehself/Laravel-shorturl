@@ -288,3 +288,8 @@ div.bar {
     background-color: teal;
     margin-right: 2px;
 }
+
+svg{
+    height: 100%;
+    width: 100%;
+}
