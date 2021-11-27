@@ -50,26 +50,26 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
-  var vote = [{
-    "name": "Grete",
-    "num": 80
-  }, {
-    "name": "Steffi",
-    "num": 100
-  }, {
-    "name": "Lala",
-    "num": 200
-  }];
-  d3.select('.chart-output').append('svg').attr({
-    "width": "100%",
-    "height": "100%"
-  });
-  d3.select('.chart-output').selectAll('div').data(vote).enter().append('div').html(function (d) {
-    // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
-    return d.name + '<br>' + d.num;
-  }).style("height", function (d) {
-    return d.num + 'px'; // 調整每個長條的高度
-  });
+});
+var vote = [{
+  "name": "Grete",
+  "num": 80
+}, {
+  "name": "Steffi",
+  "num": 100
+}, {
+  "name": "Lala",
+  "num": 200
+}];
+d3.select('.chart-output').append('svg').attr({
+  "width": "100%",
+  "height": "100%"
+});
+d3.select('.chart-output').selectAll('div').data(vote).enter().append('div').html(function (d) {
+  // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
+  return d.name + '<br>' + d.num;
+}).style("height", function (d) {
+  return d.num + 'px'; // 調整每個長條的高度
 });
 
 /***/ }),
