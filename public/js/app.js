@@ -54,16 +54,16 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
   var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
-  var w = 5000;
+  var w = 500;
   var h = 100;
   var barPadding = 1;
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg");
-  svg.selectAll("rect").data(dataset).enter().append("rect").attr('height', function (d, i) {
-    return 100 - yScale(d);
-  }).attr("x", function (d, i) {
+  svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return xScale(i) + 50;
   }).attr("y", function (d, i) {
     return yScale(d) + 100;
+  }).attr('height', function (d, i) {
+    return 100 - yScale(d);
   }).attr("width", 15);
 });
 

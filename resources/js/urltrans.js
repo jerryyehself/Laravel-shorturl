@@ -37,7 +37,7 @@ $(document).ready(function(){
     var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
         11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-    var w = 5000;
+    var w = 500;
     var h = 100;
     var barPadding = 1;
 
@@ -49,9 +49,9 @@ $(document).ready(function(){
             .data(dataset)
             .enter()
             .append("rect")
-            .attr('height', (d, i) => 100 - yScale(d))
             .attr("x", (d, i) => xScale(i) + 50)
             .attr("y", (d, i) => yScale(d) + 100)
+            .attr('height', (d, i) => 100 - yScale(d))
             .attr("width",15)
 
 });
