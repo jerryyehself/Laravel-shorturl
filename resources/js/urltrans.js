@@ -45,7 +45,7 @@ $(document).ready(function(){
                 .append("svg")
                 
         let xScale = d3.scaleLinear()
-            .domain([0, data.length])
+            .domain([0, dataset.length])
             .range([0, 200])
         let yScale = d3.scaleLinear()
             .domain([0, 10000])
