@@ -15,11 +15,8 @@ __webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js");
 /*!**********************************!*\
   !*** ./resources/js/urltrans.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 if (document.getElementById("url-string").getAttribute("href") != "") {
   $(".head-bar").toggleClass("active");
   $(".title-zh").toggleClass("active");
@@ -44,7 +41,7 @@ if (document.getElementById("url-string").getAttribute("href") != "") {
   $(".submit").css("display", "none");
 }
 
-;
+; //import * as d3 from "d3";
 
 $(document).ready(function () {
   $(".url.active").on('focus', function (event) {
@@ -63,11 +60,11 @@ $(document).ready(function () {
     "name": "Lala",
     "num": 200
   }];
-  Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.chart-output').append('svg').attr({
+  d3.select('.chart-output').append('svg').attr({
     "width": "100%",
     "height": "100%"
   });
-  Object(function webpackMissingModule() { var e = new Error("Cannot find module 'd3'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.chart').selectAll('div').data(vote).enter().append('div').html(function (d) {
+  d3.select('.chart').selectAll('div').data(vote).enter().append('div').html(function (d) {
     // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
     return d.name + '<br>' + d.num;
   }).style("height", function (d) {
