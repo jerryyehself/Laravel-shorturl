@@ -64,7 +64,7 @@ $(document).ready(function () {
     "width": "100%",
     "height": "100%"
   });
-  d3.select('.chart').selectAll('div').data(vote).enter().append('div').html(function (d) {
+  d3.select('.chart-output').selectAll('div').data(vote).enter().append('div').html(function (d) {
     // .html() 類似 .innerHTML，D3 允許 SVG 跟 HTML 標籤混用
     return d.name + '<br>' + d.num;
   }).style("height", function (d) {

@@ -57,7 +57,7 @@ $(document).ready(function(){
         "height": "100%",
     });
 
-    d3.select('.chart')
+    d3.select('.chart-output')
     .selectAll('div')
     .data(vote)
     .enter()
