@@ -52,6 +52,6 @@ $(document).ready(function(){
         .append("rect")
         .attr("y", 0)
         .attr("height", h)
-        .attr("width", dataset.length )
+        .attr("width", 100/dataset.length )
 });
 
