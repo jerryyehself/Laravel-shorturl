@@ -37,7 +37,7 @@ $(document).ready(function(){
     var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
         11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-    var w = 2000;
+    var w = "100%";
     var h = "100%";
     var barPadding = 1;
 
