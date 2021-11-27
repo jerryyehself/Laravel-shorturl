@@ -63,9 +63,9 @@ $(document).ready(function () {
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return xScale(i);
   }).attr("y", function (d, i) {
-    return yScale(d);
+    return yScale(d) + 10000;
   }).attr('height', function (d, i) {
-    return yScale(d);
+    return 10000 - yScale(d);
   }).attr("width", 15);
 });
 

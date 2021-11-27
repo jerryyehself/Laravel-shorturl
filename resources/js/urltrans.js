@@ -56,8 +56,8 @@ $(document).ready(function(){
             .enter()
             .append("rect")
             .attr("x", (d, i) => xScale(i))
-            .attr("y", (d, i) => yScale(d))
-            .attr('height', (d, i) =>yScale(d))
+            .attr("y", (d, i) => yScale(d) + 10000)
+            .attr('height', (d, i) => 10000 - yScale(d))
             .attr("width",15)
 
 });
