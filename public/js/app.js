@@ -61,11 +61,11 @@ $(document).ready(function () {
   var xScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, dataset.length]).range([0, 200]);
   var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, 100]).range([100, 0]);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
-    return xScale(i) + 50;
+    return xScale(i);
   }).attr("y", function (d, i) {
-    return yScale(d) + 100;
+    return yScale(d);
   }).attr('height', function (d, i) {
-    return 100 - yScale(d);
+    return yScale(d);
   }).attr("width", 15);
 });
 

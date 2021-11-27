@@ -55,9 +55,9 @@ $(document).ready(function(){
             .data(dataset)
             .enter()
             .append("rect")
-            .attr("x", (d, i) => xScale(i) + 50)
-            .attr("y", (d, i) => yScale(d) + 100)
-            .attr('height', (d, i) => 100 - yScale(d))
+            .attr("x", (d, i) => xScale(i))
+            .attr("y", (d, i) => yScale(d))
+            .attr('height', (d, i) =>yScale(d))
             .attr("width",15)
 
 });
