@@ -22,7 +22,7 @@ if (document.getElementById("url-string").getAttribute("href") != ""){
     $(".submit").css("display", "none");
 };
 
-//import * as d3 from "d3";
+import * as d3 from "d3";
 $(document).ready(function(){
     
     $(".url.active").on('focus', function(event){
@@ -61,7 +61,7 @@ d3.select('.chart-output')
     "height": "100%",
 });
 
-d3.select('.chart-output')
+d3.select('.chart')
 .selectAll('div')
 .data(vote)
 .enter()
