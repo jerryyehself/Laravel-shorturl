@@ -33,7 +33,8 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    
+    import * as d3 from "d3";
+
     var vote =[
         {
         "name": "Grete",
@@ -68,5 +69,5 @@ $(document).ready(function(){
     .style("height", function(d){
         return d.num + 'px'  // 調整每個長條的高度
     });
-    
+
 });
