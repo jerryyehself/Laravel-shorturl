@@ -65,11 +65,20 @@ var dataset = [ 5, 10, 15, 20, 25 ];
 
 
 
-svg.selectAll("div")
+/*svg.selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
     .attr("class", "bar").style("height", function(d) {
         var barHeight = d * 5;  //Scale up by factor of 5
         return barHeight + "px";
-    });
+    });*/
+
+svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", 20)
+    .attr("height", 100);
