@@ -45,8 +45,8 @@ $(document).ready(function(){
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h)
-                .attr("max-width", "100%")
-                .attr("max-height", "100%");
+                .attr("max-width", "inherit")
+                .attr("max-height", "inherit");
 
         svg.selectAll("rect")
             .data(dataset)

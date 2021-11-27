@@ -57,7 +57,7 @@ $(document).ready(function () {
   var w = 2000;
   var h = 2000;
   var barPadding = 1;
-  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg").attr("width", w).attr("height", h).attr("max-width", "100%").attr("max-height", "100%");
+  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg").attr("width", w).attr("height", h).attr("max-width", "inherit").attr("max-height", "inherit");
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return i * (w / dataset.length);
   }).attr("y", function (d) {
