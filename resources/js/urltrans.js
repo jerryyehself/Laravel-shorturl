@@ -54,12 +54,7 @@ $(document).ready(function(){
         .attr("width", "5%")
         .attr("height", "100%")
         .attr("width", w / dataset.length - barPadding)
-        .attr("y", function(d) {
-            return h - d;  //Height minus data value
-        })
-        .attr("height", function(d) {
-            return d;  //Just the data value
-        });
+        
         
 
         

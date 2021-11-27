@@ -58,11 +58,7 @@ $(document).ready(function () {
   var h = "100%";
   var barPadding = 1;
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg").attr("width", w).attr("height", h);
-  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("width", "5%").attr("height", "100%").attr("width", w / dataset.length - barPadding).attr("y", function (d) {
-    return h - d; //Height minus data value
-  }).attr("height", function (d) {
-    return d; //Just the data value
-  });
+  svg.selectAll("rect").data(dataset).enter().append("rect").attr("y", 0).attr("width", "5%").attr("height", "100%").attr("width", w / dataset.length - barPadding);
 });
 
 /***/ }),
