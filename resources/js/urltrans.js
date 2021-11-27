@@ -40,7 +40,7 @@ $(document).ready(function(){
     var w = 500;
 var h = 100;
 
-var svg = d3.select("body")
+var svg = d3.select(".chart-output")
             .append("svg")
             .attr("width", w)
             .attr("height", h);
