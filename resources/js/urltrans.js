@@ -44,7 +44,9 @@ $(document).ready(function(){
     var svg = d3.select(".chart-output")
                 .append("svg")
                 .attr("width", w)
-                .attr("height", h);
+                .attr("height", h)
+                .attr("max-width", "100%")
+                .attr("max-height", "100%");
 
         svg.selectAll("rect")
             .data(dataset)
