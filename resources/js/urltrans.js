@@ -51,13 +51,7 @@ $(document).ready(function(){
         .enter()
         .append("rect")
         .attr("y", 0)
-        .attr("width", "5%")
         .attr("height", "100%")
         .attr("width", w / dataset.length - barPadding)
-        
-        
-
-        
-
 });
 
