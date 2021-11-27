@@ -33,52 +33,51 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
+    var vote =[
+        {
+        "name": "Grete",
+        "num": 80
+        },
+        {
+        "name": "Steffi",
+        "num": 100
+        },
+        {
+        "name": "Lala",
+        "num": 200
+        },
+    ];
     
+    var svg = d3.select('.chart-output')
+                .append('svg')
+                .attr({
+                    "width": "100%",
+                    "height": "100%",
+                }); 
+    
+    var dataset = [ 5, 10, 15, 20, 25 ];
+    
+    
+    
+    /*svg.selectAll("div")
+        .data(dataset)
+        .enter()
+        .append("div")
+        .attr("class", "bar").style("height", function(d) {
+            var barHeight = d * 5;  //Scale up by factor of 5
+            return barHeight + "px";
+        });*/
+    
+    svg.selectAll("rect")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr({"x": 0,
+              "y": 0,
+              "width": 20,
+              "height": 100});
 
     
 
 });
 
-var vote =[
-    {
-    "name": "Grete",
-    "num": 80
-    },
-    {
-    "name": "Steffi",
-    "num": 100
-    },
-    {
-    "name": "Lala",
-    "num": 200
-    },
-];
-
-var svg = d3.select('.chart-output')
-            .append('svg')
-            .attr({
-                "width": "100%",
-                "height": "100%",
-            }); 
-
-var dataset = [ 5, 10, 15, 20, 25 ];
-
-
-
-/*svg.selectAll("div")
-    .data(dataset)
-    .enter()
-    .append("div")
-    .attr("class", "bar").style("height", function(d) {
-        var barHeight = d * 5;  //Scale up by factor of 5
-        return barHeight + "px";
-    });*/
-
-svg.selectAll("rect")
-   .data(dataset)
-   .enter()
-   .append("rect")
-   .attr({"x": 0,
-          "y": 0,
-          "width": 20,
-          "height": 100});
