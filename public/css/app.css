@@ -293,3 +293,8 @@ svg{
     height: 100%;
     width: 100%;
 }
+
+rect{
+    max-width: inherit;
+    max-height: inherit;
+}
