@@ -36,34 +36,22 @@ $(document).ready(function(){
     
 
 
-    var svg = d3.select('.chart-output')
-                .append('svg')
-                .attr({
-                    "width": 500 ,
-                    "height": 100 ,
-                }); 
-    
-    var dataset = [ 5, 10, 15, 20, 25 ];
-    
-    
-    
-    /*svg.selectAll("div")
-        .data(dataset)
-        .enter()
-        .append("div")
-        .attr("class", "bar").style("height", function(d) {
-            var barHeight = d * 5;  //Scale up by factor of 5
-            return barHeight + "px";
-        });*/
-    
-        svg.selectAll("rect")
-        .data(dataset)
-        .enter()
-        .append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 20)
-        .attr("height", 100);
+    var w = 500;
+var h = 100;
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+            svg.selectAll("rect")
+   .data(dataset)
+   .enter()
+   .append("rect")
+   .attr("x", 0)
+   .attr("y", 0)
+   .attr("width", 20)
+   .attr("height", 100);
 
     
 
