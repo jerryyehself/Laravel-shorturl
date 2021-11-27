@@ -67,4 +67,7 @@ d3.select(".chart-output").selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
-    .attr("class", "bar");
+    .attr("class", "bar").style("height", function(d) {
+        var barHeight = d * 5;  //Scale up by factor of 5
+        return barHeight + "px";
+    });;
