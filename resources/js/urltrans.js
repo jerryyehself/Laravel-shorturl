@@ -38,7 +38,7 @@ $(document).ready(function(){
         11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
     var w = 500;
-    var h = 1000;
+    var h = 100;
     var barPadding = 1;
 
     var svg = d3.select(".chart-output")
