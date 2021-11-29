@@ -54,7 +54,8 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var yScale = d3.scaleLinear() //製作線性尺度
-                         .domain([0, 100])
+                         .domain([0, 100]) //輸入的範圍
+                         .range([h - barPadding, barPadding])
                          .ticks(10)
 
     var yAxis = d3.axisLeft(yScale)
