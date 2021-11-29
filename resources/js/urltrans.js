@@ -53,7 +53,7 @@ $(document).ready(function(){
     var h = document.getElementById("canvas").clientHeight;
     var barPadding = 1;
 
-    var yScale = d3.scale.linear() //製作線性尺度
+    var yScale = d3.scaleLinear() //製作線性尺度
                          .domain([0, 100]) //輸入的範圍
                          .range([h - barpadding, barpadding])
 

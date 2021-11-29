@@ -62,7 +62,7 @@ $(document).ready(function () {
   var w = document.getElementById("canvas").clientWidth;
   var h = document.getElementById("canvas").clientHeight;
   var barPadding = 1;
-  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scale.linear() //製作線性尺度
+  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
   .domain([0, 100]) //輸入的範圍
   .range([h - barpadding, barpadding]);
   var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
