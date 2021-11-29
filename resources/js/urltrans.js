@@ -89,7 +89,7 @@ $(document).ready(function(){
             .scale("left");*/
 
     svg.append('g').attr('class', 'axis')
-        .attr('transform', 'translate('+ (barPadding) +')', 0) //移動到左方
+        .attr('transform', 'translate("10")', 0) //移動到左方
         .call(yAxis);
 
 });
