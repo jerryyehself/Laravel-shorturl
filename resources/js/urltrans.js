@@ -66,7 +66,7 @@ $(document).ready(function(){
         .data(dataset)
         .enter()
         .append("rect")
-        .attr("x", function(d, i) {return i * (w / dataset.length);})
+        .attr("x", function(d, i) {return i * (w / dataset.length)+20;})
         .attr("y", function(d) {return h - (d * 4);})
         .attr("width", w / dataset.length - barPadding)
         .attr("height", function(d) {return d * 4;})
