@@ -86,7 +86,7 @@ $(document).ready(function () {
       .scale("bottom")
       .scale("left");*/
 
-  svg.append('g').attr('class', 'axis').attr('transform', 'translate(10%)', 0) //移動到左方
+  svg.append('g').attr('class', 'axis').attr('transform', 'translate(20)', 0) //移動到左方
   .call(yAxis);
 });
 
