@@ -68,7 +68,7 @@ $(document).ready(function(){
         .append("rect")
         .attr("x", function(d, i) {return i * (w / dataset.length) + 20;})
         .attr("y", function(d) {return h - (d * 4);})
-        .attr("width", (w  - 50) / dataset.length - barPadding)
+        .attr("width", (w  - 100) / dataset.length - barPadding)
         .attr("height", function(d) {return d * 4;})
         .attr("fill", function(d) {return "rgb(0, 0, " + (d * 10) + ")";});
 
