@@ -70,7 +70,7 @@ $(document).ready(function () {
     return i * (w / dataset.length) + 20;
   }).attr("y", function (d) {
     return h - d * 4;
-  }).attr("width", (w - 20) / dataset.length - barPadding).attr("height", function (d) {
+  }).attr("width", (w - 40) / dataset.length - barPadding).attr("height", function (d) {
     return d * 4;
   }).attr("fill", function (d) {
     return "rgb(0, 0, " + d * 10 + ")";
