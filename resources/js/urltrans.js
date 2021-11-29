@@ -78,7 +78,7 @@ $(document).ready(function(){
         .append("text")
         .text(function(d) {return d;})
         .attr("text-anchor", "middle")
-        .attr("x", function(d, i) {return i * (w / dataset.length - barPadding + (w / dataset.length - barPadding) / 2 + 20;})
+        .attr("x", function(d, i) {return i * (w / dataset.length  - barPadding) + (w / dataset.length - barPadding) / 2 + 20;})
         .attr("y", function(d) {return h - (d * 4) + 14;})
         .attr("font-family", "sans-serif")
         .attr("font-size", "11px")
