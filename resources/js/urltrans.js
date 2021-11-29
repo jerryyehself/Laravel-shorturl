@@ -54,11 +54,12 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var yScale = d3.scaleLinear() //製作線性尺度
-                         .domain([0, 100]) //輸入的範圍
-                         .range([h - barPadding, barPadding])
+                    .domain([0, 100]) //輸入的範圍
+                    .range([h - barPadding, barPadding])
                          
 
-    var yAxis = d3.axisLeft(yScale).ticks(10)
+    var yAxis = d3.axisLeft(yScale)
+                    .ticks(10)
 	                
 
     svg.selectAll("rect")
@@ -87,9 +88,9 @@ $(document).ready(function(){
             .scale("bottom")
             .scale("left");*/
 
-    svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
-        .attr('transform', 'translate(0, '+ (barPadding) +')') //移動到下方
-        .call(yAxis); //將軸線匯入
+    svg.append('g').attr('class', 'axis')
+        .attr('transform', 'translate('+ (barPadding) +')', 0) //移動到左方
+        .call(yAxis);
 
 });
 

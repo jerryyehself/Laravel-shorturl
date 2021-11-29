@@ -86,9 +86,8 @@ $(document).ready(function () {
       .scale("bottom")
       .scale("left");*/
 
-  svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
-  .attr('transform', 'translate(0, ' + barPadding + ')') //移動到下方
-  .call(yAxis); //將軸線匯入
+  svg.append('g').attr('class', 'axis').attr('transform', 'translate(' + barPadding + ')', 0) //移動到左方
+  .call(yAxis);
 });
 
 /***/ }),
