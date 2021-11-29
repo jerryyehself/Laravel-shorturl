@@ -57,8 +57,7 @@ $(document).ready(function(){
                          .domain([0, 100]) //輸入的範圍
                          .range([h - barPadding, barPadding])
 
-    var yAxis = d3.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
-	                .orient("left") //標示位置
+    var yAxis = d3.axisLeft(yScale)
 	                .ticks(10)
 
     svg.selectAll("rect")
@@ -87,8 +86,9 @@ $(document).ready(function(){
             .scale("bottom")
             .scale("left");*/
 
-        svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
-	        .attr('transform', 'translate(0, '+ (barPadding) +')') //移動到下方
-	        .call(yAxis); //將軸線匯入
+    svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
+        .attr('transform', 'translate(0, '+ (barPadding) +')') //移動到下方
+        .call(yAxis); //將軸線匯入
+
 });
 

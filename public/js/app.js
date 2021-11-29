@@ -65,9 +65,7 @@ $(document).ready(function () {
   var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
   .domain([0, 100]) //輸入的範圍
   .range([h - barPadding, barPadding]);
-  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
-  .orient("left") //標示位置
-  .ticks(10);
+  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return i * (w / dataset.length);
   }).attr("y", function (d) {
