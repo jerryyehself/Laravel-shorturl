@@ -63,9 +63,8 @@ $(document).ready(function () {
   var h = document.getElementById("canvas").clientHeight;
   var barPadding = 1;
   var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
-  .domain([0, 100]) //輸入的範圍
-  .range([h - barPadding, barPadding]);
-  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
+  .domain([0, 100]).ticks(10);
+  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return i * (w / dataset.length);
   }).attr("y", function (d) {

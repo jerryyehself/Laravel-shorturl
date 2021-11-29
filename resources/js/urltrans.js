@@ -54,11 +54,11 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var yScale = d3.scaleLinear() //製作線性尺度
-                         .domain([0, 100]) //輸入的範圍
-                         .range([h - barPadding, barPadding])
+                         .domain([0, 100])
+                         .ticks(10)
 
     var yAxis = d3.axisLeft(yScale)
-	                .ticks(10)
+	                
 
     svg.selectAll("rect")
         .data(dataset)
