@@ -43,22 +43,15 @@ $(document).ready(function(){
 
     var svg = d3.select(".chart-output")
                 .append("svg")
-                
-        let xScale = d3.scaleLinear()
-            .domain([0, dataset.length])
-            .range([0, 200])
-        let yScale = d3.scaleLinear()
-            .domain([0, 100])
-            .range([100, 0])
+                .attr("class", "chart")
 
         svg.selectAll("rect")
             .data(dataset)
             .enter()
             .append("rect")
-            .attr("x", (d, i) => xScale(i))
-            .attr("y", (d, i) => yScale(d) + 10000)
             .attr('height', (d, i) => 10000 - yScale(d))
-            .attr("width",15)
+            .attr("width", w / dataset.length - barPadding)
+
 
 });
 
