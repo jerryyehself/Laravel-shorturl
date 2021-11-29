@@ -68,7 +68,7 @@ $(document).ready(function(){
         .append("rect")
         .attr("x", function(d, i) {return i * ((w-20) / dataset.length) + 20;})
         .attr("y", function(d) {return h - (d * 4);})
-        .attr("width", (w  - (20*(dataset.length+1)) - barPadding) / dataset.length+20 - barPadding)
+        .attr("width", (w  - (20*(dataset.length+barPadding)) - barPadding) / dataset.length+20 - barPadding)
         .attr("height", function(d) {return d * 4;})
         .attr("fill", function(d) {return "rgb(0, 0, " + (d * 10) + ")";});
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
         .append("text")
         .text(function(d) {return d;})
         .attr("text-anchor", "middle")
-        .attr("x", function(d, i) {return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2 + 20;})
+        .attr("x", function(d, i) {return i * (w / dataset.length - barPadding + (w / dataset.length - barPadding) / 2 + 20;})
         .attr("y", function(d) {return h - (d * 4) + 14;})
         .attr("font-family", "sans-serif")
         .attr("font-size", "11px")
