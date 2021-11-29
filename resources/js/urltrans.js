@@ -38,8 +38,10 @@ $(document).ready(function(){
 
     var svg = d3.select(".chart-output")
                 .append("svg")
-                .attr("id", "canvas");
+                
     
+    $("svg").attr("id", "canvas");
+
     var w = document.getElementById("canvas").clientWidth;
     var h = document.getElementById("canvas").clientHeight;
     var barPadding = 1;
