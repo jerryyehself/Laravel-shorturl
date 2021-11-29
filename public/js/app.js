@@ -54,11 +54,20 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
   var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
-  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg");
-  $("svg").attr("id", "canvas");
   var w = document.getElementById("canvas").clientWidth;
   var h = document.getElementById("canvas").clientHeight;
   var barPadding = 1;
+  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
+  //                     .domain([0, 100]) //輸入的範圍
+  //                     .range([padding , w - barpadding])
+
+  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scale.linear() //製作線性尺度
+  .domain([0, 100]) //輸入的範圍
+  .range([h - barpadding, barpadding]);
+  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
+  .orient("left") //標示位置
+  .ticks(10);
+  $("svg").attr("id", "canvas");
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
     return i * (w / dataset.length);
   }).attr("y", function (d) {
@@ -75,7 +84,13 @@ $(document).ready(function () {
   }).attr("y", function (d) {
     return h - d * 4 + 14;
   }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
-  svg.axis().scale("bottom").scale("left");
+  /*svg.axis()
+      .scale("bottom")
+      .scale("left");*/
+
+  svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
+  .attr('transform', 'translate(0, ' + barpadding + ')') //移動到下方
+  .call(yAxis); //將軸線匯入
 });
 
 /***/ }),

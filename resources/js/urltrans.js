@@ -36,15 +36,28 @@ $(document).ready(function(){
     var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
         11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-    var svg = d3.select(".chart-output")
-                .append("svg")
-                
-    
-    $("svg").attr("id", "canvas");
-
     var w = document.getElementById("canvas").clientWidth;
     var h = document.getElementById("canvas").clientHeight;
     var barPadding = 1;
+
+    var svg = d3.select(".chart-output")
+                .append("svg")
+
+    //var xScale = d3.scale.linear() //製作線性尺度
+    //                     .domain([0, 100]) //輸入的範圍
+    //                     .range([padding , w - barpadding])
+                
+    var yScale = d3.scale.linear() //製作線性尺度
+                         .domain([0, 100]) //輸入的範圍
+                         .range([h - barpadding, barpadding])
+
+    var yAxis = d3.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
+	                .orient("left") //標示位置
+	                .ticks(10)
+                         
+    $("svg").attr("id", "canvas");
+
+    
 
     svg.selectAll("rect")
         .data(dataset)
@@ -56,7 +69,7 @@ $(document).ready(function(){
         .attr("height", function(d) {return d * 4;})
         .attr("fill", function(d) {return "rgb(0, 0, " + (d * 10) + ")";});
 
-        svg.selectAll("text")
+    svg.selectAll("text")
         .data(dataset)
         .enter()
         .append("text")
@@ -68,8 +81,12 @@ $(document).ready(function(){
         .attr("font-size", "11px")
         .attr("fill", "white");
 
-        svg.axis()
+        /*svg.axis()
             .scale("bottom")
-            .scale("left");
+            .scale("left");*/
+
+        svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
+	        .attr('transform', 'translate(0, '+ (barpadding) +')') //移動到下方
+	        .call(yAxis); //將軸線匯入
 });
 
