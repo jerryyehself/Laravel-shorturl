@@ -41,7 +41,8 @@ $(document).ready(function(){
 
     var svg = d3.select(".chart-output")
                 .append("svg")
-                .attr("id", "chart")
+
+    svg.attr("id", "chart");
     
     var w = document.getElementById("chart").clientWidth;
     var h = document.getElementById("chart").clientHeight;
