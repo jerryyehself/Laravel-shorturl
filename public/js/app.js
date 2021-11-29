@@ -64,7 +64,7 @@ $(document).ready(function () {
   var barPadding = 1;
   var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
   .domain([0, 100]) //輸入的範圍
-  .range([h - barpadding, barpadding]);
+  .range([h - barPadding, barPadding]);
   var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
   .orient("left") //標示位置
   .ticks(10);
@@ -89,7 +89,7 @@ $(document).ready(function () {
       .scale("left");*/
 
   svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
-  .attr('transform', 'translate(0, ' + barpadding + ')') //移動到下方
+  .attr('transform', 'translate(0, ' + barPadding + ')') //移動到下方
   .call(yAxis); //將軸線匯入
 });
 
