@@ -67,10 +67,10 @@ $(document).ready(function () {
   .range([h - barPadding, barPadding]);
   var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
-    return i * ((w - 20 * dataset.length) / dataset.length) + 20;
+    return i * ((w - 20) / dataset.length) + 20;
   }).attr("y", function (d) {
     return h - d * 4;
-  }).attr("width", (w - 20 * dataset.length) / dataset.length - barPadding + 20).attr("height", function (d) {
+  }).attr("width", (w - 20 * dataset.length) / dataset.length + 20 - barPadding).attr("height", function (d) {
     return d * 4;
   }).attr("fill", function (d) {
     return "rgb(0, 0, " + d * 10 + ")";

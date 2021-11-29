@@ -66,9 +66,9 @@ $(document).ready(function(){
         .data(dataset)
         .enter()
         .append("rect")
-        .attr("x", function(d, i) {return i * ((w-(20*dataset.length)) / dataset.length) + 20;})
+        .attr("x", function(d, i) {return i * ((w-20) / dataset.length) + 20;})
         .attr("y", function(d) {return h - (d * 4);})
-        .attr("width", (w  - (20*dataset.length)) / dataset.length - barPadding + 20)
+        .attr("width", (w  - (20*dataset.length)) / dataset.length  + 20 - barPadding)
         .attr("height", function(d) {return d * 4;})
         .attr("fill", function(d) {return "rgb(0, 0, " + (d * 10) + ")";});
 
