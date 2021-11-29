@@ -42,6 +42,7 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var svg = d3.select(".chart-output")
+                .select("svg")
                 .append("svg")
                 .attr("id", "chart");
 
