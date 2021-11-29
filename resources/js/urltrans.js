@@ -68,6 +68,8 @@ $(document).ready(function(){
         .attr("font-size", "11px")
         .attr("fill", "white");
 
-        svg.call(axis);
+        svg.axis()
+            .scale("bottom")
+            .scale("left");
 });
 

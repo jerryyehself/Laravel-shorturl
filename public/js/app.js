@@ -75,7 +75,7 @@ $(document).ready(function () {
   }).attr("y", function (d) {
     return h - d * 4 + 14;
   }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
-  svg.call(axis);
+  svg.axis().scale("bottom").scale("left");
 });
 
 /***/ }),
