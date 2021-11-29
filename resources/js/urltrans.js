@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     var svg = d3.select(".chart-output")
                 .append("svg")
-                .attr("class", "chart")
+                .attr("id", "chart");
 
         svg.selectAll("rect")
             .data(dataset)
