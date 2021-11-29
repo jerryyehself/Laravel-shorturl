@@ -68,6 +68,11 @@ $(document).ready(function () {
   }).attr("fill", function (d) {
     return "rgb(0, 0, " + d * 10 + ")";
   });
+  svg.selectAll("text").data(dataset).enter().append("text").attr("x", function (d, i) {
+    return i * (w / dataset.length) + 5;
+  }).attr("y", function (d) {
+    return h - d * 4 + 15;
+  }).attr("font-size", "11px").attr("fill", "white").attr("text-anchor", "middle");
 });
 
 /***/ }),
