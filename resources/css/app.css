@@ -283,7 +283,8 @@ div.bar {
 
 svg{
     height: 100%;
-    width: 100%;
+    width: 90%;
+    align-self: right;
 }
 
 /*rect{
