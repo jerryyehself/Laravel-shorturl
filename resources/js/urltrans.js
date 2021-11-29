@@ -36,9 +36,7 @@ $(document).ready(function(){
     var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
         11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-    var w = document.getElementById("canvas").clientWidth;
-    var h = document.getElementById("canvas").clientHeight;
-    var barPadding = 1;
+
 
     var svg = d3.select(".chart-output")
                 .append("svg")
@@ -47,6 +45,14 @@ $(document).ready(function(){
     //                     .domain([0, 100]) //輸入的範圍
     //                     .range([padding , w - barpadding])
                 
+    
+                         
+    $("svg").attr("id", "canvas");
+
+    var w = document.getElementById("canvas").clientWidth;
+    var h = document.getElementById("canvas").clientHeight;
+    var barPadding = 1;
+
     var yScale = d3.scale.linear() //製作線性尺度
                          .domain([0, 100]) //輸入的範圍
                          .range([h - barpadding, barpadding])
@@ -54,10 +60,6 @@ $(document).ready(function(){
     var yAxis = d3.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
 	                .orient("left") //標示位置
 	                .ticks(10)
-                         
-    $("svg").attr("id", "canvas");
-
-    
 
     svg.selectAll("rect")
         .data(dataset)
