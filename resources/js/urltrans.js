@@ -59,7 +59,11 @@ $(document).ready(function(){
         .attr("width", w / dataset.length - barPadding)
         .attr("height", function(d) {
                 return d * 4;
-        });
+        })
+        .attr("fill", function(d) {
+            return "rgb(0, 0, " + (d * 10) + ")";
+        })
+        
 
 });
 
