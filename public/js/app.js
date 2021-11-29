@@ -67,7 +67,7 @@ $(document).ready(function () {
   .range([h - barPadding, barPadding]);
   var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
-    return i * (w / dataset.length) + 20;
+    return i * (w - 20 / dataset.length) + 20;
   }).attr("y", function (d) {
     return h - d * 4;
   }).attr("width", w / dataset.length - barPadding).attr("height", function (d) {
@@ -78,7 +78,7 @@ $(document).ready(function () {
   svg.selectAll("text").data(dataset).enter().append("text").text(function (d) {
     return d;
   }).attr("text-anchor", "middle").attr("x", function (d, i) {
-    return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2 + 20;
+    return i * (w - 20 / dataset.length) + (w / dataset.length - barPadding) / 2 + 20;
   }).attr("y", function (d) {
     return h - d * 4 + 14;
   }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
