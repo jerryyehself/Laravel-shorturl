@@ -42,10 +42,10 @@ $(document).ready(function(){
     var svg = d3.select(".chart-output")
                 .append("svg")
 
-    svg.attr("id", "chart");
+    svg.attr("id", "canvas");
     
-    var w = document.getElementById("chart").clientWidth;
-    var h = document.getElementById("chart").clientHeight;
+    var w = document.getElementById("canvas").clientWidth;
+    var h = document.getElementById("canvas").clientHeight;
     var barPadding = 1;
 
     svg.selectAll("rect")
