@@ -32,10 +32,14 @@ $(document).ready(function(){
     $(".url.active").on('blur', function(event){
         $(".submit").css("display", "none");
     });
-        
-    var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-        11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
+    var usage_num = $usage_number ;
+    var trans_num = $number_of_inseret_times;
+        
+    var dataset = [ usage_num, trans_num];
+    
+
+    
 
 
     var svg = d3.select(".chart-output")
