@@ -289,7 +289,10 @@ div.bar {
     margin-right: 2px;
 }
 
-
+svg{
+    height: 50%;
+    width: 50%;
+}
 
 /*rect{
     max-width: inherit;
