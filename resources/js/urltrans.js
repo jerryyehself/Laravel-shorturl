@@ -36,7 +36,7 @@ $(document).ready(function(){
     var usage_num = Number("<?php echo $usage_number;?>") ;
     var trans_num = Number("<?php echo $number_of_inseret_times;?>");
         
-    var dataset = [ usage_num, trans_num];
+    var dataset = [usage_num, trans_num];
     
 
     
@@ -58,7 +58,7 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var yScale = d3.scaleLinear() //製作線性尺度
-                    .domain([0, dataset.max()]) //輸入的範圍
+                    .domain([0, 100]) //輸入的範圍
                     .range([h - barPadding, barPadding])
                          
 
