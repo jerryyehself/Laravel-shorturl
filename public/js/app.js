@@ -53,8 +53,8 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
-  var usage_num = "<?php echo $usage_number;?>";
-  var trans_num = "<?php echo $number_of_inseret_times;?>";
+  var usage_num = "<?php echo $sql -> usage_number;?>";
+  var trans_num = "<?php echo $sql -> number_of_inseret_times;?>";
   var dataset = [usage_num, trans_num];
   console.log(dataset);
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
