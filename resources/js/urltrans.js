@@ -58,7 +58,7 @@ $(document).ready(function(){
     var barPadding = 1;
 
     var yScale = d3.scaleLinear() //製作線性尺度
-                    .domain([0, max(dataset)]) //輸入的範圍
+                    .domain([0, dataset.max()]) //輸入的範圍
                     .range([h - barPadding, barPadding])
                          
 
