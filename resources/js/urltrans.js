@@ -33,8 +33,8 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
 
-    var usage_num = "<?php echo $sql -> usage_number;?>" ;
-    var trans_num = "<?php echo $sql -> number_of_inseret_times;?>";
+    var usage_num = "<?=$sql -> usage_number?>" ;
+    var trans_num = "<?=$sql -> number_of_inseret_times?>";
         
     var dataset = [usage_num, trans_num];
     
