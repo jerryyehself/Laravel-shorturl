@@ -38,7 +38,7 @@ $(document).ready(function(){
         
     var dataset = [usage_num, trans_num];
     
-
+    
     console.log(dataset);
 
 
