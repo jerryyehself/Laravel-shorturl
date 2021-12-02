@@ -36,7 +36,7 @@ $(document).ready(function(){
     var usage_num = parseInt('<?php echo $sql -> usage_number;?>');
     var trans_num = parseInt('<?php echo $sql -> number_of_inseret_times;?>');
         
-    var dataset = [1111, trans_num];
+    var dataset = [usage_num, trans_num];
     
 
     alert(dataset);
