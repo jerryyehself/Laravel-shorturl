@@ -16,4 +16,6 @@ use App\Http\Controllers\Urlcon;
 
 Route::get('/', [Urlcon::class, 'turn_in']);
 
+Route::get('/show_chart',);
+
 Route::get('/{codee}', [Urlcon::class, 'turn_t']);
