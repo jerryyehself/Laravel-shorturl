@@ -32,15 +32,8 @@ $(document).ready(function(){
     $(".url.active").on('blur', function(event){
         $(".submit").css("display", "none");
     });
-
-    //var usage_num = parseInt('<?php echo $sql -> usage_number;?>');
-    //var trans_num = parseInt('<?php echo $sql -> number_of_inseret_times;?>');
         
     var dataset = [usage_num, trans_num];
-    
-
-    //alert(dataset);
-
 
     var svg = d3.select(".chart-output")
                 .append("svg")

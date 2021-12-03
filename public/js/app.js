@@ -9,6 +9,41 @@
 
 __webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js");
 
+__webpack_require__(/*! ./show_chart */ "./resources/js/show_chart.js");
+
+/***/ }),
+
+/***/ "./resources/js/show_chart.js":
+/*!************************************!*\
+  !*** ./resources/js/show_chart.js ***!
+  \************************************/
+/***/ (() => {
+
+var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+var suicide = {
+  type: 'line',
+  label: '全台自殺人數',
+  backgroundColor: 'rgb(255, 99, 132)',
+  borderColor: 'rgb(255, 99, 132)',
+  data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
+};
+var antidepressant = {
+  type: 'line',
+  label: '全台抗憂鬱藥物使用人數',
+  backgroundColor: 'rgb(255, 255, 132)',
+  borderColor: 'rgb(255, 255, 132)',
+  data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
+};
+var config = {
+  type: 'scatter',
+  data: {
+    labels: labels,
+    datasets: [suicide, antidepressant]
+  },
+  options: {}
+};
+var myChart = new Chart(document.getElementById('myChart'), config);
+
 /***/ }),
 
 /***/ "./resources/js/urltrans.js":
@@ -52,11 +87,8 @@ $(document).ready(function () {
   });
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
-  }); //var usage_num = parseInt('<?php echo $sql -> usage_number;?>');
-  //var trans_num = parseInt('<?php echo $sql -> number_of_inseret_times;?>');
-
-  var dataset = [usage_num, trans_num]; //alert(dataset);
-
+  });
+  var dataset = [usage_num, trans_num];
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
   //                     .domain([0, 100]) //輸入的範圍
   //                     .range([padding , w - barpadding])

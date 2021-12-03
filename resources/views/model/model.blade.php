@@ -6,6 +6,7 @@
         <script src="{{asset('js/jquery.min.js')}}" defer></script>
         <script src="{{asset('js/app.js')}}" defer></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         @yield('content')
