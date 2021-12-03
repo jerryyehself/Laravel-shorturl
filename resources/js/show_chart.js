@@ -20,7 +20,7 @@ const antidepressant = {
     type:'line',
     label: '全台抗憂鬱藥物使用人數',
     backgroundColor: 'rgb(255, 255, 132)',
-    borderColor: 'rgb(255, 255, 132)',
+    borderColor: 'rgb(60, 95, 189)',
     data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197],
 };
   
