@@ -55,7 +55,7 @@ var myChart = new Chart(document.getElementById('myChart'), config);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
-if (document.getElementById("url-string").getAttribute("href") != "") {
+if (document.getElementById("url-string").getAttribute("href") !== "") {
   $(".head-bar").toggleClass("active");
   $(".title-zh").toggleClass("active");
   $(".title-eng").toggleClass("active");
