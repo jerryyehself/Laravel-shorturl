@@ -16,7 +16,7 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     //$("footer").toggleClass("active");
     $(".input-msg").remove();
     $(function() {
-            var arr = $('.url-tran').find('input').toArray();// 把三個div放進數組裡面
+            var arr = $('.url-tran').find('input').toArray();
             var temp;
             // 1 3對調
             temp = arr[0];
