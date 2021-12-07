@@ -23,8 +23,7 @@
     
 <h2>前端設計</h2>
     <ul>
-        <li>HTML5</li>
-            
+        <li>HTML5</li>    
         <li>CSS3</li>
         <li>javascript</li>
         <li>jQuery</li>
