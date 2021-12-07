@@ -218,12 +218,14 @@ input{
 }
 
 .chart-list.active {
-    display: flex;
+    display: inline-block;
     width: 20%;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    /*float: left;*/
+}
+
+.chart-output.footer.active{
+    display: inline-block;
+    width: 80%;
 }
 
 .footer{
@@ -268,12 +270,11 @@ span{
     grid-column-end: 2;
 }
 
-.chart-output{
+.visual.active{
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-    width: 80%;
 }
 
 .origin-url{
