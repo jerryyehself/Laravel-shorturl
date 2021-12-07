@@ -23,8 +23,10 @@
     <div class="visual">
 
         <div class="chart-list">
+
             <div class="list-content">chart.js</div>
             <div class="list-content">d3.js</div>
+        
         </div>
         
         <div class="chart-output">
