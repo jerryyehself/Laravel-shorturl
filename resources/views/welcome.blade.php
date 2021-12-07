@@ -22,10 +22,8 @@
 
     <div class="visual">
         <div class="chart-list">
-            <ul>
-                <li>chart.js</li>
-                <li>d3.js</li>
-            </ul>
+            <div>chart.js</div>
+            <div>d3.js</div>
         </div>
     
         <div class="chart-output">
