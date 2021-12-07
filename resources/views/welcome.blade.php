@@ -21,13 +21,16 @@
 <div class="main-content">
 
     <div class="visual">
+
         <div class="chart-list">
             <div>chart.js</div>
             <div>d3.js</div>
         </div>
+        
         <div class="chart-output">
             <div class="chart"></div>
         </div>
+    
     </div>
 
     <div class="function-output">
