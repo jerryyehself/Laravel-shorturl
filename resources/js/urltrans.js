@@ -13,6 +13,7 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".chart-output").toggleClass("active");
     //$("input").toggleClass("active");
     //$("div").toggleClass("active");
+    
     //$("footer").toggleClass("active");
     $(".input-msg").remove();
     $(function() {
