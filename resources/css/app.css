@@ -223,7 +223,7 @@ input{
     /*float: left;*/
 }
 
-.chart-output.footer.active{
+.chart-output.active{
     display: inline-block;
     width: 80%;
 }
