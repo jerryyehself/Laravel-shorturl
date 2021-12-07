@@ -23,9 +23,7 @@
     
 <h2>前端設計</h2>
     <ul>
-        <li>HTML5
-        <p>111</p>
-        </li>
+        <li>HTML5</li>
             
         <li>CSS3</li>
         <li>javascript</li>
