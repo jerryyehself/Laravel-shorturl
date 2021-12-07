@@ -25,7 +25,6 @@
             <div>chart.js</div>
             <div>d3.js</div>
         </div>
-    
         <div class="chart-output">
             <div class="chart"></div>
         </div>
