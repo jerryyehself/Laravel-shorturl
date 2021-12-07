@@ -218,9 +218,10 @@ input{
 }
 
 .chart-list.active {
-    display: inline-block;
+    display: inline;
     width: 20%;
-    /*float: left;*/
+    height: 100%;
+    float: left;
 }
 
 .chart-output.active{
@@ -295,6 +296,11 @@ div.bar {
 svg{
     height: 100%;
     width: 100%;
+}
+
+ul{
+    list-style-type: none;
+    border: 1px #555;
 }
 
 /*rect{
