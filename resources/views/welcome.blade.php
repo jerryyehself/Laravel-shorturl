@@ -19,9 +19,18 @@
 </div>
 @if(@isset($pre_url))
 <div class="main-content">
+    
+    <div class="chart-list">
+        <ul>
+            <li>chart.js</li>
+            <li>d3.js</li>
+        </ul>
+    <div>
+        
     <div class="chart-output">
         <div class="chart"></div>
     </div>
+
     <div class="function-output">
         
         <p class="trans-result">轉換結果</p>

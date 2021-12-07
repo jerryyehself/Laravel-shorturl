@@ -217,6 +217,15 @@ input{
     background-color: #eae4e9;
 }
 
+.chart-list.active {
+    display: flex;
+    width: 20%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
 .footer{
     display: none;
     height: 0;
@@ -264,6 +273,7 @@ span{
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    width: 80%;
 }
 
 .origin-url{
