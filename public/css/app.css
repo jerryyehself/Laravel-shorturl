@@ -223,6 +223,17 @@ input{
     background-color: #eae4e9;
 }
 
+.chart-list.active {
+    display: inline-block;
+    width: 20%;
+    /*float: left;*/
+}
+
+.chart-output.active{
+    display: inline-block;
+    width: 80%;
+}
+
 .footer{
     display: none;
     height: 0;
@@ -267,7 +278,7 @@ span{
     grid-column-end: 2;
 }
 
-.chart-output{
+.visual.active{
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
