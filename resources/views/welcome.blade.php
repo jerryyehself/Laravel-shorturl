@@ -26,13 +26,13 @@
                 <li>chart.js</li>
                 <li>d3.js</li>
             </ul>
-        <div>
+        </div>
     
         <div class="chart-output">
             <div class="chart"></div>
         </div>
     </div>
-    
+
     <div class="function-output">
         
         <p class="trans-result">轉換結果</p>
