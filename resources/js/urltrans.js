@@ -1,5 +1,5 @@
 if (document.getElementById("url-string").getAttribute("href") !== ""){
-    $(".head-bar").toggleClass("active");
+    /*$(".head-bar").toggleClass("active");
     $(".title-zh").toggleClass("active");
     $(".title-eng").toggleClass("active");
     $(".input-mag").toggleClass("active");
@@ -10,7 +10,10 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".title-font").toggleClass("active");
     $(".chart-list").toggleClass("active");
     $(".visual").toggleClass("active");
-    $(".chart-output").toggleClass("active");
+    $(".chart-output").toggleClass("active");*/
+    $("input").toggleClass("active");
+    $("div").toggleClass("active");
+    $("footer").toggleClass("active");
     $(".input-msg").remove();
     $(function() {
             var arr = $('.url-tran').find('input').toArray();// 把三個div放進數組裡面
