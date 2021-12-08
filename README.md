@@ -17,6 +17,7 @@
         <li>複習前端/後端語言</li>
         <li>探索實作時可用的資源</li>
     </ul>
+<h2>原型設計</h2>
     
 <h2>部屬Docker</h2>
     <p>laravel 8以上在Windows中建立專案需透過Docker虛擬主機，作業系統使用ubuntu 20.04</p>
