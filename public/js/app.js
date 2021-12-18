@@ -140,20 +140,23 @@ $(document).ready(function () {
   \**********************************/
 /***/ (() => {
 
-var Counter = {
-  data: function data() {
-    return {
-      counter: 0
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
+$(document).ready(function () {
+  var Counter = {
+    data: function data() {
+      return {
+        counter: 0
+      };
+    },
+    mounted: function mounted() {
+      var _this = this;
 
-    setInterval(function () {
-      _this.counter++;
-    }, 1000);
-  }
-};
+      setInterval(function () {
+        _this.counter++;
+      }, 1000);
+    }
+  };
+  Vue.createApp(Counter).mount('.chart-list');
+});
 
 /***/ }),
 
