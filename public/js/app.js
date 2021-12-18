@@ -140,7 +140,7 @@ $(document).ready(function () {
   \**********************************/
 /***/ (() => {
 
-if (document.getElementById("url-string").getAttribute("href") !== "") {
+$(document).ready(function () {
   var Counter = {
     data: function data() {
       return {
@@ -149,7 +149,7 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
     }
   };
   Vue.createApp(Counter).mount('.chart-list');
-}
+});
 
 /***/ }),
 

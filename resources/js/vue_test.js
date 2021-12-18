@@ -1,4 +1,4 @@
-if (document.getElementById("url-string").getAttribute("href") !== ""){
+$(document).ready(function(){
 
     const Counter = {
         data() {
@@ -9,4 +9,4 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     }
     
     Vue.createApp(Counter).mount('.chart-list')
-}
+});
