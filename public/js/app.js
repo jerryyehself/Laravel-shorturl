@@ -147,7 +147,7 @@ var Counter = {
     };
   }
 };
-Vue.createApp(Counter).mount('#counter');
+Vue.createApp(Counter).mount('.chart-list');
 
 /***/ }),
 
