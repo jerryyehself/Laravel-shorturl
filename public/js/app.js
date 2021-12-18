@@ -11,6 +11,8 @@ __webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js");
 
 __webpack_require__(/*! ./show_chart */ "./resources/js/show_chart.js");
 
+__webpack_require__(/*! ./vue_test */ "./resources/js/vue_test.js");
+
 /***/ }),
 
 /***/ "./resources/js/show_chart.js":
@@ -129,6 +131,23 @@ $(document).ready(function () {
   svg.append('g').attr('class', 'axis').attr('transform', 'translate(20)', 0) //移動到左方
   .call(yAxis);
 });
+
+/***/ }),
+
+/***/ "./resources/js/vue_test.js":
+/*!**********************************!*\
+  !*** ./resources/js/vue_test.js ***!
+  \**********************************/
+/***/ (() => {
+
+var Counter = {
+  data: function data() {
+    return {
+      counter: 0
+    };
+  }
+};
+Vue.createApp(Counter).mount('#counter');
 
 /***/ }),
 
