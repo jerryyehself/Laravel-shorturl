@@ -140,14 +140,16 @@ $(document).ready(function () {
   \**********************************/
 /***/ (() => {
 
-var Counter = {
-  data: function data() {
-    return {
-      counter: 0
-    };
-  }
-};
-Vue.createApp(Counter).mount('.chart-list');
+if (document.getElementById("url-string").getAttribute("href") !== "") {
+  var Counter = {
+    data: function data() {
+      return {
+        counter: 0
+      };
+    }
+  };
+  Vue.createApp(Counter).mount('.chart-list');
+}
 
 /***/ }),
 
