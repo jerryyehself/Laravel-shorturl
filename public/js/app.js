@@ -150,7 +150,8 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.chartlist');
-  var vm3 = chartLabel.mount('.chartType');
+  var vm3 = new chartLabel();
+  vm3.mount('.chartType');
   var hideShadow = Vue.createApp({
     methods: {
       hidden: function hidden(event) {
