@@ -11,7 +11,7 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".chart-list").toggleClass("active");
     $(".visual").toggleClass("active");
     $(".chart-output").toggleClass("active");
-    $('list-content').toggleClass("active");
+    $('.list-content').toggleClass("active");
     //$("input").toggleClass("active");
     //$("div").toggleClass("active");
     //$("footer").toggleClass("active");
