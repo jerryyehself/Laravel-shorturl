@@ -7,7 +7,7 @@ body {
     background-color: #f0efeb;
     flex-direction: column; 
 }
- 
+
 a{
     display: block;
     text-decoration:none;
@@ -227,7 +227,7 @@ input{
 .chart-output.active{
     width: 70%;
     float: left;
-    border-radius: 25px;
+    
 }
 
 .footer{
@@ -298,6 +298,7 @@ svg{
     height: 100%;
     width: 100%;
     background-color: white;
+    border-radius: 25px;
 }
 
 ul{
@@ -312,7 +313,7 @@ ul{
     padding: 5px;
     margin-bottom: 5px;
     margin-right: 1em;
-    background-color: #555;
+    background-color: #eae4ea;
     border-radius: 5px;
 }
 

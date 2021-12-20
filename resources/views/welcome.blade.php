@@ -31,7 +31,7 @@
         </div>
         
         <div class="chart-output">
-            <div class="chart"></div>
+            <!--<div class="chart"></div>-->
         </div>
     
         
