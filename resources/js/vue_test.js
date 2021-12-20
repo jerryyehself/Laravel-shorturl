@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const chartLabel = Vue.createApp({
+    let chartLabel = Vue.createApp({
         data(){
             return{
                 chartLists: ['d3.js', 'chart.js']
@@ -7,8 +7,7 @@ $(document).ready(function(){
         }
     })
     const vm = chartLabel.mount('.chartlist');
-    const vm3 = new chartLabel;
-    vm3.mount('.chartType')
+    const vm3 = chartLabel.mount('.chartType');
 
     const hideShadow = Vue.createApp({
         methods:{
