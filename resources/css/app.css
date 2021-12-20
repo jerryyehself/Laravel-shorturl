@@ -319,6 +319,9 @@ ul{
     box-shadow: 2px 2px black;
 }
 
+.list-content.active:active, .list-content.active:focus{
+    box-shadow:none;
+}
 /*rect{
     max-width: inherit;
     max-height: inherit;
