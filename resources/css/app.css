@@ -226,8 +226,6 @@ input{
 .chart-output.active{
     width: 80% -1em;
     float: left;
-    background: white;
-    border-radius: 5px;
 }
 
 .footer{
@@ -310,7 +308,7 @@ ul{
     height: fit-content;
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #e9e4ea;
+    background-color: #555;
     border-radius: 5px;
 }
 
