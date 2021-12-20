@@ -231,7 +231,7 @@ input{
 
 .chart-output.active{
     float: left;
-    width: auto;
+    flex-grow: 1;
 }
 
 .footer{
