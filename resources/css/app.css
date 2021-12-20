@@ -220,7 +220,7 @@ input{
 .chartlist.active {
     height: 100%;
     float: left;
-    padding-right: 1em;
+    
     width: 30%;
 }
 
