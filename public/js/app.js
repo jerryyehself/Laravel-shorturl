@@ -17299,15 +17299,18 @@ $(document).ready(function () {
   var chartLabel = Vue.createApp({
     data: function data() {
       return {
+        defultChart: 'chart.js',
         chartLists: ['d3.js', 'chart.js']
       };
+    },
+    methods: {
+      getChartType: function getChartType(chartType) {
+        this.defultChart = chartType;
+        return this.chartType;
+      }
     }
   });
   var vm = chartLabel.mount('.chartlist');
-
-  function ttry() {
-    alert('s');
-  }
   /*const hideShadow = Vue.createApp({
       methods:{
           hidden(event){
@@ -17317,7 +17320,6 @@ $(document).ready(function () {
   })
   
   const vm2 = hideShadow.mount('.list-content.active');*/
-
 });
 
 /***/ }),

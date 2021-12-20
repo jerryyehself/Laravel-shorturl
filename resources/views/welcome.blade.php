@@ -24,8 +24,8 @@
 
         <div class="chartlist">
             
-            <div class="chartType">@{{ chartList }}</div>
-            <div class="list-content" v-for="chartList in chartLists" onclick='window.ttry()'>
+            <div class="chartType">{{ this.defultChart }}</div>
+            <div class="list-content" v-for="chartList in chartLists" @click='getChartType(chartList)'>
                 @{{ chartList }}
             </div>
 

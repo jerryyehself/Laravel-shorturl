@@ -4,16 +4,22 @@ $(document).ready(function(){
     const chartLabel = Vue.createApp({
         data(){
             return{
+                defultChart: 'chart.js',
                 chartLists: ['d3.js', 'chart.js']
+            }
+        },
+        methods:{
+            getChartType: function(chartType){
+                this.defultChart = chartType
+                
+                return this.chartType
             }
         }
     })
 
     const vm = chartLabel.mount('.chartlist');
 
-    function ttry(){
-        alert('s');
-    }
+    
     /*const hideShadow = Vue.createApp({
         methods:{
             hidden(event){
