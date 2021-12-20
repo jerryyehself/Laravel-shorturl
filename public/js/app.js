@@ -150,6 +150,26 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.chartlist');
+  var listContent = Vue.createApp({
+    data: function data() {
+      return {
+        shadow: "none"
+      };
+    },
+    computed: {
+      modelStyle: function modelStyle() {
+        return {
+          'box-shadow': this.shadow ? '' : 'none'
+        };
+      }
+    },
+    methods: {
+      toggleModal: function toggleModal() {
+        this.shadow = !this.shadow;
+      }
+    }
+  });
+  var vm2 = listContent.mount('.list-content.active');
 });
 
 /***/ }),
