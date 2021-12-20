@@ -24,7 +24,7 @@
 
         <div class="chartlist">
             
-            <div class="list-content" v-for="chartList in chartLists" @click="pushed">
+            <div class="list-content" v-for="chartList in chartLists" @onclick="boxShadow = false">
                 @{{ chartList }}
             </div>
 
