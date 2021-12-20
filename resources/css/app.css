@@ -220,12 +220,15 @@ input{
 .chartlist.active {
     height: 100%;
     float: left;
-    margin: 1em;
+    margin-right: 1em;
+    margin-left:5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
 .chart-output.active{
-    width: 80%-2em;
+    width: 80% -1em -5px;
     float: left;
 }
 
