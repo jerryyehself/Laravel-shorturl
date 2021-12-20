@@ -223,7 +223,7 @@ input{
     background-color: #eae4e9;
 }
 
-.chart-list.active {
+.chartlist.active {
     width: 20%;
     height: 100%;
     float: left;
@@ -318,6 +318,7 @@ ul{
     height: fit-content;
     padding: 5px;
     background-color: #555;
+    width: 30%;
 }
 
 

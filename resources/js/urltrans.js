@@ -8,7 +8,7 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".main-content").toggleClass("active");
     $(".footer").toggleClass("active");
     $(".title-font").toggleClass("active");
-    $(".chart-list").toggleClass("active");
+    $(".chartlist").toggleClass("active");
     $(".visual").toggleClass("active");
     $(".chart-output").toggleClass("active");
     $('.list-content').toggleClass("active");
