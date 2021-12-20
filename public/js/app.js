@@ -69,7 +69,8 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
   $(".title-font").toggleClass("active");
   $(".chart-list").toggleClass("active");
   $(".visual").toggleClass("active");
-  $(".chart-output").toggleClass("active"); //$("input").toggleClass("active");
+  $(".chart-output").toggleClass("active");
+  $('list-content').toggleClass("active"); //$("input").toggleClass("active");
   //$("div").toggleClass("active");
   //$("footer").toggleClass("active");
 
