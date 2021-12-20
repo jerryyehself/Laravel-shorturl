@@ -7,7 +7,7 @@ $(document).ready(function(){
         },
         methods:{
             getChartType(){
-                console.log(chartList.text());
+                return this.text();
             }
         }
     })
