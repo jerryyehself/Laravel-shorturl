@@ -4,17 +4,14 @@ $(document).ready(function(){
             return{
                 chartLists: ['d3.js', 'chart.js']
             }
-        },
-        methods:{
-            getChartType(){
-                return this.text();
-            }
         }
     })
 
     const vm = chartLabel.mount('.chartlist');
 
-    
+    function getChartType(){
+        console.log(this.text());
+    }
     /*const hideShadow = Vue.createApp({
         methods:{
             hidden(event){
