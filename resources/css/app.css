@@ -274,6 +274,8 @@ span{
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    display: grid;
+    grid-row-gap: 1em;
 }
 
 .origin-url{
