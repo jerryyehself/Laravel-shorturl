@@ -220,10 +220,11 @@ input{
 .chartlist.active {
     height: 100%;
     float: left;
+    margin-right: 1em;
 }
 
 .chart-output.active{
-    width: 80%;
+    width: 80%-1em;
     float: left;
 }
 
@@ -274,8 +275,6 @@ span{
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-    display: grid;
-    grid-row-gap: 1em;
 }
 
 .origin-url{
