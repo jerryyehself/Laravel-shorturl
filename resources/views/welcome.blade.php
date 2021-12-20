@@ -25,7 +25,7 @@
         <div class="chartlist">
             
             <div class="chartType">@{{ chartList }}</div>
-            <div class="list-content" v-for="chartList in chartLists" @click='$alert("s")'>
+            <div class="list-content" v-for="chartList in chartLists" @click='ttry()'>
                 @{{ chartList }}
             </div>
 

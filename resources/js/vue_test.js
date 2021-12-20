@@ -1,20 +1,19 @@
+const { TrackOpTypes } = require("vue");
+
 $(document).ready(function(){
     const chartLabel = Vue.createApp({
         data(){
             return{
                 chartLists: ['d3.js', 'chart.js']
             }
-        },
-        methods:{
-            getChartType(chartList){
-                console.log(chartList.text());
-            }
         }
     })
 
     const vm = chartLabel.mount('.chartlist');
 
-    
+    function ttry(){
+        alert('s');
+    }
     /*const hideShadow = Vue.createApp({
         methods:{
             hidden(event){
