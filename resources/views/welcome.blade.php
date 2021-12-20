@@ -24,7 +24,10 @@
 
         <div class="chartlist">
             
-            <div class="chartType">@{{ this.defultChart }}</div>
+            <div class="chartType">
+                <p class="sub-title">圖表套件<p>
+                @{{ this.defultChart }}
+            </div>
             <div class="list-content" v-for="chartList in chartLists" @click='getChartType(chartList)'>
                 @{{ chartList }}
             </div>
