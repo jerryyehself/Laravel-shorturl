@@ -141,21 +141,14 @@ $(document).ready(function () {
 /***/ (() => {
 
 $(document).ready(function () {
-  var Counter = {
+  var test = Vue.createApp({
     data: function data() {
       return {
-        counter: 0
+        chartLists: ['d3.js', 'chart.js']
       };
-    },
-    mounted: function mounted() {
-      var _this = this;
-
-      setInterval(function () {
-        _this.counter++;
-      }, 1000);
     }
-  };
-  Vue.createApp(Counter).mount('.chart-list');
+  });
+  var vm = test.mount('.test');
 });
 
 /***/ }),

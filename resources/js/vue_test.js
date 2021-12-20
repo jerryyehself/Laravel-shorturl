@@ -1,17 +1,10 @@
 $(document).ready(function(){
-
-    const Counter = {
-        data() {
-          return {
-            counter: 0
-          }
-        },
-        mounted() {
-          setInterval(() => {
-            this.counter++
-          }, 1000)
+    const test = Vue.createApp({
+        data(){
+            return{
+                chartLists: ['d3.js', 'chart.js']
+            }
         }
-      }
-    
-    Vue.createApp(Counter).mount('.chart-list')
-});
+    })
+    const vm = test.mount('.test')
+})

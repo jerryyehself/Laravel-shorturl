@@ -24,11 +24,8 @@
 
         <div class="chart-list">
             
-            Counter: @{{ counter }}
+            <div class="list-content" v-for="">{{chartList}}</div>
 
-            <div class="list-content">chart.js</div>
-            <div class="list-content">d3.js</div>
-        
         </div>
         
         <div class="chart-output">
