@@ -226,11 +226,12 @@ input{
 .chartlist.active {
     height: 100%;
     float: left;
-    margin-right: 1em;
+    margin: 1em;
+    border-radius: 5px;
 }
 
 .chart-output.active{
-    width: 80%-1em;
+    width: 80%-2em;
     float: left;
 }
 
