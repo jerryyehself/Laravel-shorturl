@@ -330,7 +330,7 @@ ul{
 }
 
 .list-content.active:active, .list-content.active:focus{
-    box-shadow:none;
+    box-shadow: none;
 }
 /*rect{
     max-width: inherit;

@@ -24,7 +24,8 @@
 
         <div class="chartlist">
             
-            <div class="list-content" v-for="chartList in chartLists" @click="hideShadow.hidden(event)">
+            <div class="chartType">@{{ chartList }}</div>
+            <div class="list-content" v-for="chartList in chartLists">
                 @{{ chartList }}
             </div>
 
