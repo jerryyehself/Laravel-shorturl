@@ -141,14 +141,14 @@ $(document).ready(function () {
 /***/ (() => {
 
 $(document).ready(function () {
-  var test = Vue.createApp({
+  var chartLabel = Vue.createApp({
     data: function data() {
       return {
         chartLists: ['d3.js', 'chart.js']
       };
     }
   });
-  var vm = test.mount('.test');
+  var vm = chartLabel.mount('.chart-list');
 });
 
 /***/ }),

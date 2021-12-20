@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    const test = Vue.createApp({
+    const chartLabel = Vue.createApp({
         data(){
             return{
                 chartLists: ['d3.js', 'chart.js']
             }
         }
     })
-    const vm = test.mount('.test')
+    const vm = chartLabel.mount('.chart-list')
 })
