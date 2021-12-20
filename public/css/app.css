@@ -230,8 +230,8 @@ input{
 }
 
 .chart-output.active{
+    width: calc(100%-3em);
     float: left;
-    flex-grow: 1;
 }
 
 .footer{
