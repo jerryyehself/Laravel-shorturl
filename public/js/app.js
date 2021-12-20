@@ -150,7 +150,7 @@ $(document).ready(function () {
     },
     methods: {
       getChartType: function getChartType() {
-        console.log(this.text());
+        console.log(chartList.text());
       }
     }
   });
