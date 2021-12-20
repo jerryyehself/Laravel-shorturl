@@ -147,13 +147,14 @@ $(document).ready(function () {
       return {
         chartLists: ['d3.js', 'chart.js']
       };
+    },
+    methods: {
+      getChartType: function getChartType(chartList) {
+        console.log(this.text());
+      }
     }
   });
   var vm = chartLabel.mount('.chartlist');
-
-  function getChartType() {
-    console.log(this.text());
-  }
   /*const hideShadow = Vue.createApp({
       methods:{
           hidden(event){
@@ -163,7 +164,6 @@ $(document).ready(function () {
   })
   
   const vm2 = hideShadow.mount('.list-content.active');*/
-
 });
 
 /***/ }),
