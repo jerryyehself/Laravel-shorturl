@@ -220,12 +220,11 @@ input{
 .chartlist.active {
     height: 100%;
     float: left;
-    
-    width: 30%;
+    width: 3em;
 }
 
 .chart-output.active{
-    width: 70%;
+    width: 100% -3em;
     float: left;
     
 }
