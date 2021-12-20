@@ -8,25 +8,13 @@ $(document).ready(function(){
     })
     const vm = chartLabel.mount('.chartlist');
 
-    const listContent = Vue.createApp({
-        data(){
-            return{
-                shadow: "none"
-            }
-        },
-        computed:{
-            modelStyle(){
-                return{
-                    'box-shadow': this.shadow ? '': 'none'
-                }
-            }
-        },
+    const hideShadow = Vue.createApp({
         methods:{
-            toggleModal(){
-                this.shadow = !this.shadow;
+            hidden(event){
+                this.style.boxShadow = 'none';
             }
         }
     })
     
-    const vm2 = listContent.mount('.list-content.active');
+    const vm2 = hideShadow.mount('.list-content.active');
 })

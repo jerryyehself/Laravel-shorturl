@@ -150,26 +150,14 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.chartlist');
-  var listContent = Vue.createApp({
-    data: function data() {
-      return {
-        shadow: "none"
-      };
-    },
-    computed: {
-      modelStyle: function modelStyle() {
-        return {
-          'box-shadow': this.shadow ? '' : 'none'
-        };
-      }
-    },
+  var hideShadow = Vue.createApp({
     methods: {
-      toggleModal: function toggleModal() {
-        this.shadow = !this.shadow;
+      hidden: function hidden(event) {
+        this.style.boxShadow = 'none';
       }
     }
   });
-  var vm2 = listContent.mount('.list-content.active');
+  var vm2 = hideShadow.mount('.list-content.active');
 });
 
 /***/ }),
