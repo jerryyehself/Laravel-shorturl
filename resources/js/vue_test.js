@@ -6,7 +6,8 @@ $(document).ready(function(){
             }
         }
     })
-    const vm = chartLabel.mount('.chartlist').mount('.chartType');
+    const vm = chartLabel.mount('.chartlist');
+    const vm3 = chartLabel.mount('.chartType');
 
     const hideShadow = Vue.createApp({
         methods:{
