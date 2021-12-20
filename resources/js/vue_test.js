@@ -6,5 +6,5 @@ $(document).ready(function(){
             }
         }
     })
-    const vm = chartLabel.mount('.chart-list')
+    const vm = chartLabel.mount('.chartlist')
 })

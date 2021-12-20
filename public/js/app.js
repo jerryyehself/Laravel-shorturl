@@ -148,7 +148,7 @@ $(document).ready(function () {
       };
     }
   });
-  var vm = chartLabel.mount('.chart-list');
+  var vm = chartLabel.mount('.chartlist');
 });
 
 /***/ }),
