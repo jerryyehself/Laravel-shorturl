@@ -1,15 +1,21 @@
 $(document).ready(function(){
-    let chartLabel = Vue.createApp({
+    const chartLabel = Vue.createApp({
         data(){
             return{
                 chartLists: ['d3.js', 'chart.js']
             }
+        },
+        methods:{
+            getChartType(){
+                console.log(this.text());
+            }
         }
     })
-    const vm = chartLabel.mount('.chartlist');
-    const vm3 = chartLabel.mount('.chartType');
 
-    const hideShadow = Vue.createApp({
+    const vm = chartLabel.mount('.chartlist');
+
+    
+    /*const hideShadow = Vue.createApp({
         methods:{
             hidden(event){
                 this.style.boxShadow = 'none';
@@ -17,5 +23,5 @@ $(document).ready(function(){
         }
     })
     
-    const vm2 = hideShadow.mount('.list-content.active');
+    const vm2 = hideShadow.mount('.list-content.active');*/
 })

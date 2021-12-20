@@ -147,18 +147,23 @@ $(document).ready(function () {
       return {
         chartLists: ['d3.js', 'chart.js']
       };
-    }
-  });
-  var vm = chartLabel.mount('.chartlist');
-  var vm3 = chartLabel.mount('.chartType');
-  var hideShadow = Vue.createApp({
+    },
     methods: {
-      hidden: function hidden(event) {
-        this.style.boxShadow = 'none';
+      getChartType: function getChartType() {
+        console.log(this.text());
       }
     }
   });
-  var vm2 = hideShadow.mount('.list-content.active');
+  var vm = chartLabel.mount('.chartlist');
+  /*const hideShadow = Vue.createApp({
+      methods:{
+          hidden(event){
+              this.style.boxShadow = 'none';
+          }
+      }
+  })
+  
+  const vm2 = hideShadow.mount('.list-content.active');*/
 });
 
 /***/ }),
