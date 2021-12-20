@@ -228,9 +228,6 @@ input{
     float: left;
     margin-right: 1em;
     margin-left:5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
 }
 
 .chart-output.active{
@@ -321,7 +318,9 @@ ul{
     height: -moz-fit-content;
     height: fit-content;
     padding: 5px;
+    margin-bottom: 5px;
     background-color: #555;
+    border-radius: 5px;
 }
 
 
