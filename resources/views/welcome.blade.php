@@ -24,7 +24,7 @@
 
         <div class="chart-list">
             
-            <div class="list-content" v-for="">{{chartList}}</div>
+            <div class="list-content" v-for=""> @{{ chartList }} </div>
 
         </div>
         
