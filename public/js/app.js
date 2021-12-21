@@ -17288,21 +17288,11 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-
-        if (this.defultChart === 'd3.js') {
-          showChartjs();
-          console.log('bb'); //return this.chartShow;
-        } else if (this.defultChart === 'chart.js') {
-          showD3js();
-          console.log('aa'); //return this.chartShow;
-          //alert('bb');
-        }
-
         return this.chartType;
       }
     }
   });
-  var vm = chartLabel.mount('.chartlist');
+  var vm = chartLabel.mount('.visual');
 });
 
 /***/ }),

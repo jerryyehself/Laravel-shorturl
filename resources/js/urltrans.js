@@ -90,15 +90,15 @@ $(document).ready(function(){
         
         $("svg").attr("id", "canvas");
 
-        var w = document.getElementById("canvas").clientWidth;
-        var h = document.getElementById("canvas").clientHeight;
-        var barPadding = 1;
+        const w = document.getElementById("canvas").clientWidth;
+        const h = document.getElementById("canvas").clientHeight;
+        const barPadding = 1;
 
-        var yScale = d3.scaleLinear() //製作線性尺度
+        const yScale = d3.scaleLinear() //製作線性尺度
                         .domain([0, 100]) //輸入的範圍
                         .range([h - barPadding, barPadding])                         
 
-        var yAxis = d3.axisLeft(yScale)
+        const yAxis = d3.axisLeft(yScale)
                         .ticks(10)
 
         svg.selectAll("rect")
@@ -141,28 +141,12 @@ $(document).ready(function(){
 
                 this.defultChart = chartType
 
-                if(this.defultChart === 'd3.js'){
-
-                    showChartjs();
-                    console.log('bb');
-
-                    //return this.chartShow;
-
-                }else if(this.defultChart === 'chart.js'){
-
-                    showD3js();
-                    console.log('aa');
-
-                    //return this.chartShow;
-                    //alert('bb');
-                }
-                
                 return this.chartType
             }
         }
     })
 
-    const vm = chartLabel.mount('.chartlist');
+    const vm = chartLabel.mount('.visual');
 
 });
 

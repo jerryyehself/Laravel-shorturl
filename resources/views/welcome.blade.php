@@ -14,7 +14,7 @@
             <h2 class="input-msg">請輸入要縮短的網址</h2>
             <input id="submit" class="submit" type="submit" value="轉換"><br>
             <input id="url" class="url" type="url" placeholder="http:\\..." name="pre_url" required>
-         </form>
+        </form>
     </div>
 </div>
 @if(@isset($pre_url))
@@ -35,6 +35,8 @@
         </div>
         
         <div class="chart-output">
+            <div id="cjs" v-if="this.defultChart === 'chart.js'"></div>
+            <div id="djs" v-if="this.defultChart === 'd3.js'"></div>
         </div>
     
         
