@@ -30,7 +30,7 @@ function showChartjs(outsideData){
         config
     )};
 
-function showD3js(outsideData){
+function showD3js(dataset){
 
     var svg = d3.select("#djs")
                 .append("svg")
@@ -49,22 +49,22 @@ function showD3js(outsideData){
                     .ticks(10)
 
     svg.selectAll("rect")
-        .data(outsideData)
+        .data(dataset)
         .enter()
         .append("rect")
-        .attr("x", function(d, i) {return i * ((w-20) / outsideData.length) + 20;})
+        .attr("x", function(d, i) {return i * ((w-20) / dataset.length) + 20;})
         .attr("y", function(d) {return h - (d * 4);})
-        .attr("width", (w  - (20*(outsideData.length+barPadding)) - barPadding) / outsideData.length+20 - barPadding)
+        .attr("width", (w  - (20*(dataset.length+barPadding)) - barPadding) / dataset.length+20 - barPadding)
         .attr("height", function(d) {return d * 4;})
         .attr("fill", function(d) {return "rgb(0, 0, " + (d * 10) + ")";});
 
     svg.selectAll("text")
-        .data(outsideData)
+        .data(dataset)
         .enter()
         .append("text")
         .text(function(d) {return d;})
         .attr("text-anchor", "middle")
-        .attr("x", function(d, i) {return i * (w / outsideData.length  - barPadding) + (w / outsideData.length - barPadding) / 2 + 20;})
+        .attr("x", function(d, i) {return i * (w / dataset.length  - barPadding) + (w / dataset.length - barPadding) / 2 + 20;})
         .attr("y", function(d) {return h - (d * 4) + 14;})
         .attr("font-family", "sans-serif")
         .attr("font-size", "11px")
@@ -103,9 +103,6 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
             $('.url-tran').html(arr);
         });
     $(".submit").css("display", "none");
-    showChartjs(urlData);
-
-    showD3js(urlData);
 };
 
 
@@ -141,7 +138,9 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
+    showChartjs(urlData);
 
+    showD3js(dataset);
 
 });
 

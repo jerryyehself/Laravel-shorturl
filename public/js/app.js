@@ -17198,7 +17198,7 @@ function showChartjs(outsideData) {
 
 ;
 
-function showD3js(outsideData) {
+function showD3js(dataset) {
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select("#djs").append("svg");
   $("svg").attr("id", "canvas");
   var w = document.getElementById("canvas").clientWidth;
@@ -17208,19 +17208,19 @@ function showD3js(outsideData) {
   .domain([0, 100]) //輸入的範圍
   .range([h - barPadding, barPadding]);
   var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
-  svg.selectAll("rect").data(outsideData).enter().append("rect").attr("x", function (d, i) {
-    return i * ((w - 20) / outsideData.length) + 20;
+  svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
+    return i * ((w - 20) / dataset.length) + 20;
   }).attr("y", function (d) {
     return h - d * 4;
-  }).attr("width", (w - 20 * (outsideData.length + barPadding) - barPadding) / outsideData.length + 20 - barPadding).attr("height", function (d) {
+  }).attr("width", (w - 20 * (dataset.length + barPadding) - barPadding) / dataset.length + 20 - barPadding).attr("height", function (d) {
     return d * 4;
   }).attr("fill", function (d) {
     return "rgb(0, 0, " + d * 10 + ")";
   });
-  svg.selectAll("text").data(outsideData).enter().append("text").text(function (d) {
+  svg.selectAll("text").data(dataset).enter().append("text").text(function (d) {
     return d;
   }).attr("text-anchor", "middle").attr("x", function (d, i) {
-    return i * (w / outsideData.length - barPadding) + (w / outsideData.length - barPadding) / 2 + 20;
+    return i * (w / dataset.length - barPadding) + (w / dataset.length - barPadding) / 2 + 20;
   }).attr("y", function (d) {
     return h - d * 4 + 14;
   }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
@@ -17256,8 +17256,6 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
     $('.url-tran').html(arr);
   });
   $(".submit").css("display", "none");
-  showChartjs(urlData);
-  showD3js(urlData);
 }
 
 ;
@@ -17285,6 +17283,8 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
+  showChartjs(urlData);
+  showD3js(dataset);
 });
 
 /***/ }),
