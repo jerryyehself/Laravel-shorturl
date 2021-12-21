@@ -17290,11 +17290,13 @@ $(document).ready(function () {
         this.defultChart = chartType;
         return this.chartType;
       },
-      changeChart: function changeChart(chartType) {
-        if (chartType === 'd3.js') {
-          showChartjs(); //return this.chartShow;
-        } else if (chartType === 'chart.js') {
-          showD3js(); //return this.chartShow;
+      changeChart: function changeChart() {
+        if (this.defultChart === 'd3.js') {
+          showChartjs();
+          console.log('bb'); //return this.chartShow;
+        } else if (this.defultChart === 'chart.js') {
+          showD3js();
+          console.log('aa'); //return this.chartShow;
           //alert('bb');
         }
       }

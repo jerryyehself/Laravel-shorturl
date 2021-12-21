@@ -143,17 +143,19 @@ $(document).ready(function(){
                 
                 return this.chartType
             },
-            changeChart: function(chartType){
+            changeChart: function(){
 
-                if(chartType === 'd3.js'){
+                if(this.defultChart === 'd3.js'){
 
                     showChartjs();
+                    console.log('bb');
 
                     //return this.chartShow;
 
-                }else if(chartType === 'chart.js'){
+                }else if(this.defultChart === 'chart.js'){
 
                     showD3js();
+                    console.log('aa');
 
                     //return this.chartShow;
                     //alert('bb');
