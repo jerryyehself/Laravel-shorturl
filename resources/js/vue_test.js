@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     chartLabel.component('chart-list',{
         template:  `
-        <div class="list-content" v-for="chartList in chartLists" @click='getChartType(chartList)'>
+        <div class="list-content">
             @{{ chartList }}
         </div>
         `
