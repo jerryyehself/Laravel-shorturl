@@ -17282,14 +17282,12 @@ $(document).ready(function () {
       getChartType: function getChartType(chartType) {
         if (this.defultChart !== chartType) {
           this.defultChart = chartType;
-        }
 
-        console.log(this.defultChart !== 'chart.js');
-
-        if (this.defultChart === 'chart.js') {
-          showChartjs(urlData);
-        } else if (this.defultChart === 'd3.js') {
-          showD3js(urlData);
+          if (this.defultChart === 'chart.js') {
+            showChartjs(urlData);
+          } else if (this.defultChart === 'd3.js') {
+            showD3js(urlData);
+          }
         }
 
         return this.chartType;
