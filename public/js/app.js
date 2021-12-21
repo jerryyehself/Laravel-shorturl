@@ -17299,6 +17299,7 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
+  showChartjs();
 });
 
 /***/ }),
