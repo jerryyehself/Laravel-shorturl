@@ -17282,7 +17282,7 @@ $(document).ready(function () {
         if (this.defultChart === 'chart.js') {
           showChartjs(urlData);
         } else if (this.defultChart === 'd3.js') {
-          showD3js(dataset);
+          showD3js(urlData);
         }
 
         return this.chartType;

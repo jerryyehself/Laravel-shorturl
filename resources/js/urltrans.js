@@ -137,7 +137,7 @@ $(document).ready(function(){
 
                 }else if(this.defultChart === 'd3.js'){
 
-                    showD3js(dataset);
+                    showD3js(urlData);
                 
                 }
                 return this.chartType
