@@ -1,4 +1,4 @@
-const labels = [
+/*const labels = [
     '2013',
     '2014',
     '2015',
@@ -34,4 +34,4 @@ const config = {
 const myChart = new Chart(
       document.getElementById('myChart'),
       config
-      );
+      );*/
