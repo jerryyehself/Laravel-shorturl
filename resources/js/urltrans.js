@@ -138,7 +138,6 @@ $(document).ready(function(){
 
                     showD3js(urlData);
                 }
-                return this.defultChart;
             }
         }
     })
