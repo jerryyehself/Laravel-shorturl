@@ -17285,13 +17285,13 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
-
-  if (vm.defultChart === 'chart.js') {
-    showChartjs(urlData);
-  } else if (vm.defultChart === 'd3.js') {
-    showD3js(urlData);
-  }
 });
+
+if (vm.defultChart === 'chart.js') {
+  showChartjs(urlData);
+} else if (vm.defultChart === 'd3.js') {
+  showD3js(urlData);
+}
 
 /***/ }),
 
