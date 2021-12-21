@@ -119,12 +119,13 @@ $(document).ready(function(){
     
     const urlData = [usage_num, trans_num];
 
+    showChartjs(urlData);
+
     const chartLabel = Vue.createApp({
         data(){
             return{
                 defultChart: 'chart.js',
-                chartLists: ['d3.js', 'chart.js'],
-                chartShow: ""
+                chartLists: ['chart.js', 'd3.js']
             }
         },
         methods:{

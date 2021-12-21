@@ -17270,12 +17270,12 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
   var urlData = [usage_num, trans_num];
+  showChartjs(urlData);
   var chartLabel = Vue.createApp({
     data: function data() {
       return {
         defultChart: 'chart.js',
-        chartLists: ['d3.js', 'chart.js'],
-        chartShow: ""
+        chartLists: ['chart.js', 'd3.js']
       };
     },
     methods: {
