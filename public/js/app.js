@@ -17271,23 +17271,20 @@ $(document).ready(function () {
     data: function data() {
       return {
         defultChart: 'chart.js',
-        chartLists: ['chart.js', 'd3.js'],
-        chartShow: ""
+        chartLists: ['chart.js', 'd3.js']
       };
     },
-    computed: {
+    methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
 
         if (this.defultChart === 'chart.js') {
-          this.chartShow = showChartjs(urlData);
-          return this.chartShow;
+          showChartjs(urlData);
         } else if (this.defultChart === 'd3.js') {
-          this.chartShow = showD3js(urlData);
-          return this.chartShow;
+          showD3js(urlData);
         }
 
-        return this.defultChart, this.chartShow;
+        return this.defultChart;
       }
     }
   });
