@@ -35,7 +35,7 @@
         </div>
         
         <div class="chart-output">
-            <div id="cjs" v-if="this.defultChart === 'chart.js'"></div>
+            <canvas id="cjs" v-if="this.defultChart === 'chart.js'"></canvas>
             <div id="djs" v-if="this.defultChart === 'd3.js'"></div>
         </div>
     
