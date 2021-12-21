@@ -17183,6 +17183,7 @@ function showChartjs(outsideData) {
   var shortUrlCounting = {
     labels: labels,
     datasets: [{
+      label: labels,
       data: outsideData,
       backgroundColor: ['rgb(255, 255, 132)', 'rgb(255, 100, 132)']
     }]
