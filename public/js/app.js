@@ -17178,35 +17178,6 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 
 
 
-function showChartjs() {
-  var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
-  var suicide = {
-    type: 'line',
-    label: '全台自殺人數',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
-  };
-  var antidepressant = {
-    type: 'line',
-    label: '全台抗憂鬱藥物使用人數',
-    backgroundColor: 'rgb(255, 255, 132)',
-    borderColor: 'rgb(60, 95, 189)',
-    data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
-  };
-  var config = {
-    type: 'scatter',
-    data: {
-      labels: labels,
-      datasets: [suicide, antidepressant]
-    },
-    options: {}
-  };
-  var myChart = new Chart(document.$('#cjs'), config);
-}
-
-;
-
 if (document.getElementById("url-string").getAttribute("href") !== "") {
   $(".head-bar").toggleClass("active");
   $(".title-zh").toggleClass("active");
@@ -17246,7 +17217,35 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
   var dataset = [usage_num, trans_num];
-  showChartjs();
+
+  function showChartjs() {
+    var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+    var suicide = {
+      type: 'line',
+      label: '全台自殺人數',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
+    };
+    var antidepressant = {
+      type: 'line',
+      label: '全台抗憂鬱藥物使用人數',
+      backgroundColor: 'rgb(255, 255, 132)',
+      borderColor: 'rgb(60, 95, 189)',
+      data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
+    };
+    var config = {
+      type: 'scatter',
+      data: {
+        labels: labels,
+        datasets: [suicide, antidepressant]
+      },
+      options: {}
+    };
+    var myChart = new Chart(document.$('#cjs'), config);
+  }
+
+  ;
 
   function showD3js(dataset) {
     var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select("#djs").append("svg");
