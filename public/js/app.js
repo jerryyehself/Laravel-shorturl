@@ -17278,7 +17278,7 @@ $(document).ready(function () {
       };
     },
     methods: {
-      getChartType: function getChartType(chartType) {
+      getChartType: function getChartType(chartType, showChartjs, showD3js) {
         this.defultChart = chartType;
 
         if (this.defultChart === 'chart.js') {
