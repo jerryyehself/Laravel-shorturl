@@ -17283,9 +17283,9 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
-  showChartjs(urlData);
-  showD3js(dataset);
 });
+showChartjs(urlData);
+showD3js(dataset);
 
 /***/ }),
 
