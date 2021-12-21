@@ -133,9 +133,9 @@ $(document).ready(function(){
 
                 return this.chartType
 
-                showChartjs(urlData);
+                $showChartjs(urlData);
 
-                showD3js(dataset);
+                $showD3js(dataset);
             
             }
         }
@@ -143,6 +143,6 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
-
+    
 });
 
