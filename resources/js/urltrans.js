@@ -131,12 +131,11 @@ $(document).ready(function(){
 
                 this.defultChart = chartType
 
-                return this.chartType
-
                 $showChartjs(urlData);
 
                 $showD3js(dataset);
-            
+
+                return this.chartType
             }
         }
     })
