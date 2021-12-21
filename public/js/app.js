@@ -17278,7 +17278,7 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-        console.log(this.defultChart);
+        console.log(this.defultChart === 'chart.js');
 
         if (this.defultChart === 'chart.js') {
           showChartjs(urlData);

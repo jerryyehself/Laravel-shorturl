@@ -131,7 +131,7 @@ $(document).ready(function(){
 
                 this.defultChart = chartType;
 
-                console.log(this.defultChart);
+                console.log(this.defultChart === 'chart.js');
 
                 if(this.defultChart === 'chart.js'){
 
