@@ -17179,16 +17179,16 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 
 
 function showChartjs() {
-  var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+  var labels = ['短網址使用次數', '網址被轉換次數'];
   var suicide = {
-    type: 'line',
-    label: '全台自殺人數',
+    type: 'bar',
+    label: '短網址使用次數',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
     data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
   };
   var antidepressant = {
-    type: 'line',
+    type: 'bar',
     label: '全台抗憂鬱藥物使用人數',
     backgroundColor: 'rgb(255, 255, 132)',
     borderColor: 'rgb(60, 95, 189)',

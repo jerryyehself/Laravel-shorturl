@@ -4,25 +4,20 @@ import * as d3 from "d3";
 function showChartjs(){
 
     const labels = [
-        '2013',
-        '2014',
-        '2015',
-        '2016',
-        '2017',
-        '2018',
-        '2019'
+        '短網址使用次數',
+        '網址被轉換次數',
     ];
         
     const suicide = {
-        type:'line',
-        label: '全台自殺人數',
+        type:'bar',
+        label: '短網址使用次數',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
         data: [5285, 5554, 5842, 5592, 5723, 5901, 7103],
     };
 
     const antidepressant = {
-        type:'line',
+        type:'bar',
         label: '全台抗憂鬱藥物使用人數',
         backgroundColor: 'rgb(255, 255, 132)',
         borderColor: 'rgb(60, 95, 189)',
@@ -127,8 +122,6 @@ $(document).ready(function(){
     });
     
     let dataset = [usage_num, trans_num];
-
-    
 
     const chartLabel = Vue.createApp({
         data(){
