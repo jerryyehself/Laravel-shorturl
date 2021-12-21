@@ -36,7 +36,7 @@ function showChartjs(){
     };
 
     const myChart = new Chart(
-        document.$('#cjs'),
+        document.getElementById('#cjs'),
         config
     )};
 
