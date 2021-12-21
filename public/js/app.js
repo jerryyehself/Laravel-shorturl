@@ -17178,6 +17178,26 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 
 
 
+function showChartjs(outsideData) {
+  var labels = ['短網址使用次數', '網址被轉換次數'];
+  var shortUrlCounting = {
+    labels: labels,
+    datasets: [{
+      label: "次數",
+      data: outsideData,
+      backgroundColor: ['rgb(255, 255, 132)', 'rgb(255, 100, 132)']
+    }]
+  };
+  var config = {
+    type: 'bar',
+    data: shortUrlCounting,
+    options: {}
+  };
+  var myChart = new Chart($('#cjs'), config);
+}
+
+;
+
 function showD3js(dataset) {
   var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select("#djs").append("svg");
   $("svg").attr("id", "canvas");
@@ -17259,32 +17279,12 @@ $(document).ready(function () {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
         return this.chartType;
+        showChartjs(urlData);
+        showD3js(dataset);
       }
     }
   });
   var vm = chartLabel.mount('.visual');
-
-  function showChartjs(outsideData) {
-    var labels = ['短網址使用次數', '網址被轉換次數'];
-    var shortUrlCounting = {
-      labels: labels,
-      datasets: [{
-        label: "次數",
-        data: outsideData,
-        backgroundColor: ['rgb(255, 255, 132)', 'rgb(255, 100, 132)']
-      }]
-    };
-    var config = {
-      type: 'bar',
-      data: shortUrlCounting,
-      options: {}
-    };
-    var myChart = new Chart($('#cjs'), config);
-  }
-
-  ;
-  showChartjs(urlData);
-  showD3js(dataset);
 });
 
 /***/ }),
