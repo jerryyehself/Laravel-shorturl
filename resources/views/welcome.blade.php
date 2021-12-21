@@ -26,7 +26,7 @@
             
             <div class="chartType">
                 <p class="trans-result">短網址使用率圖表</p>
-                <p class="sub-title">圖表套件<p>
+                <p class="sub-title">圖表套件(請點兩次)<p>
                 <span class="url_title" name="url_title" id="url_title">@{{ this.defultChart }}</span>
             </div>
             <div class="list-content" v-for="chartList in chartLists" @click='getChartType(chartList)'>
