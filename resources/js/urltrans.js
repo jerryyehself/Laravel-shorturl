@@ -23,7 +23,6 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
             temp = arr[0];
             arr[0] = arr[1];
             arr[1] = temp;
-         
             $('.url-tran').html(arr);
         });
     $(".submit").css("display", "none");
