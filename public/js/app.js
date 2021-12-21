@@ -17280,18 +17280,14 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-        return this.chartType;
-      }
-    },
-    watch: {
-      defultChart: function defultChart(val, oldValue) {
-        console.log(val, oldValue);
 
-        if (val === 'chart.js') {
+        if (defultChart === 'chart.js') {
           showChartjs(urlData);
-        } else if (val === 'd3.js') {
+        } else if (defultChart === 'd3.js') {
           showD3js(urlData);
         }
+
+        return this.chartType;
       }
     }
   });
