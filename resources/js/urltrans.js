@@ -8,23 +8,19 @@ function showChartjs(){
         '網址被轉換次數',
     ];
         
-    const shortUrlUsage = {
-        label: '短網址使用次數',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: 100,
-    };
-
-    const shortUrlTrans = {
-        label: '網址被轉換次數',
-        backgroundColor: 'rgb(255, 255, 132)',
-        borderColor: 'rgb(60, 95, 189)',
-        data: 200,
-    };
+    const shortUrlCounting = {
+        label: labels,
+        datasets:[{
+            data: [100, 200],
+            backgroundColor: [
+                'rgb(255, 255, 132)',
+                'rgb(255, 100, 132)'
+            ]}
+        ]};
 
     const config = {
         type: 'bar',
-        data: {label: labels, datasets:[shortUrlUsage, shortUrlTrans]},
+        data: shortUrlCounting,
         options:{}
     };
 
