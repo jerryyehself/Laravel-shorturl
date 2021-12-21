@@ -128,17 +128,20 @@ $(document).ready(function(){
         methods:{
             getChartType: function(chartType){
 
-                this.defultChart = chartType;
+                if(this.defultChart === chartType){
 
-                if(this.defultChart === 'chart.js'){
+                    this.defultChart = chartType;
 
-                    showChartjs(urlData);
+                    if(this.defultChart === 'chart.js'){
 
-                }else if(this.defultChart === 'd3.js'){
+                        showChartjs(urlData);
 
-                    showD3js(urlData);
+                    }else if(this.defultChart === 'd3.js'){
+
+                        showD3js(urlData);
+                    }
+                    return this.chartType;
                 }
-                return this.chartType;
             }
         }
     })
