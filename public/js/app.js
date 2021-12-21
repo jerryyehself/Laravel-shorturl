@@ -17276,10 +17276,6 @@ $(document).ready(function () {
     }).attr("y", function (d) {
       return h - d * 4 + 14;
     }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
-    /*svg.axis()
-        .scale("bottom")
-        .scale("left");*/
-
     svg.append('g').attr('class', 'axis').attr('transform', 'translate(20)', 0) //移動到左方
     .call(yAxis);
   }
@@ -17299,16 +17295,13 @@ $(document).ready(function () {
       changeChart: function changeChart(chartType) {
         if (chartType === 'd3.js') {
           showChartjs();
-        } else if (chartType === 'chart.js') showD3js();
+        } else if (chartType === 'chart.js') {
+          showD3js();
+        }
       }
     }
   });
   var vm = chartLabel.mount('.chartlist');
-  /*if(){
-        showChartjs(dataset)
-    }else if(){
-        showD3js()
-    }*/
 });
 
 /***/ }),

@@ -127,10 +127,6 @@ $(document).ready(function(){
             .attr("font-size", "11px")
             .attr("fill", "white");
 
-            /*svg.axis()
-                .scale("bottom")
-                .scale("left");*/
-
         svg.append('g').attr('class', 'axis')
             .attr('transform', 'translate(20)', 0) //移動到左方
             .call(yAxis);
@@ -155,24 +151,15 @@ $(document).ready(function(){
 
                     showChartjs()
 
-                }else if(chartType === 'chart.js')
+                }else if(chartType === 'chart.js'){
 
-                showD3js()
+                    showD3js()
+                }
             }
         }
     })
 
     const vm = chartLabel.mount('.chartlist');
-    
-    /*if(){
-
-        showChartjs(dataset)
-
-    }else if(){
-
-        showD3js()
-
-    }*/
 
 });
 
