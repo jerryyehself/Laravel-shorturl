@@ -17242,7 +17242,7 @@ $(document).ready(function () {
       },
       options: {}
     };
-    var myChart = new Chart(document.getElementById('myChart'), config);
+    var myChart = new Chart(document.$('.chart-output'), config);
   }
 
   ;

@@ -79,7 +79,7 @@ $(document).ready(function(){
         };
 
         const myChart = new Chart(
-            document.getElementById('myChart'),
+            document.$('.chart-output'),
             config
         )};
 
