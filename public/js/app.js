@@ -17311,7 +17311,7 @@ $(document).ready(function () {
     }
   });
   chartLabel.component('chart-list', {
-    template: "\n            <span class=\"url_title\" name=\"url_title\" id=\"url_title\">\n                @{{ this.defultChart }}\n            </span>\n        "
+    template: "\n        <div class=\"list-content\" v-for=\"chartList in chartLists\" @click='getChartType(chartList)'>\n            @{{ chartList }}\n        </div>\n        "
   });
   var vm = chartLabel.mount('.chartlist');
   /*const hideShadow = Vue.createApp({

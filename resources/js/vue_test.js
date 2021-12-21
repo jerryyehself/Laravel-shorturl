@@ -20,9 +20,9 @@ $(document).ready(function(){
 
     chartLabel.component('chart-list',{
         template:  `
-            <span class="url_title" name="url_title" id="url_title">
-                @{{ this.defultChart }}
-            </span>
+        <div class="list-content" v-for="chartList in chartLists" @click='getChartType(chartList)'>
+            @{{ chartList }}
+        </div>
         `
     });
 
