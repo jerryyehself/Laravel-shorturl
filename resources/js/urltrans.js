@@ -131,9 +131,9 @@ $(document).ready(function(){
 
                 this.defultChart = chartType
 
-                $showChartjs(urlData);
+                showChartjs(urlData);
 
-                $showD3js(dataset);
+                showD3js(dataset);
 
                 return this.chartType
             }
