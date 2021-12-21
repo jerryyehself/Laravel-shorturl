@@ -17184,13 +17184,13 @@ function showChartjs() {
     label: '短網址使用次數',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
-    data: [2]
+    data: 100
   };
   var shortUrlTrans = {
     label: '網址被轉換次數',
     backgroundColor: 'rgb(255, 255, 132)',
     borderColor: 'rgb(60, 95, 189)',
-    data: [1]
+    data: 200
   };
   var config = {
     type: 'bar',
