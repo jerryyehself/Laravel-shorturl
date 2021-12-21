@@ -126,23 +126,17 @@ $(document).ready(function(){
             }
         },
         methods:{
-            getChartType: function(chartType, callback){
+            getChartType: function(chartType, showChartjs, showD3js){
 
                 this.defultChart = chartType;
 
-                whichChart = function(){
+                if(this.defultChart === 'chart.js'){
 
-                    if(this.defultChart === 'chart.js'){
+                    showChartjs(urlData);
 
-                        showChartjs(urlData);
-                        callback()
+                }else if(this.defultChart === 'd3.js'){
 
-                    }else if(this.defultChart === 'd3.js'){
-
-                        showD3js(urlData);
-                        callback()
-                    }
-                    
+                    showD3js(urlData);
                 }
                 return this.chartType;
             }

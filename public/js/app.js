@@ -17278,18 +17278,14 @@ $(document).ready(function () {
       };
     },
     methods: {
-      getChartType: function getChartType(chartType, callback) {
+      getChartType: function getChartType(chartType, showChartjs, showD3js) {
         this.defultChart = chartType;
 
-        whichChart = function whichChart() {
-          if (this.defultChart === 'chart.js') {
-            showChartjs(urlData);
-            callback();
-          } else if (this.defultChart === 'd3.js') {
-            showD3js(urlData);
-            callback();
-          }
-        };
+        if (this.defultChart === 'chart.js') {
+          showChartjs(urlData);
+        } else if (this.defultChart === 'd3.js') {
+          showD3js(urlData);
+        }
 
         return this.chartType;
       }
