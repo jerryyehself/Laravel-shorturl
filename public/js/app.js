@@ -17280,9 +17280,9 @@ $(document).ready(function () {
         this.defultChart = chartType;
 
         if (this.defultChart === 'chart.js') {
-          return showChartjs(urlData);
+          showChartjs(urlData);
         } else if (this.defultChart === 'd3.js') {
-          return showD3js(urlData);
+          showD3js(urlData);
         }
 
         return this.chartType;
