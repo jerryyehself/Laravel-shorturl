@@ -129,7 +129,9 @@ $(document).ready(function(){
         methods:{
             getChartType: function(chartType){
 
-                this.defultChart = chartType
+                this.defultChart = chartType;
+
+                console.log(this.defultChart);
 
                 if(this.defultChart === 'chart.js'){
 
