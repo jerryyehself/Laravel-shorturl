@@ -17242,13 +17242,13 @@ $(document).ready(function () {
       },
       options: {}
     };
-    var myChart = new Chart(document.$('.chart-output'), config);
+    var myChart = new Chart(document.$('.chart-output.active'), config);
   }
 
   ;
 
   function showD3js(dataset) {
-    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
+    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output.active").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
     //                     .domain([0, 100]) //輸入的範圍
     //                     .range([padding , w - barpadding])
 

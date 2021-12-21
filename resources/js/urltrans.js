@@ -79,13 +79,13 @@ $(document).ready(function(){
         };
 
         const myChart = new Chart(
-            document.$('.chart-output'),
+            document.$('.chart-output.active'),
             config
         )};
 
     function showD3js(dataset){
 
-        var svg = d3.select(".chart-output")
+        var svg = d3.select(".chart-output.active")
                     .append("svg")
 
         //var xScale = d3.scale.linear() //製作線性尺度
