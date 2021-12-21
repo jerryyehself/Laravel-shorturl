@@ -17180,18 +17180,23 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 
 function showChartjs() {
   var labels = ['短網址使用次數', '網址被轉換次數'];
-  var suicide = {
-    type: 'bar',
+  var shortUrlUsage = {
     label: '短網址使用次數',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
-    data: [1, 2]
+    data: [2]
+  };
+  var shortUrlTrans = {
+    label: '網址被轉換次數',
+    backgroundColor: 'rgb(255, 255, 132)',
+    borderColor: 'rgb(60, 95, 189)',
+    data: [1]
   };
   var config = {
-    type: 'scatter',
+    type: 'bar',
     data: {
-      labels: labels,
-      datasets: [suicide, antidepressant]
+      label: labels,
+      datasets: [shortUrlUsage, shortUrlTrans]
     },
     options: {}
   };

@@ -8,17 +8,23 @@ function showChartjs(){
         '網址被轉換次數',
     ];
         
-    const suicide = {
-        type:'bar',
+    const shortUrlUsage = {
         label: '短網址使用次數',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [1,2],
+        data: [2],
+    };
+
+    const shortUrlTrans = {
+        label: '網址被轉換次數',
+        backgroundColor: 'rgb(255, 255, 132)',
+        borderColor: 'rgb(60, 95, 189)',
+        data: [1],
     };
 
     const config = {
-        type: 'scatter',
-        data: {labels: labels,datasets:[suicide, antidepressant]},
+        type: 'bar',
+        data: {label: labels, datasets:[shortUrlUsage, shortUrlTrans]},
         options:{}
     };
 
