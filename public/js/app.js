@@ -17284,7 +17284,8 @@ $(document).ready(function () {
     data: function data() {
       return {
         defultChart: 'chart.js',
-        chartLists: ['d3.js', 'chart.js']
+        chartLists: ['d3.js', 'chart.js'],
+        chartShow: ""
       };
     },
     methods: {
@@ -17294,11 +17295,11 @@ $(document).ready(function () {
       },
       changeChart: function changeChart(chartType) {
         if (chartType === 'd3.js') {
-          ccc = showChartjs();
-          return ccc;
+          this.chartShow = showChartjs();
+          return this.chartShow;
         } else if (chartType === 'chart.js') {
-          ccc = showD3js();
-          return ccc; //alert('bb');
+          this.chartShow = showD3js();
+          return this.chartShow; //alert('bb');
         }
       }
     }

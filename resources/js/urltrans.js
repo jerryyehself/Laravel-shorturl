@@ -136,7 +136,8 @@ $(document).ready(function(){
         data(){
             return{
                 defultChart: 'chart.js',
-                chartLists: ['d3.js', 'chart.js']
+                chartLists: ['d3.js', 'chart.js'],
+                chartShow: ""
             }
         },
         methods:{
@@ -150,15 +151,15 @@ $(document).ready(function(){
 
                 if(chartType === 'd3.js'){
 
-                    ccc = showChartjs();
+                    this.chartShow = showChartjs();
 
-                    return ccc;
+                    return this.chartShow;
 
                 }else if(chartType === 'chart.js'){
 
-                    ccc = showD3js();
+                    this.chartShow = showD3js();
 
-                    return ccc ;
+                    return this.chartShow;
                     //alert('bb');
                 }
             }
