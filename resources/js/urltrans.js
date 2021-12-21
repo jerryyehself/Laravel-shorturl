@@ -129,7 +129,7 @@ $(document).ready(function(){
 
                 this.defultChart = chartType;
 
-                wc = function(){
+                wc = function(urlData, showChartjs, showD3js){
                     if(this.defultChart === 'chart.js'){
 
                         showChartjs(urlData)
