@@ -17178,12 +17178,12 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 
 
 
-function showChartjs() {
+function showChartjs(outsideData) {
   var labels = ['短網址使用次數', '網址被轉換次數'];
   var shortUrlCounting = {
     labels: labels,
     datasets: [{
-      data: [100, 200],
+      data: outsideData,
       backgroundColor: ['rgb(255, 255, 132)', 'rgb(255, 100, 132)']
     }]
   };
@@ -17272,7 +17272,7 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
-  var dataset = [usage_num, trans_num];
+  var urlData = [usage_num, trans_num];
   var chartLabel = Vue.createApp({
     data: function data() {
       return {
@@ -17289,7 +17289,7 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
-  showChartjs();
+  showChartjs(urlData);
 });
 
 /***/ }),

@@ -1,7 +1,7 @@
 const { TrackOpTypes } = require("vue");
 import * as d3 from "d3";
 
-function showChartjs(){
+function showChartjs(outsideData){
 
     const labels = [
         '短網址使用次數',
@@ -11,7 +11,7 @@ function showChartjs(){
     const shortUrlCounting = {
         labels: labels,
         datasets:[{
-            data: [100, 200],
+            data: outsideData,
             backgroundColor: [
                 'rgb(255, 255, 132)',
                 'rgb(255, 100, 132)'
@@ -115,7 +115,7 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    let dataset = [usage_num, trans_num];
+    let urlData = [usage_num, trans_num];
 
     const chartLabel = Vue.createApp({
         data(){
@@ -137,7 +137,7 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
-    showChartjs();
+    showChartjs(urlData);
 
 });
 
