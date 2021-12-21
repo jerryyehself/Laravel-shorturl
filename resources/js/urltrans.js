@@ -125,7 +125,7 @@ $(document).ready(function(){
             }
         },
         methods:{
-            getChartType: function(chartType, showChartjs, showD3js){
+            getChartType: function(chartType){
 
                 this.defultChart = chartType;
 
