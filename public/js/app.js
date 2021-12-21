@@ -17278,20 +17278,25 @@ $(document).ready(function () {
       };
     },
     methods: {
-      getChartType: function getChartType(chartType) {
+      getChartType: function getChartType(chartType, callback) {
         this.defultChart = chartType;
+
+        whichChart = function whichChart() {
+          if (this.defultChart === 'chart.js') {
+            showChartjs(urlData);
+            callback();
+          } else if (this.defultChart === 'd3.js') {
+            showD3js(urlData);
+            callback();
+          }
+        };
+
         return this.chartType;
       }
     }
   });
   var vm = chartLabel.mount('.visual');
 });
-
-if (vm.defultChart === 'chart.js') {
-  showChartjs(urlData);
-} else if (vm.defultChart === 'd3.js') {
-  showD3js(urlData);
-}
 
 /***/ }),
 

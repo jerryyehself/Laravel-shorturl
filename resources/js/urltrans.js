@@ -126,11 +126,24 @@ $(document).ready(function(){
             }
         },
         methods:{
-            getChartType: function(chartType){
+            getChartType: function(chartType, callback){
 
                 this.defultChart = chartType;
 
-                
+                whichChart = function(){
+
+                    if(this.defultChart === 'chart.js'){
+
+                        showChartjs(urlData);
+                        callback()
+
+                    }else if(this.defultChart === 'd3.js'){
+
+                        showD3js(urlData);
+                        callback()
+                    }
+                    
+                }
                 return this.chartType;
             }
         }
@@ -138,16 +151,5 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
-
-
 });
-
-if(vm.defultChart === 'chart.js'){ 
-
-    showChartjs(urlData);
-
-}else if(vm.defultChart === 'd3.js'){
-
-    showD3js(urlData);
-}
 
