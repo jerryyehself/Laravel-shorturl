@@ -17278,8 +17278,13 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-        showChartjs(urlData);
-        showD3js(dataset);
+
+        if (this.defultChart === 'chart.js') {
+          showChartjs(urlData);
+        } else if (this.defultChart === 'd3.js') {
+          showD3js(dataset);
+        }
+
         return this.chartType;
       }
     }

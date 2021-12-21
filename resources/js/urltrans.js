@@ -131,10 +131,15 @@ $(document).ready(function(){
 
                 this.defultChart = chartType
 
-                showChartjs(urlData);
+                if(this.defultChart === 'chart.js'){
 
-                showD3js(dataset);
+                    showChartjs(urlData);
 
+                }else if(this.defultChart === 'd3.js'){
+
+                    showD3js(dataset);
+                
+                }
                 return this.chartType
             }
         }
