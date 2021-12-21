@@ -149,13 +149,13 @@ $(document).ready(function(){
             },
             changeChart: function(chartType){
 
-                if(chartType === 'd3.js'){
+                if(chartType == 'd3.js'){
 
                     this.chartShow = showChartjs();
 
                     return this.chartShow;
 
-                }else if(chartType === 'chart.js'){
+                }else if(chartType == 'chart.js'){
 
                     this.chartShow = showD3js();
 

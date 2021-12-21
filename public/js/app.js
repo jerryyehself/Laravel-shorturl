@@ -17294,10 +17294,10 @@ $(document).ready(function () {
         return this.chartType;
       },
       changeChart: function changeChart(chartType) {
-        if (chartType === 'd3.js') {
+        if (chartType == 'd3.js') {
           this.chartShow = showChartjs();
           return this.chartShow;
-        } else if (chartType === 'chart.js') {
+        } else if (chartType == 'chart.js') {
           this.chartShow = showD3js();
           return this.chartShow; //alert('bb');
         }
