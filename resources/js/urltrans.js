@@ -1,5 +1,6 @@
 const { TrackOpTypes } = require("vue");
 import * as d3 from "d3";
+import { password } from "pg/lib/defaults";
 
 function showChartjs(outsideData){
 
@@ -128,20 +129,24 @@ $(document).ready(function(){
             getChartType: function(chartType){
 
                 this.defultChart = chartType;
-
-                wc = function(urlData, showChartjs, showD3js){
-                    if(this.defultChart === 'chart.js'){
-
-                        showChartjs(urlData)
-
-                    }else if(this.defultChart === 'd3.js'){
-
-                        showD3js(urlData)
-                    }
-
-                }
                 return this.chartType;
             }
+        },
+        watch:{
+
+            defultChart(val, oldValue){
+
+                console.log(val, oldValue);
+
+                if(val === 'chart.js'){
+
+                    showChartjs(urlData);
+
+                }else if(val === 'd3.js'){
+
+                    showD3js(urlData);
+                }
+            }   
         }
     })
 
