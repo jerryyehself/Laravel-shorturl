@@ -44,7 +44,7 @@ $(document).ready(function(){
     
     let dataset = [usage_num, trans_num];
 
-    function showChartjs(){
+    /*function showChartjs(){
 
         const labels = [
             '2013',
@@ -126,7 +126,7 @@ $(document).ready(function(){
         svg.append('g').attr('class', 'axis')
             .attr('transform', 'translate(20)', 0) //移動到左方
             .call(yAxis);
-    }
+    }*/
 
     const chartLabel = Vue.createApp({
         data(){
