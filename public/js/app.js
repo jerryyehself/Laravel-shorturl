@@ -17185,14 +17185,7 @@ function showChartjs() {
     label: '短網址使用次數',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
-    data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
-  };
-  var antidepressant = {
-    type: 'bar',
-    label: '全台抗憂鬱藥物使用人數',
-    backgroundColor: 'rgb(255, 255, 132)',
-    borderColor: 'rgb(60, 95, 189)',
-    data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
+    data: [1, 2]
   };
   var config = {
     type: 'scatter',
