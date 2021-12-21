@@ -79,13 +79,13 @@ $(document).ready(function(){
         };
 
         const myChart = new Chart(
-            document.$('.chart-output.active'),
+            document.$('#cjs'),
             config
         )};
 
     function showD3js(dataset){
 
-        var svg = d3.select(".chart-output.active")
+        var svg = d3.select("#djs")
                     .append("svg")
         
         $("svg").attr("id", "canvas");

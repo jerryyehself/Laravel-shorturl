@@ -17242,13 +17242,13 @@ $(document).ready(function () {
       },
       options: {}
     };
-    var myChart = new Chart(document.$('.chart-output.active'), config);
+    var myChart = new Chart(document.$('#cjs'), config);
   }
 
   ;
 
   function showD3js(dataset) {
-    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output.active").append("svg");
+    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select("#djs").append("svg");
     $("svg").attr("id", "canvas");
     var w = document.getElementById("canvas").clientWidth;
     var h = document.getElementById("canvas").clientHeight;
