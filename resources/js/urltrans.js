@@ -116,37 +116,39 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    let urlData = [usage_num, trans_num];
+    const urlData = [usage_num, trans_num];
 
-    const chartLabel = Vue.createApp({
-        data(){
-            return{
-                defultChart: 'chart.js',
-                chartLists: ['d3.js', 'chart.js'],
-                chartShow: ""
-            }
-        },
-        methods:{
-            getChartType: function(chartType){
-
-                this.defultChart = chartType
-
-                if(this.defultChart === 'chart.js'){
-
-                    showChartjs(urlData);
-
-                }else if(this.defultChart === 'd3.js'){
-
-                    showD3js(urlData);
-                
-                }
-                return this.chartType
-            }
-        }
-    })
-
-    const vm = chartLabel.mount('.visual');
+    return urlData
 
     
 });
+
+const chartLabel = Vue.createApp({
+    data(){
+        return{
+            defultChart: 'chart.js',
+            chartLists: ['d3.js', 'chart.js'],
+            chartShow: ""
+        }
+    },
+    methods:{
+        getChartType: function(chartType){
+
+            this.defultChart = chartType
+
+            if(this.defultChart === 'chart.js'){
+
+                showChartjs(urlData);
+
+            }else if(this.defultChart === 'd3.js'){
+
+                showD3js(urlData);
+            
+            }
+            return this.chartType
+        }
+    }
+})
+
+const vm = chartLabel.mount('.visual');
 
