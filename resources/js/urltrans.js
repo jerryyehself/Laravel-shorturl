@@ -106,10 +106,6 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".submit").css("display", "none");
 };
 
-const urlData = [usage_num, trans_num];
-
-showChartjs(urlData);
-
 $(document).ready(function(){
     
     $(".url.active").on('focus', function(event){
@@ -120,9 +116,7 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    
-
-    
+    const urlData = [usage_num, trans_num];
 
     const chartLabel = Vue.createApp({
         data(){
@@ -135,6 +129,12 @@ $(document).ready(function(){
             getChartType: function(chartType){
 
                 this.defultChart = chartType;
+                return this.chartType;
+            }
+        },
+        watch:{
+
+            defultChart(val, oldValue){
 
                 if(this.defultChart === 'chart.js'){
 
@@ -143,10 +143,8 @@ $(document).ready(function(){
                 }else if(this.defultChart === 'd3.js'){
 
                     showD3js(urlData);
-
                 }
-                return this.chartType;
-            }
+            }   
         }
     })
 

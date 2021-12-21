@@ -333,9 +333,6 @@ ul{
     cursor: pointer;
 }
 
-canvas{
-    height: 100%;
-}
 /*rect{
     max-width: inherit;
     max-height: inherit;

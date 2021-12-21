@@ -17262,8 +17262,6 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
 }
 
 ;
-var urlData = [usage_num, trans_num];
-showChartjs(urlData);
 $(document).ready(function () {
   $(".url.active").on('focus', function (event) {
     $(".submit").css("display", "inline-block");
@@ -17271,6 +17269,7 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
+  var urlData = [usage_num, trans_num];
   var chartLabel = Vue.createApp({
     data: function data() {
       return {
@@ -17281,14 +17280,16 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-
+        return this.chartType;
+      }
+    },
+    watch: {
+      defultChart: function defultChart(val, oldValue) {
         if (this.defultChart === 'chart.js') {
           showChartjs(urlData);
         } else if (this.defultChart === 'd3.js') {
           showD3js(urlData);
         }
-
-        return this.chartType;
       }
     }
   });
