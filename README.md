@@ -7,7 +7,8 @@
     <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-
+## 網站連結
+### ![短網址練習](https://dbtes.herokuapp.com/)
 
 ## 練習目標
  * 熟悉MVC框架
@@ -20,8 +21,11 @@
  ![原型](https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true)
  * Figma網站
 
-## 部屬Docker
- > laravel 8以上在Windows中建立專案需透過Docker虛擬主機，作業系統使用ubuntu 20.04
+## 部屬環境
+ * 虛擬環境：Docker
+    * laravel 8以上在Windows中建立專案需透過Docker虛擬主機，作業系統使用ubuntu 20.04
+ * 網路空間：Heroku
+ * 資料庫：PostgreSQL
     
 ## 前端設計
  * HTML5
