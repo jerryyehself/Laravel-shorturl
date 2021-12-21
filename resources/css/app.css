@@ -320,6 +320,7 @@ ul{
 
 .list-content.active:active, .list-content.active:focus{
     box-shadow: none;
+    cursor: pointer
 }
 /*rect{
     max-width: inherit;
