@@ -17265,10 +17265,9 @@ $(document).ready(function () {
   });
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
-  });
-  var urlData = [usage_num, trans_num];
-  return urlData;
+  }); //const urlData = [usage_num, trans_num];
 });
+var urlData = [usage_num, trans_num];
 var chartLabel = Vue.createApp({
   data: function data() {
     return {

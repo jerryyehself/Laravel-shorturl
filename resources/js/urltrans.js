@@ -116,12 +116,11 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    const urlData = [usage_num, trans_num];
+    //const urlData = [usage_num, trans_num];
 
-    return urlData
-
-    
 });
+
+const urlData = [usage_num, trans_num];
 
 const chartLabel = Vue.createApp({
     data(){
@@ -132,6 +131,7 @@ const chartLabel = Vue.createApp({
         }
     },
     methods:{
+
         getChartType: function(chartType){
 
             this.defultChart = chartType
