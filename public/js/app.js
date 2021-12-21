@@ -17202,7 +17202,7 @@ function showChartjs() {
     },
     options: {}
   };
-  var myChart = new Chart(document.getElementById('#cjs'), config);
+  var myChart = new Chart(document.$('#cjs'), config);
 }
 
 ;
