@@ -17275,16 +17275,20 @@ $(document).ready(function () {
       };
     },
     methods: {
-      getChartType: function getChartType(chartType, showChartjs, showD3js) {
+      getChartType: function getChartType(chartType, ch) {
         this.defultChart = chartType;
 
         if (this.defultChart === 'chart.js') {
-          showChartjs(urlData);
+          var _ch = showChartjs(urlData);
+
+          return _ch;
         } else if (this.defultChart === 'd3.js') {
-          showD3js(urlData);
+          var _ch2 = showD3js(urlData);
+
+          return _ch2;
         }
 
-        return this.defultChart;
+        return this.defultChart, ch;
       }
     }
   });

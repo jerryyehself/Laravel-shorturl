@@ -125,19 +125,21 @@ $(document).ready(function(){
             }
         },
         methods:{
-            getChartType: function(chartType, showChartjs, showD3js){
+            getChartType: function(chartType, ch){
 
                 this.defultChart = chartType;
 
                 if(this.defultChart === 'chart.js'){
 
-                    showChartjs(urlData);
+                    const ch = showChartjs(urlData);
+                    return ch;
 
                 }else if(this.defultChart === 'd3.js'){
 
-                    showD3js(urlData);
+                    const ch = showD3js(urlData);
+                    return ch
                 }
-                return this.defultChart;
+                return this.defultChart, ch;
             }
         }
     })
