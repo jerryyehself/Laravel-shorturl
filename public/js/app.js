@@ -17274,7 +17274,7 @@ $(document).ready(function () {
         chartLists: ['chart.js', 'd3.js']
       };
     },
-    methods: {
+    computed: {
       getChartType: function getChartType(chartType, ch) {
         this.defultChart = chartType;
 
