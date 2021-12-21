@@ -136,14 +136,16 @@ $(document).ready(function(){
 
             defultChart(val, oldValue){
 
-                if(this.defultChart === 'chart.js'){
+                console.log(val, oldValue);
+
+                /*if(this.defultChart === 'chart.js'){
 
                     showChartjs(urlData);
 
                 }else if(this.defultChart === 'd3.js'){
 
                     showD3js(urlData);
-                }
+                }*/
             }   
         }
     })

@@ -17285,11 +17285,12 @@ $(document).ready(function () {
     },
     watch: {
       defultChart: function defultChart(val, oldValue) {
-        if (this.defultChart === 'chart.js') {
-          showChartjs(urlData);
-        } else if (this.defultChart === 'd3.js') {
-          showD3js(urlData);
-        }
+        console.log(val, oldValue);
+        /*if(this.defultChart === 'chart.js'){
+              showChartjs(urlData);
+          }else if(this.defultChart === 'd3.js'){
+              showD3js(urlData);
+        }*/
       }
     }
   });
