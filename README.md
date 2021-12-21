@@ -19,7 +19,7 @@
     </ul>
     
 <h2>原型設計</h2>
-    <img scr="https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png" width="50%"/>
+    <img scr="https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true" width="50%"/>
     <ul><li>Figma</li></ul>
     
     
