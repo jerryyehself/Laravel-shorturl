@@ -17262,6 +17262,8 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
 }
 
 ;
+var urlData = [usage_num, trans_num];
+showChartjs(urlData);
 $(document).ready(function () {
   $(".url.active").on('focus', function (event) {
     $(".submit").css("display", "inline-block");
@@ -17269,8 +17271,6 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
-  var urlData = [usage_num, trans_num];
-  showChartjs(urlData);
   var chartLabel = Vue.createApp({
     data: function data() {
       return {

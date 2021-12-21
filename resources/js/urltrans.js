@@ -106,6 +106,9 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".submit").css("display", "none");
 };
 
+const urlData = [usage_num, trans_num];
+
+showChartjs(urlData);
 
 $(document).ready(function(){
     
@@ -117,9 +120,9 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    const urlData = [usage_num, trans_num];
+    
 
-    showChartjs(urlData);
+    
 
     const chartLabel = Vue.createApp({
         data(){

@@ -42,7 +42,6 @@
             <div id="djs" v-if="this.defultChart === 'd3.js'"></div>
         </div>
     
-        
     </div>
 
     <div class="function-output">
