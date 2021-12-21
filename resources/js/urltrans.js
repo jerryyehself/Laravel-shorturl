@@ -134,9 +134,13 @@ $(document).ready(function(){
 
                     this.chartShow = showChartjs(urlData);
 
+                    return this.chartShow;
+
                 }else if(this.defultChart === 'd3.js'){
 
                     this.chartShow = showD3js(urlData);
+
+                    return this.chartShow;
                 }
                 return this.defultChart, this.chartShow;
             }

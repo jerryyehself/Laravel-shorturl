@@ -17281,8 +17281,10 @@ $(document).ready(function () {
 
         if (this.defultChart === 'chart.js') {
           this.chartShow = showChartjs(urlData);
+          return this.chartShow;
         } else if (this.defultChart === 'd3.js') {
           this.chartShow = showD3js(urlData);
+          return this.chartShow;
         }
 
         return this.defultChart, this.chartShow;
