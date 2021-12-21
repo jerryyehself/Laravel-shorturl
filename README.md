@@ -19,7 +19,8 @@
     </ul>
     
 <h2>原型設計</h2>
-    <h3><a href="https://www.figma.com/">Figma</a></h3>
+    <img scr="prototype.png"/>
+    <ul><li>Figma</li></ul>
     
     
 <h2>部屬Docker</h2>
