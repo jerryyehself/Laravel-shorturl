@@ -1,34 +1,7 @@
 const { TrackOpTypes } = require("vue");
 import * as d3 from "d3";
 
-function showChartjs(outsideData){
 
-    const labels = [
-        '短網址使用次數',
-        '網址被轉換次數',
-    ];
-        
-    const shortUrlCounting = {
-        labels: labels,
-        datasets:[{
-            label: "次數",
-            data: outsideData,
-            backgroundColor: [
-                'rgb(255, 255, 132)',
-                'rgb(255, 100, 132)'
-            ]}
-        ]};
-
-    const config = {
-        type: 'bar',
-        data: shortUrlCounting,
-        options:{}
-    };
-
-    const myChart = new Chart(
-        $('#cjs'),
-        config
-    )};
 
 function showD3js(dataset){
 
@@ -137,6 +110,35 @@ $(document).ready(function(){
     })
 
     const vm = chartLabel.mount('.visual');
+
+    function showChartjs(outsideData){
+
+        const labels = [
+            '短網址使用次數',
+            '網址被轉換次數',
+        ];
+            
+        const shortUrlCounting = {
+            labels: labels,
+            datasets:[{
+                label: "次數",
+                data: outsideData,
+                backgroundColor: [
+                    'rgb(255, 255, 132)',
+                    'rgb(255, 100, 132)'
+                ]}
+            ]};
+    
+        const config = {
+            type: 'bar',
+            data: shortUrlCounting,
+            options:{}
+        };
+    
+        const myChart = new Chart(
+            $('#cjs'),
+            config
+        )};
 
     showChartjs(urlData);
 
