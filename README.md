@@ -9,43 +9,43 @@
 
 
 
-<h2>練習目標</h2>
-    <ul>
-        <li>熟悉MVC框架</li>
-        <li>練習網路空間架站</li>
-        <li>練習設計prototype</li>
-        <li>複習前端/後端語言</li>
-        <li>探索實作時可用的資源</li>
-    </ul>
+## 練習目標
+ * 熟悉MVC框架
+ * 練習網路空間架站
+ * 練習設計prototype
+ * 複習前端/後端語言
+ * 探索實作時可用的資源
     
-<h2>原型設計</h2>
-    ![原型](https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true)
-    <ul><li>Figma</li></ul>
-    
-    
-<h2>部屬Docker</h2>
-    <p>laravel 8以上在Windows中建立專案需透過Docker虛擬主機，作業系統使用ubuntu 20.04</p>
-    
-<h2>前端設計</h2>
-    <ul>
-        <li>HTML5</li>    
-        <li>CSS3</li>
-        <li>javascript</li>
-        <li>jQuery</li>
-    </ul>
+## 原型設計
+ ![原型](https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true)
+ * Figma網站
 
-<h2>資料庫設計</h2>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+## 部屬Docker
+ > laravel 8以上在Windows中建立專案需透過Docker虛擬主機，作業系統使用ubuntu 20.04
+    
+## 前端設計
+ * HTML5
+ * CSS3
+    * display:grid
+    * transition 
+ * javascript
+ * jQuery
+    * .toggleClass() 
+ * Vue
+    * v-for
+    * v-if 
 
-<h2>自我檢討</h2>
+## 資料庫設計(待補)
+ * 欄位
+    * 原網址、亂數(以數字1-100代替)、首次縮網址時間、網址轉換次數、短網址被使用次數、網頁標題、 所屬網域
 
-<h2>追加練習：資料視覺化</h2>
-    <ul>
-        <li>D3.js</li>
-        <li>chart.js</li>
-    </ul>
+## 自我檢討
+ * js流程控制
+ * Vue元件使用
+ * Ajax使用
+ * 視覺、版面設計
+
+## 追加練習：資料視覺化
+ * D3.js
+ * chart.js
 
