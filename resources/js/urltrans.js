@@ -11,7 +11,6 @@ function showChartjs(){
     const shortUrlCounting = {
         labels: labels,
         datasets:[{
-            label:"數值",
             data: [100, 200],
             backgroundColor: [
                 'rgb(255, 255, 132)',
