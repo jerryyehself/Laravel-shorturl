@@ -87,10 +87,6 @@ $(document).ready(function(){
 
         var svg = d3.select(".chart-output.active")
                     .append("svg")
-
-        //var xScale = d3.scale.linear() //製作線性尺度
-        //                     .domain([0, 100]) //輸入的範圍
-        //                     .range([padding , w - barpadding])
         
         $("svg").attr("id", "canvas");
 
@@ -149,17 +145,17 @@ $(document).ready(function(){
             },
             changeChart: function(chartType){
 
-                if(chartType == 'd3.js'){
+                if(chartType === 'd3.js'){
 
-                    this.chartShow = showChartjs();
+                    showChartjs();
 
-                    return this.chartShow;
+                    //return this.chartShow;
 
-                }else if(chartType == 'chart.js'){
+                }else if(chartType === 'chart.js'){
 
-                    this.chartShow = showD3js();
+                    showD3js();
 
-                    return this.chartShow;
+                    //return this.chartShow;
                     //alert('bb');
                 }
             }

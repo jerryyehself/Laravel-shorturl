@@ -17248,10 +17248,7 @@ $(document).ready(function () {
   ;
 
   function showD3js(dataset) {
-    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output.active").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
-    //                     .domain([0, 100]) //輸入的範圍
-    //                     .range([padding , w - barpadding])
-
+    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output.active").append("svg");
     $("svg").attr("id", "canvas");
     var w = document.getElementById("canvas").clientWidth;
     var h = document.getElementById("canvas").clientHeight;
@@ -17294,12 +17291,11 @@ $(document).ready(function () {
         return this.chartType;
       },
       changeChart: function changeChart(chartType) {
-        if (chartType == 'd3.js') {
-          this.chartShow = showChartjs();
-          return this.chartShow;
-        } else if (chartType == 'chart.js') {
-          this.chartShow = showD3js();
-          return this.chartShow; //alert('bb');
+        if (chartType === 'd3.js') {
+          showChartjs(); //return this.chartShow;
+        } else if (chartType === 'chart.js') {
+          showD3js(); //return this.chartShow;
+          //alert('bb');
         }
       }
     }
