@@ -1,6 +1,7 @@
 const { TrackOpTypes } = require("vue");
 
 $(document).ready(function(){
+
     const chartLabel = Vue.createApp({
         data(){
             return{
@@ -16,6 +17,14 @@ $(document).ready(function(){
             }
         }
     })
+
+    chartLabel.component('chart-list',{
+        template:  `
+            <span class="url_title" name="url_title" id="url_title">
+                @{{ this.defultChart }}
+            </span>
+        `
+    });
 
     const vm = chartLabel.mount('.chartlist');
 

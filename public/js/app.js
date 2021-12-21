@@ -17310,6 +17310,9 @@ $(document).ready(function () {
       }
     }
   });
+  chartLabel.component('chart-list', {
+    template: "\n            <span class=\"url_title\" name=\"url_title\" id=\"url_title\">\n                @{{ this.defultChart }}\n            </span>\n        "
+  });
   var vm = chartLabel.mount('.chartlist');
   /*const hideShadow = Vue.createApp({
       methods:{
