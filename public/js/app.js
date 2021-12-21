@@ -17266,31 +17266,31 @@ $(document).ready(function () {
   $(".url.active").on('blur', function (event) {
     $(".submit").css("display", "none");
   });
-  var urlData = [usage_num, trans_num];
-  var chartLabel = Vue.createApp({
-    data: function data() {
-      return {
-        defultChart: 'chart.js',
-        chartLists: ['d3.js', 'chart.js'],
-        chartShow: ""
-      };
-    },
-    computed: {
-      getChartType: function getChartType(chartType) {
-        this.defultChart = chartType;
-
-        if (this.defultChart === 'chart.js') {
-          showChartjs(urlData);
-        } else if (this.defultChart === 'd3.js') {
-          showD3js(urlData);
-        }
-
-        return this.chartType;
-      }
-    }
-  });
-  var vm = chartLabel.mount('.visual');
 });
+var urlData = [usage_num, trans_num];
+var chartLabel = Vue.createApp({
+  data: function data() {
+    return {
+      defultChart: 'chart.js',
+      chartLists: ['d3.js', 'chart.js'],
+      chartShow: ""
+    };
+  },
+  computed: {
+    getChartType: function getChartType(chartType) {
+      this.defultChart = chartType;
+
+      if (this.defultChart === 'chart.js') {
+        showChartjs(urlData);
+      } else if (this.defultChart === 'd3.js') {
+        showD3js(urlData);
+      }
+
+      return this.chartType;
+    }
+  }
+});
+var vm = chartLabel.mount('.visual');
 
 /***/ }),
 

@@ -116,7 +116,11 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    const urlData = [usage_num, trans_num];
+    
+
+});
+
+const urlData = [usage_num, trans_num];
 
     const chartLabel = Vue.createApp({
         data(){
@@ -146,6 +150,3 @@ $(document).ready(function(){
     })
 
     const vm = chartLabel.mount('.visual');
-
-});
-
