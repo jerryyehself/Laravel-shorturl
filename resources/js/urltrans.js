@@ -1,5 +1,6 @@
 const { TrackOpTypes } = require("vue");
 import * as d3 from "d3";
+import { password } from "pg/lib/defaults";
 
 function showChartjs(outsideData){
 
@@ -105,6 +106,7 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".submit").css("display", "none");
 };
 
+
 $(document).ready(function(){
     
     $(".url.active").on('focus', function(event){
@@ -129,14 +131,15 @@ $(document).ready(function(){
 
                 this.defultChart = chartType;
 
-                    if(this.defultChart === 'chart.js'){
+                if(this.defultChart === 'chart.js'){
 
-                        showChartjs(urlData);
+                    showChartjs(urlData);
 
-                    }else if(this.defultChart === 'd3.js'){
+                }else if(this.defultChart === 'd3.js'){
 
-                        showD3js(urlData);
-                    }
+                    showD3js(urlData);
+
+                }
                 return this.chartType;
             }
         }
