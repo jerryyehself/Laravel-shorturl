@@ -17285,11 +17285,9 @@ $(document).ready(function () {
     },
     watch: {
       defultChart: function defultChart(val, oldValue) {
-        console.log(val, oldValue);
-
-        if (val === 'chart.js') {
+        if (this.defultChart === 'chart.js') {
           showChartjs(urlData);
-        } else if (val === 'd3.js') {
+        } else if (this.defultChart === 'd3.js') {
           showD3js(urlData);
         }
       }
