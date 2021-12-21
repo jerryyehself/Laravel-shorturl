@@ -17285,6 +17285,8 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
+  console.log(chartLabel.defultChart);
+  console.log(vm.defultChart);
 
   if (chartLabel.defultChart === 'chart.js') {
     showChartjs(urlData);

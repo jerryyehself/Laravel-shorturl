@@ -138,7 +138,10 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
-    if(chartLabel.defultChart === 'chart.js'){
+    console.log(chartLabel.defultChart);
+    console.log(vm.defultChart);
+
+    if(chartLabel.defultChart === 'chart.js'){ 
 
         showChartjs(urlData);
 
