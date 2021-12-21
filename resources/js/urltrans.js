@@ -137,8 +137,10 @@ $(document).ready(function(){
     })
 
     const vm = chartLabel.mount('.visual');
+
+    showChartjs(urlData);
+
+    showD3js(dataset);
+
 });
 
-showChartjs(urlData);
-
-showD3js(dataset);
