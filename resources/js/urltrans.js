@@ -138,14 +138,11 @@ $(document).ready(function(){
 
     const vm = chartLabel.mount('.visual');
 
-    console.log(chartLabel.defultChart);
-    console.log(vm.defultChart);
-
-    if(chartLabel.defultChart === 'chart.js'){ 
+    if(vm.defultChart === 'chart.js'){ 
 
         showChartjs(urlData);
 
-    }else if(chartLabel.defultChart === 'd3.js'){
+    }else if(vm.defultChart === 'd3.js'){
 
         showD3js(urlData);
     }
