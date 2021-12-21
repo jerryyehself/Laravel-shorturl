@@ -17303,6 +17303,7 @@ $(document).ready(function () {
       }
     }
   });
+  var vm = chartLabel.mount('.chartlist');
   /*if(){
         showChartjs(dataset)
     }else if(){

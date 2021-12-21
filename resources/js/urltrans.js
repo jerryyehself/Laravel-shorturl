@@ -161,6 +161,8 @@ $(document).ready(function(){
             }
         }
     })
+
+    const vm = chartLabel.mount('.chartlist');
     
     /*if(){
 
