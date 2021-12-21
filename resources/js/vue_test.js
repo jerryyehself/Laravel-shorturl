@@ -1,7 +1,7 @@
 const { TrackOpTypes } = require("vue");
 
 $(document).ready(function(){
-
+    
     const chartLabel = Vue.createApp({
         data(){
             return{
@@ -17,14 +17,6 @@ $(document).ready(function(){
             }
         }
     })
-
-    chartLabel.component('chart-list',{
-        template:  `
-        <div class="list-content">
-            @{{ chartList }}
-        </div>
-        `
-    });
 
     const vm = chartLabel.mount('.chartlist');
 
