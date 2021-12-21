@@ -17294,9 +17294,11 @@ $(document).ready(function () {
       },
       changeChart: function changeChart(chartType) {
         if (chartType === 'd3.js') {
-          return showChartjs();
+          ccc = showChartjs();
+          return ccc;
         } else if (chartType === 'chart.js') {
-          return showD3js(); //alert('bb');
+          ccc = showD3js();
+          return ccc; //alert('bb');
         }
       }
     }

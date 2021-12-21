@@ -141,6 +141,7 @@ $(document).ready(function(){
         },
         methods:{
             getChartType: function(chartType){
+
                 this.defultChart = chartType
                 
                 return this.chartType
@@ -149,11 +150,15 @@ $(document).ready(function(){
 
                 if(chartType === 'd3.js'){
 
-                    return showChartjs();
+                    ccc = showChartjs();
+
+                    return ccc;
 
                 }else if(chartType === 'chart.js'){
 
-                    return showD3js();
+                    ccc = showD3js();
+
+                    return ccc ;
                     //alert('bb');
                 }
             }
