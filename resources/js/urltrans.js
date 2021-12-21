@@ -106,7 +106,6 @@ if (document.getElementById("url-string").getAttribute("href") !== ""){
     $(".submit").css("display", "none");
 };
 
-
 $(document).ready(function(){
     
     $(".url.active").on('focus', function(event){
@@ -130,18 +129,24 @@ $(document).ready(function(){
             getChartType: function(chartType){
 
                 this.defultChart = chartType;
+                return this.chartType;
+            }
+        },
+        watch:{
 
-                if(this.defultChart === 'chart.js'){
+            defultChart(val, oldValue){
+
+                console.log(val, oldValue);
+
+                if(val === 'chart.js'){
 
                     showChartjs(urlData);
 
-                }else if(this.defultChart === 'd3.js'){
+                }else if(val === 'd3.js'){
 
                     showD3js(urlData);
-
                 }
-                return this.chartType;
-            }
+            }   
         }
     })
 
