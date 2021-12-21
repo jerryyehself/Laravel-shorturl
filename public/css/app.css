@@ -11,8 +11,6 @@ body {
 a{
     display: block;
     text-decoration:none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -24,8 +22,6 @@ a{
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-    width:-webkit-fit-content;
-    width:-moz-fit-content;
     width:fit-content;
     align-self: end;
 }
@@ -110,8 +106,7 @@ form{
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 4;
-    -webkit-margin-after: 0;
-            margin-block-end: 0;
+    margin-block-end: 0;
     align-self: center;
     transition: 1s;
 }
@@ -204,8 +199,7 @@ input{
     grid-template-rows: 1fr 1fr;
     row-gap: 10px;
     height: 79%;
-    -moz-column-gap: 15px;
-         column-gap: 15px;
+    column-gap: 15px;
     transition: 1s;
     width: 100%;
     padding: 1em 0.5em;
@@ -261,8 +255,6 @@ input{
 }
 
 .ot{
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -315,8 +307,6 @@ ul{
 .list-content.active{
     text-align: center;
     font-style: border;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     padding: 5px;
     margin-bottom: 5px;
