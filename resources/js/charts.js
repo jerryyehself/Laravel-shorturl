@@ -1,4 +1,4 @@
-import * as d3 from "d3";
+/*import * as d3 from "d3";
 
 function showChartjs(){
 
@@ -85,9 +85,9 @@ function showD3js(dataset){
 
         /*svg.axis()
             .scale("bottom")
-            .scale("left");*/
+            .scale("left");
 
     svg.append('g').attr('class', 'axis')
         .attr('transform', 'translate(20)', 0) //移動到左方
         .call(yAxis);
-}
+}*/
