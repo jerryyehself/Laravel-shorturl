@@ -17181,7 +17181,7 @@ var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
 function showChartjs() {
   var labels = ['短網址使用次數', '網址被轉換次數'];
   var shortUrlCounting = {
-    label: labels,
+    labels: labels,
     datasets: [{
       label: "數值",
       data: [100, 200],

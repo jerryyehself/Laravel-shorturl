@@ -9,7 +9,7 @@ function showChartjs(){
     ];
         
     const shortUrlCounting = {
-        label: labels,
+        labels: labels,
         datasets:[{
             label:"數值",
             data: [100, 200],
