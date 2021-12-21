@@ -149,13 +149,12 @@ $(document).ready(function(){
 
                 if(chartType === 'd3.js'){
 
-                    showChartjs();
-                    alert('aa');
+                    return showChartjs();
 
                 }else if(chartType === 'chart.js'){
 
-                    showD3js();
-                    alert('bb');
+                    return showD3js();
+                    //alert('bb');
                 }
             }
         }
