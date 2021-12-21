@@ -132,11 +132,11 @@ $(document).ready(function(){
                 wc = function(){
                     if(this.defultChart === 'chart.js'){
 
-                        showChartjs(urlData);
+                        showChartjs(urlData)
 
                     }else if(this.defultChart === 'd3.js'){
 
-                        showD3js(urlData);
+                        showD3js(urlData)
                     }
 
                 }
