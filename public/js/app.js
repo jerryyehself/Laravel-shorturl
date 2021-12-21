@@ -17158,44 +17158,9 @@ const getGlobalThis = () => {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js");
-
-__webpack_require__(/*! ./show_chart */ "./resources/js/show_chart.js");
-
-__webpack_require__(/*! ./vue_test */ "./resources/js/vue_test.js");
-
-/***/ }),
-
-/***/ "./resources/js/show_chart.js":
-/*!************************************!*\
-  !*** ./resources/js/show_chart.js ***!
-  \************************************/
-/***/ (() => {
-
-var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
-var suicide = {
-  type: 'line',
-  label: '全台自殺人數',
-  backgroundColor: 'rgb(255, 99, 132)',
-  borderColor: 'rgb(255, 99, 132)',
-  data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
-};
-var antidepressant = {
-  type: 'line',
-  label: '全台抗憂鬱藥物使用人數',
-  backgroundColor: 'rgb(255, 255, 132)',
-  borderColor: 'rgb(60, 95, 189)',
-  data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
-};
-var config = {
-  type: 'scatter',
-  data: {
-    labels: labels,
-    datasets: [suicide, antidepressant]
-  },
-  options: {}
-};
-var myChart = new Chart(document.getElementById('myChart'), config);
+__webpack_require__(/*! ./urltrans */ "./resources/js/urltrans.js"); //require('./show_chart');
+//require('./vue_test');
+//require('./charts')
 
 /***/ }),
 
@@ -17208,6 +17173,11 @@ var myChart = new Chart(document.getElementById('myChart'), config);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/src/index.js");
+var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
+    TrackOpTypes = _require.TrackOpTypes;
+
+
+
 if (document.getElementById("url-string").getAttribute("href") !== "") {
   $(".head-bar").toggleClass("active");
   $(".title-zh").toggleClass("active");
@@ -17239,7 +17209,6 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
 }
 
 ;
-
 $(document).ready(function () {
   $(".url.active").on('focus', function (event) {
     $(".submit").css("display", "inline-block");
@@ -17248,54 +17217,73 @@ $(document).ready(function () {
     $(".submit").css("display", "none");
   });
   var dataset = [usage_num, trans_num];
-  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
-  //                     .domain([0, 100]) //輸入的範圍
-  //                     .range([padding , w - barpadding])
 
-  $("svg").attr("id", "canvas");
-  var w = document.getElementById("canvas").clientWidth;
-  var h = document.getElementById("canvas").clientHeight;
-  var barPadding = 1;
-  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
-  .domain([0, 100]) //輸入的範圍
-  .range([h - barPadding, barPadding]);
-  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
-  svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
-    return i * ((w - 20) / dataset.length) + 20;
-  }).attr("y", function (d) {
-    return h - d * 4;
-  }).attr("width", (w - 20 * (dataset.length + barPadding) - barPadding) / dataset.length + 20 - barPadding).attr("height", function (d) {
-    return d * 4;
-  }).attr("fill", function (d) {
-    return "rgb(0, 0, " + d * 10 + ")";
-  });
-  svg.selectAll("text").data(dataset).enter().append("text").text(function (d) {
-    return d;
-  }).attr("text-anchor", "middle").attr("x", function (d, i) {
-    return i * (w / dataset.length - barPadding) + (w / dataset.length - barPadding) / 2 + 20;
-  }).attr("y", function (d) {
-    return h - d * 4 + 14;
-  }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
-  /*svg.axis()
-      .scale("bottom")
-      .scale("left");*/
+  function showChartjs(dataset) {
+    var labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+    var suicide = {
+      type: 'line',
+      label: '全台自殺人數',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [5285, 5554, 5842, 5592, 5723, 5901, 7103]
+    };
+    var antidepressant = {
+      type: 'line',
+      label: '全台抗憂鬱藥物使用人數',
+      backgroundColor: 'rgb(255, 255, 132)',
+      borderColor: 'rgb(60, 95, 189)',
+      data: [1141151, 1165942, 1194395, 1212659, 1273561, 1330204, 1397197]
+    };
+    var config = {
+      type: 'scatter',
+      data: {
+        labels: labels,
+        datasets: [suicide, antidepressant]
+      },
+      options: {}
+    };
+    var myChart = new Chart(document.getElementById('myChart'), config);
+  }
 
-  svg.append('g').attr('class', 'axis').attr('transform', 'translate(20)', 0) //移動到左方
-  .call(yAxis);
-});
+  ;
 
-/***/ }),
+  function showD3js(dataset) {
+    var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select(".chart-output").append("svg"); //var xScale = d3.scale.linear() //製作線性尺度
+    //                     .domain([0, 100]) //輸入的範圍
+    //                     .range([padding , w - barpadding])
 
-/***/ "./resources/js/vue_test.js":
-/*!**********************************!*\
-  !*** ./resources/js/vue_test.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+    $("svg").attr("id", "canvas");
+    var w = document.getElementById("canvas").clientWidth;
+    var h = document.getElementById("canvas").clientHeight;
+    var barPadding = 1;
+    var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear() //製作線性尺度
+    .domain([0, 100]) //輸入的範圍
+    .range([h - barPadding, barPadding]);
+    var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(10);
+    svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", function (d, i) {
+      return i * ((w - 20) / dataset.length) + 20;
+    }).attr("y", function (d) {
+      return h - d * 4;
+    }).attr("width", (w - 20 * (dataset.length + barPadding) - barPadding) / dataset.length + 20 - barPadding).attr("height", function (d) {
+      return d * 4;
+    }).attr("fill", function (d) {
+      return "rgb(0, 0, " + d * 10 + ")";
+    });
+    svg.selectAll("text").data(dataset).enter().append("text").text(function (d) {
+      return d;
+    }).attr("text-anchor", "middle").attr("x", function (d, i) {
+      return i * (w / dataset.length - barPadding) + (w / dataset.length - barPadding) / 2 + 20;
+    }).attr("y", function (d) {
+      return h - d * 4 + 14;
+    }).attr("font-family", "sans-serif").attr("font-size", "11px").attr("fill", "white");
+    /*svg.axis()
+        .scale("bottom")
+        .scale("left");*/
 
-var _require = __webpack_require__(/*! vue */ "./node_modules/vue/index.js"),
-    TrackOpTypes = _require.TrackOpTypes;
+    svg.append('g').attr('class', 'axis').attr('transform', 'translate(20)', 0) //移動到左方
+    .call(yAxis);
+  }
 
-$(document).ready(function () {
   var chartLabel = Vue.createApp({
     data: function data() {
       return {
@@ -17307,19 +17295,19 @@ $(document).ready(function () {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
         return this.chartType;
+      },
+      changeChart: function changeChart(chartType) {
+        if (chartType === 'd3.js') {
+          showChartjs();
+        } else if (chartType === 'chart.js') showD3js();
       }
     }
   });
-  var vm = chartLabel.mount('.chartlist');
-  /*const hideShadow = Vue.createApp({
-      methods:{
-          hidden(event){
-              this.style.boxShadow = 'none';
-          }
-      }
-  })
-  
-  const vm2 = hideShadow.mount('.list-content.active');*/
+  /*if(){
+        showChartjs(dataset)
+    }else if(){
+        showD3js()
+    }*/
 });
 
 /***/ }),

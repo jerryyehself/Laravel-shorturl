@@ -14,20 +14,17 @@ $(document).ready(function(){
                 this.defultChart = chartType
                 
                 return this.chartType
+            },
+            changeChart: function(chartType){
+
+                if(chartType === 'd3.js'){
+
+                    showChartjs()
+
+                }else if(chartType === 'chart.js')
+
+                showD3js()
             }
         }
     })
-
-    const vm = chartLabel.mount('.chartlist');
-
-    
-    /*const hideShadow = Vue.createApp({
-        methods:{
-            hidden(event){
-                this.style.boxShadow = 'none';
-            }
-        }
-    })
-    
-    const vm2 = hideShadow.mount('.list-content.active');*/
 })
