@@ -1,50 +1,7 @@
 const { TrackOpTypes } = require("vue");
 import * as d3 from "d3";
 
-if (document.getElementById("url-string").getAttribute("href") !== ""){
-    $(".head-bar").toggleClass("active");
-    $(".title-zh").toggleClass("active");
-    $(".title-eng").toggleClass("active");
-    $(".input-mag").toggleClass("active");
-    $(".function-input").toggleClass("active");
-    $(".url").toggleClass("active");
-    $(".main-content").toggleClass("active");
-    $(".footer").toggleClass("active");
-    $(".title-font").toggleClass("active");
-    $(".chartlist").toggleClass("active");
-    $(".visual").toggleClass("active");
-    $(".chart-output").toggleClass("active");
-    $('.list-content').toggleClass("active");
-    //$("input").toggleClass("active");
-    //$("div").toggleClass("active");
-    //$("footer").toggleClass("active");
-    $(".input-msg").remove();
-    $(function() {
-            var arr = $('.url-tran').find('input').toArray();
-            var temp;
-            // 1 3對調
-            temp = arr[0];
-            arr[0] = arr[1];
-            arr[1] = temp;
-            $('.url-tran').html(arr);
-        });
-    $(".submit").css("display", "none");
-};
-
-
-$(document).ready(function(){
-    
-    $(".url.active").on('focus', function(event){
-        $(".submit").css("display", "inline-block");
-    });    
-        
-    $(".url.active").on('blur', function(event){
-        $(".submit").css("display", "none");
-    });
-    
-    let dataset = [usage_num, trans_num];
-
-    /*function showChartjs(){
+/*function showChartjs(){
 
         const labels = [
             '2013',
@@ -127,6 +84,51 @@ $(document).ready(function(){
             .attr('transform', 'translate(20)', 0) //移動到左方
             .call(yAxis);
     }*/
+
+if (document.getElementById("url-string").getAttribute("href") !== ""){
+    $(".head-bar").toggleClass("active");
+    $(".title-zh").toggleClass("active");
+    $(".title-eng").toggleClass("active");
+    $(".input-mag").toggleClass("active");
+    $(".function-input").toggleClass("active");
+    $(".url").toggleClass("active");
+    $(".main-content").toggleClass("active");
+    $(".footer").toggleClass("active");
+    $(".title-font").toggleClass("active");
+    $(".chartlist").toggleClass("active");
+    $(".visual").toggleClass("active");
+    $(".chart-output").toggleClass("active");
+    $('.list-content').toggleClass("active");
+    //$("input").toggleClass("active");
+    //$("div").toggleClass("active");
+    //$("footer").toggleClass("active");
+    $(".input-msg").remove();
+    $(function() {
+            var arr = $('.url-tran').find('input').toArray();
+            var temp;
+            // 1 3對調
+            temp = arr[0];
+            arr[0] = arr[1];
+            arr[1] = temp;
+            $('.url-tran').html(arr);
+        });
+    $(".submit").css("display", "none");
+};
+
+
+$(document).ready(function(){
+    
+    $(".url.active").on('focus', function(event){
+        $(".submit").css("display", "inline-block");
+    });    
+        
+    $(".url.active").on('blur', function(event){
+        $(".submit").css("display", "none");
+    });
+    
+    let dataset = [usage_num, trans_num];
+
+    
 
     const chartLabel = Vue.createApp({
         data(){
