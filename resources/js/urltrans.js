@@ -134,12 +134,13 @@ $(document).ready(function(){
 
                     if(this.defultChart === 'chart.js'){
 
-                        showChartjs(urlData);
+                        return showChartjs(urlData);
 
                     }else if(this.defultChart === 'd3.js'){
 
-                        showD3js(urlData);
+                        return showD3js(urlData);
                     }
+                    return this.defultChart;
                 }
             }
         }
