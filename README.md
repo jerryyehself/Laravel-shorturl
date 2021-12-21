@@ -19,7 +19,7 @@
     </ul>
     
 <h2>原型設計</h2>
-    ![原型]"https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true"
+    ![原型]("https://github.com/jerryyehself/Laravel-shorturl/blob/main/prototype.png?raw=true")
     <ul><li>Figma</li></ul>
     
     
