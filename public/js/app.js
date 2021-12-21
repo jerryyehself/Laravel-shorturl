@@ -17256,6 +17256,8 @@ if (document.getElementById("url-string").getAttribute("href") !== "") {
     $('.url-tran').html(arr);
   });
   $(".submit").css("display", "none");
+  showChartjs(urlData);
+  showD3js(urlData);
 }
 
 ;
@@ -17283,8 +17285,6 @@ $(document).ready(function () {
     }
   });
   var vm = chartLabel.mount('.visual');
-  showChartjs(urlData);
-  showD3js(urlData);
 });
 
 /***/ }),
