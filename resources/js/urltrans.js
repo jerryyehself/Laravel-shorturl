@@ -132,7 +132,7 @@ $(document).ready(function(){
 
                 if(this.defultChart != chartType){
 
-                    this.defultChart = chartType
+                    this.defultChart = chartType;
 
                     if(this.defultChart === 'chart.js'){
 
@@ -145,7 +145,7 @@ $(document).ready(function(){
                     }
                 }
 
-                return this.chartType
+                return this.chartType;
             }
         }
     })
