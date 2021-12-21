@@ -17280,7 +17280,7 @@ $(document).ready(function () {
     },
     methods: {
       getChartType: function getChartType(chartType) {
-        if (this.defultChart !== chartType) {
+        if (this.defultChart != chartType) {
           this.defultChart = chartType;
 
           if (this.defultChart === 'chart.js') {

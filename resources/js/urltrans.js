@@ -130,7 +130,7 @@ $(document).ready(function(){
         methods:{
             getChartType: function(chartType){
 
-                if(this.defultChart !== chartType){
+                if(this.defultChart != chartType){
 
                     this.defultChart = chartType
 
@@ -144,6 +144,7 @@ $(document).ready(function(){
                     
                     }
                 }
+
                 return this.chartType
             }
         }
