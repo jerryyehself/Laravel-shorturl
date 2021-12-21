@@ -129,22 +129,17 @@ $(document).ready(function(){
             getChartType: function(chartType){
 
                 this.defultChart = chartType;
-                return this.chartType;
-            }
-        },
-        watch:{
-
-            defultChart(val, oldValue){
-
-                if(this.defultChart === 'chart.js'){
+                if(val === 'chart.js'){
 
                     showChartjs(urlData);
 
-                }else if(this.defultChart === 'd3.js'){
+                }else if(val === 'd3.js'){
 
                     showD3js(urlData);
                 }
-            }   
+                return this.chartType;
+                
+            }
         }
     })
 
