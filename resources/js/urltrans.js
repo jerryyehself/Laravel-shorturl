@@ -140,10 +140,6 @@ $(document).ready(function(){
             getChartType: function(chartType){
 
                 this.defultChart = chartType
-                
-                return this.chartType
-            },
-            changeChart: function(){
 
                 if(this.defultChart === 'd3.js'){
 
@@ -160,6 +156,8 @@ $(document).ready(function(){
                     //return this.chartShow;
                     //alert('bb');
                 }
+                
+                return this.chartType
             }
         }
     })

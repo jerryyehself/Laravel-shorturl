@@ -17288,9 +17288,7 @@ $(document).ready(function () {
     methods: {
       getChartType: function getChartType(chartType) {
         this.defultChart = chartType;
-        return this.chartType;
-      },
-      changeChart: function changeChart() {
+
         if (this.defultChart === 'd3.js') {
           showChartjs();
           console.log('bb'); //return this.chartShow;
@@ -17299,6 +17297,8 @@ $(document).ready(function () {
           console.log('aa'); //return this.chartShow;
           //alert('bb');
         }
+
+        return this.chartType;
       }
     }
   });
