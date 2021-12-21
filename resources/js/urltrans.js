@@ -116,11 +116,7 @@ $(document).ready(function(){
         $(".submit").css("display", "none");
     });
     
-    
-
-});
-
-const urlData = [usage_num, trans_num];
+    const urlData = [usage_num, trans_num];
 
     const chartLabel = Vue.createApp({
         data(){
@@ -137,11 +133,11 @@ const urlData = [usage_num, trans_num];
 
                 if(this.defultChart === 'chart.js'){
 
-                    showChartjs(urlData);
+                    return showChartjs(urlData);
 
                 }else if(this.defultChart === 'd3.js'){
 
-                    showD3js(urlData);
+                    return showD3js(urlData);
                 
                 }
                 return this.chartType
@@ -150,3 +146,6 @@ const urlData = [usage_num, trans_num];
     })
 
     const vm = chartLabel.mount('.visual');
+
+});
+
