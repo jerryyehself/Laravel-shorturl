@@ -126,7 +126,7 @@ $(document).ready(function(){
             }
         },
         computed:{
-            getChartType: function(chartType, ch){
+            getChartType: function(chartType){
 
                 this.defultChart = chartType;
 
