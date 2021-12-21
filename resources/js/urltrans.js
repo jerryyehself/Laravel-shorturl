@@ -121,7 +121,8 @@ $(document).ready(function(){
         data(){
             return{
                 defultChart: 'chart.js',
-                chartLists: ['chart.js', 'd3.js']
+                chartLists: ['chart.js', 'd3.js'],
+                chartShow: ""
             }
         },
         computed:{
@@ -131,15 +132,13 @@ $(document).ready(function(){
 
                 if(this.defultChart === 'chart.js'){
 
-                    const ch = showChartjs(urlData);
-                    return ch;
+                    this.chartShow = showChartjs(urlData);
 
                 }else if(this.defultChart === 'd3.js'){
 
-                    const ch = showD3js(urlData);
-                    return ch
+                    this.chartShow = showD3js(urlData);
                 }
-                return this.defultChart, ch;
+                return this.defultChart, this.chartShow;
             }
         }
     })

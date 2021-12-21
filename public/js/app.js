@@ -17271,7 +17271,8 @@ $(document).ready(function () {
     data: function data() {
       return {
         defultChart: 'chart.js',
-        chartLists: ['chart.js', 'd3.js']
+        chartLists: ['chart.js', 'd3.js'],
+        chartShow: ""
       };
     },
     computed: {
@@ -17279,16 +17280,12 @@ $(document).ready(function () {
         this.defultChart = chartType;
 
         if (this.defultChart === 'chart.js') {
-          var _ch = showChartjs(urlData);
-
-          return _ch;
+          this.chartShow = showChartjs(urlData);
         } else if (this.defultChart === 'd3.js') {
-          var _ch2 = showD3js(urlData);
-
-          return _ch2;
+          this.chartShow = showD3js(urlData);
         }
 
-        return this.defultChart, ch;
+        return this.defultChart, this.chartShow;
       }
     }
   });
