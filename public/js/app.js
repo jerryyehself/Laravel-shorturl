@@ -17295,8 +17295,10 @@ $(document).ready(function () {
       changeChart: function changeChart(chartType) {
         if (chartType === 'd3.js') {
           showChartjs();
+          alert('aa');
         } else if (chartType === 'chart.js') {
           showD3js();
+          alert('bb');
         }
       }
     }

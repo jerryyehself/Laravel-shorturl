@@ -149,11 +149,13 @@ $(document).ready(function(){
 
                 if(chartType === 'd3.js'){
 
-                    showChartjs()
+                    showChartjs();
+                    alert('aa');
 
                 }else if(chartType === 'chart.js'){
 
-                    showD3js()
+                    showD3js();
+                    alert('bb');
                 }
             }
         }
