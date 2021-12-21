@@ -130,20 +130,22 @@ $(document).ready(function(){
 
                 this.defultChart = chartType;
 
-                if(this.defultChart === 'chart.js'){
-
-                    showChartjs(urlData);
-
-                }else if(this.defultChart === 'd3.js'){
-
-                    showD3js(urlData);
-                }
+                
                 return this.chartType;
             }
         }
     })
 
     const vm = chartLabel.mount('.visual');
+
+    if(chartLabel.defultChart === 'chart.js'){
+
+        showChartjs(urlData);
+
+    }else if(chartLabel.defultChart === 'd3.js'){
+
+        showD3js(urlData);
+    }
 
 });
 
