@@ -75,7 +75,7 @@ function showD3js(dataset){
         .call(yAxis);
 }
 
-if (document.getElementById("url-string").getAttribute("href") !== ""){
+if ($("#url-string").getAttribute("href") !== ""){
     $(".head-bar").toggleClass("active");
     $(".title-zh").toggleClass("active");
     $(".title-eng").toggleClass("active");
