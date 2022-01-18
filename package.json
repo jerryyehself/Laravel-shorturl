@@ -10,6 +10,10 @@
         "production": "mix --production"
     },
     "devDependencies": {
+<<<<<<< HEAD
+=======
+        "@vue/compiler-sfc": "^3.2.26",
+>>>>>>> e997a452c8acbf51530c8eb02df83802c4ac549b
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -19,6 +23,11 @@
         "chart.js": "^3.6.1",
         "d3": "^7.1.1",
         "d3-selection": "^3.0.0",
+<<<<<<< HEAD
         "pg": "^8.7.1"
+=======
+        "pg": "^8.7.1",
+        "vue": "^3.2.26"
+>>>>>>> e997a452c8acbf51530c8eb02df83802c4ac549b
     }
 }
